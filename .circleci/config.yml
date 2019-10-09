@@ -1,0 +1,39 @@
+version: 2
+
+default: &default
+  working_directory: ~/repo
+  docker:
+    - image: circleci/node:8
+
+jobs:
+  test:
+    <<: *default
+    steps:
+      - checkout
+      - run: yarn install
+      - run: yarn test
+
+  build:
+    <<: *default
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "yarn.lock" }}
+      - run: yarn install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "yarn.lock" }}
+      - run: yarn install
+      - run: yarn build
+
+workflows:
+  version: 2
+
+  build_and_test:
+    jobs:
+      - test
+      - build:
+          requires:
+            - test
