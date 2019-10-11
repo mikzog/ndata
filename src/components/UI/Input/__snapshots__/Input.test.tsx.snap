@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input renders with prefix 1`] = `
+<div
+  className="nd-input-group nd-input-icon"
+>
+  <input
+    className="nd-input"
+  />
+  <div
+    className="nd-input-prefix"
+  >
+    $
+  </div>
+</div>
+`;
+
+exports[`Input renders without crashing 1`] = `
+<input
+  className="nd-input"
+/>
+`;
