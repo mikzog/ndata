@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/classnames": "^2.2.9",
     "@types/jest": "24.0.18",
     "@types/node": "12.7.12",
     "@types/react": "16.9.5",
     "@types/react-dom": "16.9.1",
+    "classnames": "^2.2.6",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-scripts": "3.2.0",
@@ -26,8 +28,12 @@
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{ts,tsx}",
-      "!<rootDir>/node_modules/",
-      "!src/**/*.stories.{ts,tsx}"
+      "!src/**/*/index.ts",
+      "!src/**/*.d.ts",
+      "!src/**/*.stories.{ts,tsx}",
+      "!src/serviceWorker.ts",
+      "!src/typings/",
+      "!<rootDir>/node_modules/"
     ]
   },
   "browserslist": {
@@ -47,6 +53,7 @@
     "@storybook/addon-links": "^5.2.3",
     "@storybook/addons": "^5.2.3",
     "@storybook/react": "^5.2.3",
+    "@types/react-test-renderer": "^16.9.0",
     "react-test-renderer": "^16.10.2"
   }
 }

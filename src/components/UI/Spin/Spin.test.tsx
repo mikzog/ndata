@@ -1,11 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
-import Button from './Button';
+import Spin from './Spin';
 
-describe('Button', () => {
+describe('Spin', () => {
   it('renders without crashing', () => {
-    const component = renderer.create(<Button />);
+    const component = renderer.create(<Spin />);
     const json = component.toJSON();
 
     expect(json).toMatchSnapshot();
