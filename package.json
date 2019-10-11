@@ -29,7 +29,10 @@
     "collectCoverageFrom": [
       "src/**/*.{ts,tsx}",
       "!src/**/*/index.ts",
+      "!src/**/*.d.ts",
       "!src/**/*.stories.{ts,tsx}",
+      "!src/serviceWorker.ts",
+      "!src/typings/",
       "!<rootDir>/node_modules/"
     ]
   },
