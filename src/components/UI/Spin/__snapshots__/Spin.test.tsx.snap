@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Spin renders without crashing 1`] = `
+<div
+  className="nd-loader show"
+>
+  <div />
+  <div />
+  <div />
+  <div />
+</div>
+`;

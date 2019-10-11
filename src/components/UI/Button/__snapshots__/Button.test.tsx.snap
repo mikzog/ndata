@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button renders without crashing 1`] = `
+<button
+  className="nd-button"
+/>
+`;
+
+exports[`Button renders without loading 1`] = `
+<div
+  className="nd-button-loading load-inline"
+>
+  <button
+    className="nd-button"
+  >
+    <div
+      className="nd-loader show small"
+    >
+      <div />
+      <div />
+      <div />
+      <div />
+    </div>
+  </button>
+</div>
+`;
