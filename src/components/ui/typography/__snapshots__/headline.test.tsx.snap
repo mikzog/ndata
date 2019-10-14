@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Headline renders with correct tag 1`] = `<h3 />`;
+
+exports[`Headline renders without crashing 1`] = `<h1 />`;
