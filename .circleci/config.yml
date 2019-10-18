@@ -1,7 +1,10 @@
-version: 2
+version: 2.1
+
+orbs:
+  aws-s3: circleci/aws-s3@1.0.11
 
 default: &default
-  working_directory: ~/repo
+  working_directory: ~/ndata-frontend
   docker:
     - image: circleci/node:8
 
@@ -11,7 +14,15 @@ jobs:
     steps:
       - checkout
       - run: yarn install
-      - run: yarn test --collectCoverage --coverageDirectory=./artifacts/coverage
+      - run:
+          name: Run tests with JUnit as reporter
+          command: yarn test --updateSnapshot --runInBand --reporters=default --reporters=jest-junit --collectCoverage=true
+          environment:
+            JEST_JUNIT_OUTPUT_DIR: './test-results/junit/results.xml'
+      - store_test_results:
+          path: ./test-results
+      - store_artifacts:
+          path: ./coverage
 
   build:
     <<: *default
@@ -21,12 +32,28 @@ jobs:
           keys:
             - v1-dependencies-{{ checksum "yarn.lock" }}
       - run: yarn install
+      - run: yarn build
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "yarn.lock" }}
-      - run: yarn install
-      - run: yarn build
+      - persist_to_workspace:
+          root: .
+          paths:
+            - build
+
+  deploy-uat:
+    docker:
+      - image: 'circleci/python:2.7'
+    steps:
+      - checkout
+      - aws-s3/sync:
+          from: build
+          to: '$UAT_BUCKET'
+          arguments: |
+            --acl public-read \
+            --cache-control "max-age=86400"
+          overwrite: true
 
 workflows:
   version: 2
@@ -37,3 +64,21 @@ workflows:
       - build:
           requires:
             - test
+
+  build-deploy-uat:
+    jobs:
+      - test
+      - build:
+          requires:
+            - test
+          filters:
+            branches:
+              only: develop
+          context: uat
+      - deploy-uat:
+          requires:
+            - build
+          filters:
+            branches:
+              only: develop
+          context: uat
