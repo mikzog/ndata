@@ -40,8 +40,7 @@ jobs:
     docker:
       - image: 'circleci/python:2.7'
     steps:
-      - attach_workspace:
-          at: .
+      - checkout
       - aws-s3/sync:
           from: build
           to: '$UAT_BUCKET'
