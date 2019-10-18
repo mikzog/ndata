@@ -14,9 +14,11 @@ jobs:
     steps:
       - checkout
       - run: yarn install
-      - run: yarn test --updateSnapshot --collectCoverage --coverageDirectory=./artifacts/coverage
+      - run: yarn test --updateSnapshot --collectCoverage
       - store_test_results:
-          path: artifacts/coverage
+          path: coverage/lcov.info
+      - store_artifacts: # upload test coverage as artifact
+          path: coverage
 
   build:
     <<: *default
