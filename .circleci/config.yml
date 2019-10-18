@@ -15,10 +15,10 @@ jobs:
       - checkout
       - run: yarn install
       - run:
-        name: Run tests with JUnit as reporter
-        command: yarn test --updateSnapshot --runInBand --reporters=default --reporters=jest-junit
-        environment:
-          JEST_JUNIT_OUTPUT_DIR: './test-results/report.xml'
+          name: Run tests with JUnit as reporter
+          command: yarn test --updateSnapshot --runInBand --reporters=default --reporters=jest-junit
+          environment:
+            JEST_JUNIT_OUTPUT_DIR: './test-results/report.xml'
       - store_test_results:
           path: ./test-results
       - store_artifacts:
