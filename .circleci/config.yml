@@ -16,13 +16,13 @@ jobs:
       - run: yarn install
       - run:
           name: Run tests with JUnit as reporter
-          command: yarn test --updateSnapshot --runInBand --reporters=default --reporters=jest-junit
+          command: yarn test --updateSnapshot --runInBand --reporters=default --reporters=jest-junit --collectCoverage=true
           environment:
             JEST_JUNIT_OUTPUT_DIR: './test-results/junit/results.xml'
       - store_test_results:
           path: ./test-results
       - store_artifacts:
-          path: ./test-results/junit
+          path: ./coverage
 
   build:
     <<: *default
