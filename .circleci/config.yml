@@ -14,11 +14,15 @@ jobs:
     steps:
       - checkout
       - run: yarn install
-      - run: yarn test --updateSnapshot --collectCoverage
+      - run:
+        name: Run tests with JUnit as reporter
+        command: yarn test --updateSnapshot --runInBand --reporters=default --reporters=jest-junit
+        environment:
+          JEST_JUNIT_OUTPUT_DIR: './test-results/report.xml'
       - store_test_results:
-          path: ./coverage/clover.xml
-      - store_artifacts: # upload test coverage as artifact
-          path: ./coverage
+          path: ./test-results
+      - store_artifacts:
+          path: ./test-results
 
   build:
     <<: *default
