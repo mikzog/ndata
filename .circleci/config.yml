@@ -18,11 +18,11 @@ jobs:
           name: Run tests with JUnit as reporter
           command: yarn test --updateSnapshot --runInBand --reporters=default --reporters=jest-junit
           environment:
-            JEST_JUNIT_OUTPUT_DIR: './test-results/report.xml'
+            JEST_JUNIT_OUTPUT_DIR: './test-results/junit/results.xml'
       - store_test_results:
           path: ./test-results
       - store_artifacts:
-          path: ./test-results
+          path: ./test-results/junit
 
   build:
     <<: *default
