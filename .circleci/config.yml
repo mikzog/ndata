@@ -1,4 +1,7 @@
-version: 2
+version: 2.1
+
+orbs:
+  aws-s3: circleci/aws-s3@1.0.0
 
 default: &default
   working_directory: ~/repo
@@ -21,12 +24,29 @@ jobs:
           keys:
             - v1-dependencies-{{ checksum "yarn.lock" }}
       - run: yarn install
+      - run: yarn build
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "yarn.lock" }}
-      - run: yarn install
-      - run: yarn build
+      - persist_to_workspace:
+        root: .
+        paths:
+          - build
+
+    deploy-uat:
+    docker:
+      - image: "circleci/python:2.7"
+    steps:
+      - attach_workspace:
+          at: .
+      - aws-s3/sync:
+          from: build
+          to: "$UAT_BUCKET"
+          arguments: |
+            --acl public-read \
+            --cache-control "max-age=86400"
+          overwrite: true
 
 workflows:
   version: 2
@@ -37,3 +57,25 @@ workflows:
       - build:
           requires:
             - test
+
+  build-deploy-uat:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only: develop
+          context: uat
+      - test:
+          requires:
+            - build
+          filters:
+            branches:
+              only: develop
+          context: uat
+      - deploy-uat:
+          requires:
+            - test
+          filters:
+            branches:
+              only: develop
+          context: uat
