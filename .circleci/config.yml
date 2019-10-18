@@ -16,7 +16,7 @@ jobs:
       - run: yarn install
       - run: yarn test --updateSnapshot --collectCoverage
       - store_test_results:
-          path: coverage/lcov.info
+          path: coverage/clover.xml
       - store_artifacts: # upload test coverage as artifact
           path: coverage
 
