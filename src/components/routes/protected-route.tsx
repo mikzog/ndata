@@ -18,7 +18,7 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
       <Route
         {...rest}
         render={props =>
-          appProps.isAuthenticated ? (
+          appProps.authenticated ? (
             <C {...props} {...appProps} />
           ) : (
             <Redirect
