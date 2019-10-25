@@ -6,7 +6,7 @@ interface InputProps extends React.HTMLProps<HTMLInputElement> {
   suffix?: React.ReactNode;
 }
 
-export const Input: React.FC<InputProps> = ({ prefix, ...props }) => {
+const Input: React.FC<InputProps> = ({ prefix, ...props }) => {
   let component = <input className="nd-input" {...props} />;
 
   if (prefix) {
@@ -19,6 +19,10 @@ export const Input: React.FC<InputProps> = ({ prefix, ...props }) => {
   }
 
   return component;
+};
+
+Input.defaultProps = {
+  type: 'text',
 };
 
 export default Input;

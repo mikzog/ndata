@@ -16,7 +16,7 @@ export const PublicRoute: React.FC<PublicRouteProps> = ({
     <Route
       {...rest}
       render={props =>
-        !appProps.isAuthenticated ? (
+        !appProps.authenticated ? (
           <C {...props} {...appProps} />
         ) : (
           <Redirect to="/" />

@@ -5,11 +5,11 @@ import PublicRoute from './public-route';
 
 const HomePage = lazy(() => import('pages/home'));
 const LoginPage = lazy(() => import('pages/login'));
+const SignUpPage = lazy(() => import('pages/signup'));
 const NotFoundPage = lazy(() => import('pages/not-found'));
 
 export type TAppProps = {
-  isAuthenticated: boolean;
-  userHasAuthenticated: React.Dispatch<React.SetStateAction<boolean>>;
+  authenticated: boolean;
 };
 
 interface AppRoutesProps {
@@ -24,6 +24,12 @@ export const Routes: React.FC<AppRoutesProps> = ({ appProps }) => {
         exact
         path="/login"
         component={LoginPage}
+        appProps={appProps}
+      />
+      <PublicRoute
+        exact
+        path="/signup"
+        component={SignUpPage}
         appProps={appProps}
       />
       {/* Finally, catch all unmatched routes */}

@@ -2,10 +2,10 @@ import cx from 'classnames';
 import React from 'react';
 import Spin from '../spin';
 
-export type ButtonType = 'blue' | 'grey' | 'teal' | 'green' | 'red';
+export type TButtonColor = 'blue' | 'grey' | 'teal' | 'green' | 'red';
 
 export interface ButtonProps {
-  type?: ButtonType;
+  color?: TButtonColor;
   outline?: boolean;
   loading?: boolean;
   full?: boolean;
@@ -13,14 +13,14 @@ export interface ButtonProps {
 
 export const Button: React.FC<
   ButtonProps & React.HTMLProps<HTMLButtonElement>
-> = ({ children, onClick, type, outline, loading, full }) => {
+> = ({ children, onClick, color, outline, loading, full }) => {
   const buttonClasses = cx('nd-button', {
-    blue: type === 'blue',
-    grey: type === 'grey',
-    teal: type === 'teal',
-    green: type === 'green',
-    red: type === 'red',
-    [`${type}-outline`]: outline,
+    blue: color === 'blue',
+    grey: color === 'grey',
+    teal: color === 'teal',
+    green: color === 'green',
+    red: color === 'red',
+    [`${color}-outline`]: outline,
     full: full,
   });
 
@@ -32,9 +32,7 @@ export const Button: React.FC<
   );
 
   if (loading) {
-    component = (
-      <div className="nd-button-loading load-inline">{component}</div>
-    );
+    component = <div className="nd-button-loading">{component}</div>;
   }
 
   return component;

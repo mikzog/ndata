@@ -14,30 +14,30 @@ const Group: React.FC = ({ children }) => (
 const ButtonWithType = () => (
   <Group>
     <Button>default</Button>
-    <Button type="blue">blue</Button>
-    <Button type="grey">grey</Button>
-    <Button type="green">green</Button>
-    <Button type="teal">teal</Button>
-    <Button type="red">red</Button>
+    <Button color="blue">blue</Button>
+    <Button color="grey">grey</Button>
+    <Button color="green">green</Button>
+    <Button color="teal">teal</Button>
+    <Button color="red">red</Button>
   </Group>
 );
 
 const ButtonWithOutline = () => (
   <Group>
     <Button>default</Button>
-    <Button outline type="blue">
+    <Button outline color="blue">
       blue
     </Button>
-    <Button outline type="grey">
+    <Button outline color="grey">
       grey
     </Button>
-    <Button outline type="green">
+    <Button outline color="green">
       green
     </Button>
-    <Button outline type="teal">
+    <Button outline color="teal">
       teal
     </Button>
-    <Button outline type="red">
+    <Button outline color="red">
       red
     </Button>
   </Group>
@@ -45,16 +45,16 @@ const ButtonWithOutline = () => (
 
 const ButtonWithLoading = () => (
   <Group>
-    <Button loading type="blue">
+    <Button loading color="blue">
       Button
     </Button>
-    <Button loading type="green">
+    <Button loading color="green">
       Button
     </Button>
-    <Button loading type="teal">
+    <Button loading color="teal">
       Button
     </Button>
-    <Button loading type="red">
+    <Button loading color="red">
       Button
     </Button>
   </Group>
@@ -63,10 +63,10 @@ const ButtonWithLoading = () => (
 const ButtonWithFull = () => (
   <Group>
     <Button full>Button</Button>
-    <Button full type="blue">
+    <Button full color="blue">
       Button
     </Button>
-    <Button full outline type="blue">
+    <Button full outline color="blue">
       Button
     </Button>
     <Button full type="red">
