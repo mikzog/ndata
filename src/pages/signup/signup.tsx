@@ -3,18 +3,17 @@ import { Link } from 'react-router-dom';
 import { Auth } from 'aws-amplify';
 import { Headline } from 'components/ui/typography';
 import NDataIcon from 'assets/img/ndata-icon.svg';
-import SignUpForm from './signup-form';
+import SignUpForm, { TFormValues } from './signup-form';
 import 'assets/css/auth.css';
 import './signup.css';
 
 interface SignUpProps {}
 
 export const SignUp: React.FC<SignUpProps> = props => {
-  function handleSignUp() {
+  function handleSignUp(values: TFormValues) {
+    console.log({ values });
     const username = 'quang@nclouds.com';
     const password = 'p@ssw0rd!';
-    // const email = 'quang@nclouds.com';
-    // const phone_number = '1234567890';
 
     Auth.signUp({
       username,
