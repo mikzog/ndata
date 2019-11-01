@@ -13,7 +13,7 @@ export interface ButtonProps {
 
 export const Button: React.FC<
   ButtonProps & React.HTMLProps<HTMLButtonElement>
-> = ({ children, onClick, color, outline, loading, full }) => {
+> = ({ children, onClick, color, outline, loading, full, disabled }) => {
   const buttonClasses = cx('nd-button', {
     blue: color === 'blue',
     grey: color === 'grey',
@@ -25,7 +25,7 @@ export const Button: React.FC<
   });
 
   let component = (
-    <button className={buttonClasses} onClick={onClick}>
+    <button className={buttonClasses} onClick={onClick} disabled={disabled}>
       {children}
       {loading && <Spin small />}
     </button>
