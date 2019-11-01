@@ -61,24 +61,23 @@ workflows:
   build_and_test:
     jobs:
       - test
-      - build:
-          requires:
-            - test
-
-  build-deploy-uat:
-    jobs:
-      - test
-      - build:
-          requires:
-            - test
-          filters:
-            branches:
-              only: develop
-          context: uat
-      - deploy-uat:
-          requires:
-            - build
-          filters:
-            branches:
-              only: develop
-          context: uat
+      # - build:
+      #     requires:
+      #       - test
+  # build-deploy-uat:
+  #   jobs:
+  #     - test
+  #     - build:
+  #         requires:
+  #           - test
+  #         filters:
+  #           branches:
+  #             only: develop
+  #         context: uat
+  #     - deploy-uat:
+  #         requires:
+  #           - build
+  #         filters:
+  #           branches:
+  #             only: develop
+  #         context: uat
