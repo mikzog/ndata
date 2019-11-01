@@ -1,43 +1,54 @@
 import React, { useState } from 'react';
 import { Auth } from 'aws-amplify';
-import { Link } from 'react-router-dom';
+import { Link, RouteComponentProps } from 'react-router-dom';
+import { Alert } from 'components/ui';
 import { Headline } from 'components/ui/typography';
 import NDataIcon from 'assets/img/ndata-icon.svg';
-import LoginForm from './login-form';
+import LoginForm, { TFormValues } from './login-form';
 import 'assets/css/auth.css';
 import './login.css';
+import { CognitoUser } from '@aws-amplify/auth';
 
-interface LoginProps {}
+type Error = {
+  code: string;
+  message?: string;
+  name?: string;
+};
+
+interface LoginProps extends RouteComponentProps {}
 
 export const Login: React.FC<LoginProps> = props => {
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState();
 
-  async function handleLogin() {
-    const username = 'quang@nclouds.com';
-    const password = 'p@ssw0rd!';
+  const handleChange = () => {
+    setError(undefined);
+  };
+
+  const handleLogin = async (values: TFormValues) => {
+    const username = values.email || '';
+    const password = values.password;
 
     setLoading(true);
     Auth.signIn(username, password)
-      .then(value => {
-        console.log({ value });
+      .then((user: CognitoUser) => {
+        props.history.replace('/');
       })
-      .catch(error => {
-        setError(error.message);
+      .catch((error: Error) => {
+        if (error.code === 'UserNotConfirmedException') {
+          props.history.push('/verify-email?redirect=/', {
+            username,
+          });
+        } else {
+          setError(error);
+        }
       })
       .finally(() => {
         setLoading(false);
       });
+  };
 
-    // To verify attribute with the code
-    // const code = '071685';
-    // Auth.confirmSignUp(username, code, {
-    //   // Optional. Force user confirmation irrespective of existing alias. By default set to True.
-    //   forceAliasCreation: true,
-    // })
-    //   .then(data => console.log(data))
-    //   .catch(err => console.log(err));
-  }
+  console.log({ error });
 
   return (
     <section className="auth-body">
@@ -49,7 +60,18 @@ export const Login: React.FC<LoginProps> = props => {
                 <img src={NDataIcon} width={70} height={94} alt="Logo" />
               </div>
               <Headline tag="h4">Log in to nData</Headline>
-              <LoginForm loading={loading} onLogin={handleLogin} />
+              {error && (
+                <Alert
+                  type="error"
+                  message="Error"
+                  description={error.message}
+                />
+              )}
+              <LoginForm
+                loading={loading}
+                onLogin={handleLogin}
+                onChange={handleChange}
+              />
               <div className="form-foot">
                 <p>
                   Don't have an account?{' '}

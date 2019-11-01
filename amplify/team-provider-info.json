@@ -1,0 +1,19 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-ndata-frontend-dev-04433-authRole",
+            "UnauthRoleArn": "arn:aws:iam::695292474035:role/amplify-ndata-frontend-dev-04433-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::695292474035:role/amplify-ndata-frontend-dev-04433-authRole",
+            "Region": "us-west-2",
+            "DeploymentBucketName": "amplify-ndata-frontend-dev-04433-deployment",
+            "UnauthRoleName": "amplify-ndata-frontend-dev-04433-unauthRole",
+            "StackName": "amplify-ndata-frontend-dev-04433",
+            "StackId": "arn:aws:cloudformation:us-west-2:695292474035:stack/amplify-ndata-frontend-dev-04433/e2b38210-fcc6-11e9-a37b-068a25e2e0ea"
+        },
+        "categories": {
+            "auth": {
+                "ndatafrontend4ed395d3": {}
+            }
+        }
+    }
+}
