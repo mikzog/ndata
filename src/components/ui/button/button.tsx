@@ -11,9 +11,16 @@ export interface ButtonProps {
   full?: boolean;
 }
 
-export const Button: React.FC<
-  ButtonProps & React.HTMLProps<HTMLButtonElement>
-> = ({ children, onClick, color, outline, loading, full, disabled }) => {
+export const Button: React.FC<ButtonProps &
+  React.HTMLProps<HTMLButtonElement>> = ({
+  children,
+  onClick,
+  color,
+  outline,
+  loading,
+  full,
+  disabled,
+}) => {
   const buttonClasses = cx('nd-button', {
     blue: color === 'blue',
     grey: color === 'grey',
