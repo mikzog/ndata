@@ -1,7 +1,7 @@
 import _get from 'lodash/get';
 import React, { useState, useEffect } from 'react';
 import { Auth } from 'aws-amplify';
-import { Link, RouteComponentProps } from 'react-router-dom';
+import { RouteComponentProps } from 'react-router-dom';
 import { Alert } from 'components/ui';
 import { Headline } from 'components/ui/typography';
 import NDataIcon from 'assets/img/ndata-icon.svg';
@@ -11,31 +11,51 @@ import 'assets/css/auth.css';
 interface Props extends RouteComponentProps {}
 
 export const VerifyEmail: React.FC<Props> = props => {
-  useEffect(() => {
-    const username = _get(props, 'location.state.username');
+  const [loading, setLoading] = useState(false);
+  const [resendLoading, setResendLoading] = useState(false);
+  const [error, setError] = useState();
+  // const [success, setSuccess] = useState();
+  const username = _get(props, 'location.state.username');
 
+  useEffect(() => {
     if (!username) {
       props.history.replace('/login');
     }
   }, []);
 
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState();
-
   const handleSubmit = (otp: string) => {
-    const username = _get(props, 'location.state.username');
-
+    setError(undefined);
     setLoading(true);
+
     Auth.confirmSignUp(username, otp, {
       // Optional. Force user confirmation irrespective of existing alias. By default set to True.
       forceAliasCreation: true,
     })
-      .then(data => console.log(data))
+      .then(() => {
+        props.history.replace('/login');
+      })
       .catch((err: Error) => {
         setError(err);
       })
       .finally(() => {
         setLoading(false);
+      });
+  };
+
+  const handleResendOTP = () => {
+    setError(undefined);
+    setResendLoading(true);
+
+    Auth.resendSignUp(username)
+      .then(data => {
+        console.log({ data });
+        // setSuccess(data)
+      })
+      .catch(err => {
+        setError(err);
+      })
+      .finally(() => {
+        setResendLoading(false);
       });
   };
 
@@ -57,7 +77,11 @@ export const VerifyEmail: React.FC<Props> = props => {
               <div className="form-foot">
                 <p>
                   OTP not received?{' '}
-                  <Link to="/signup">Request another OTP</Link>
+                  {resendLoading ? (
+                    `sending...`
+                  ) : (
+                    <a onClick={handleResendOTP}>Request another OTP</a>
+                  )}
                 </p>
               </div>
               <div className="auth-content-foot">

@@ -1,7 +1,9 @@
-import _mapValues from 'lodash/mapValues';
-import React, { useState } from 'react';
+import * as Yup from 'yup';
+import React from 'react';
+import { Formik, FormikProps } from 'formik';
 import { Button, Col, Row } from 'components/ui';
-import Input, { InputGroup } from 'components/ui/input';
+import { InputField } from 'components/form';
+import { InputGroup } from 'components/ui/input';
 import {
   CompanyIcon,
   EmailIcon,
@@ -9,19 +11,10 @@ import {
   UserIcon,
 } from 'components/ui/icons';
 
-export type TFormField = {
-  value?: string;
-  error?: string;
-};
-
-export type TFormFields = {
-  [key: string]: TFormField;
-};
-
 export type TFormValues = {
-  email?: string;
-  password?: string;
-  confirmPassword?: string;
+  email: string;
+  password: string;
+  passwordConfirm: string;
   username?: string;
   companyName?: string;
   firstName?: string;
@@ -29,132 +22,134 @@ export type TFormValues = {
 };
 
 interface Props {
-  onSignUp: (formValue: TFormValues) => void;
+  loading?: boolean;
+  onSignUp: (values: TFormValues) => void;
 }
 
-// TODO: Implement form validation
-function getValidation(fieldName: string, fieldValue: string) {
-  return undefined;
-}
+const DEFAULT_VALUES: TFormValues = {
+  email: '',
+  password: '',
+  passwordConfirm: '',
+  firstName: '',
+  lastName: '',
+  username: '',
+  companyName: '',
+};
 
-function getFormValue(fields: TFormFields): TFormValues {
-  return _mapValues(fields, (field: TFormField) => field.value);
-}
+const SignupSchema = Yup.object().shape({
+  email: Yup.string()
+    .email('Invalid email')
+    .required('Required'),
+  password: Yup.string()
+    .min(6, 'Too Short!')
+    .max(24, 'Too Long!')
+    .required('Required'),
+  passwordConfirm: Yup.string()
+    .oneOf([Yup.ref('password'), null], 'Passwords must match')
+    .required('Password confirm is required'),
+});
 
-export const SignUpForm: React.FC<Props> = props => {
-  const [fields, setFields] = useState({});
-
-  const handleFieldChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const fieldName = e.target.name;
-    const fieldValue = e.target.value;
-
-    if (fieldName) {
-      setFields({
-        ...fields,
-        [fieldName]: {
-          value: fieldValue,
-          error: getValidation(fieldName, fieldValue),
-        },
-      });
-    }
-  };
-
-  const handleSignUp = (e: React.FormEvent<EventTarget>) => {
-    e.preventDefault();
-
-    const formValue = getFormValue(fields);
-    props.onSignUp(formValue);
-  };
-
+export const SignUpForm: React.FC<Props> = ({ loading, onSignUp }) => {
   return (
-    <form className="auth-form" method="post" onSubmit={handleSignUp}>
-      <Row>
-        <Col sm={12} xs={12}>
-          <Input
-            type="email"
-            name="email"
-            prefix={<EmailIcon />}
-            placeholder="Email"
-            onChange={handleFieldChange}
-          />
-        </Col>
-      </Row>
-      <Row>
-        <Col sm={12} xs={12}>
-          <Input
-            name="companyName"
-            prefix={<CompanyIcon />}
-            placeholder="Company name"
-            onChange={handleFieldChange}
-          />
-        </Col>
-      </Row>
-      <Row>
-        <Col sm={12} xs={12}>
-          <Input
-            name="username"
-            autoComplete="username"
-            prefix={<UserIcon />}
-            placeholder="Username"
-            onChange={handleFieldChange}
-          />
-        </Col>
-      </Row>
-      <Row>
-        <Col sm={6} xs={12}>
-          <Input
-            name="firstName"
-            autoComplete="given-name"
-            prefix={<UserIcon />}
-            placeholder="First name"
-            onChange={handleFieldChange}
-          />
-        </Col>
-        <Col sm={6} xs={12}>
-          <Input
-            name="lastName"
-            autoComplete="family-name"
-            prefix={<UserIcon />}
-            placeholder="Last name"
-            onChange={handleFieldChange}
-          />
-        </Col>
-      </Row>
-      <Row>
-        <Col sm={6} xs={12}>
-          <Input
-            type="password"
-            name="password"
-            autoComplete="new-password"
-            prefix={<LockIcon />}
-            placeholder="Enter password"
-            onChange={handleFieldChange}
-          />
-        </Col>
-        <Col sm={6} xs={12}>
-          <Input
-            type="password"
-            name="confirmPassword"
-            autoComplete="new-password"
-            prefix={<LockIcon />}
-            placeholder="Confirm password"
-            onChange={handleFieldChange}
-          />
-        </Col>
-      </Row>
+    <Formik
+      initialValues={DEFAULT_VALUES}
+      validationSchema={SignupSchema}
+      onSubmit={(values, actions) => {
+        console.log({ actions });
+        onSignUp(values);
+      }}
+      render={(props: FormikProps<TFormValues>) => (
+        <form className="auth-form" method="post" onSubmit={props.handleSubmit}>
+          <Row>
+            <Col sm={12} xs={12}>
+              <InputField
+                type="email"
+                name="email"
+                autoComplete="email"
+                prefix={<EmailIcon />}
+                placeholder="Email"
+              />
+            </Col>
+          </Row>
+          <Row>
+            <Col sm={12} xs={12}>
+              <InputField
+                name="companyName"
+                prefix={<CompanyIcon />}
+                placeholder="Company name"
+              />
+            </Col>
+          </Row>
+          <Row>
+            <Col sm={12} xs={12}>
+              <InputField
+                name="username"
+                autoComplete="username"
+                prefix={<UserIcon />}
+                placeholder="Username"
+              />
+            </Col>
+          </Row>
+          <Row>
+            <Col sm={6} xs={12}>
+              <InputField
+                name="firstName"
+                autoComplete="given-name"
+                prefix={<UserIcon />}
+                placeholder="First name"
+              />
+            </Col>
+            <Col sm={6} xs={12}>
+              <InputField
+                name="lastName"
+                autoComplete="family-name"
+                prefix={<UserIcon />}
+                placeholder="Last name"
+              />
+            </Col>
+          </Row>
+          <Row>
+            <Col sm={6} xs={12}>
+              <InputField
+                type="password"
+                name="password"
+                autoComplete="new-password"
+                prefix={<LockIcon />}
+                placeholder="Enter password"
+              />
+            </Col>
+            <Col sm={6} xs={12}>
+              <InputField
+                type="password"
+                name="passwordConfirm"
+                autoComplete="new-password"
+                prefix={<LockIcon />}
+                placeholder="Confirm password"
+              />
+            </Col>
+          </Row>
 
-      <InputGroup>
-        <p>
-          By signing up, you agree to the <a href="login.html">Terms of Use</a>.
-        </p>
-      </InputGroup>
+          <InputGroup>
+            <p>
+              By signing up, you agree to the{' '}
+              <a href="login.html">Terms of Use</a>.
+            </p>
+          </InputGroup>
 
-      <InputGroup>
-        <Button full color="blue" onClick={handleSignUp}>
-          Create my account
-        </Button>
-      </InputGroup>
-    </form>
+          <InputGroup>
+            <Button
+              full
+              color="blue"
+              type="submit"
+              loading={loading}
+              disabled={props.isSubmitting}
+            >
+              Create my account
+            </Button>
+          </InputGroup>
+        </form>
+      )}
+    ></Formik>
   );
 };
 

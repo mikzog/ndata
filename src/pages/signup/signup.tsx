@@ -1,32 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Auth } from 'aws-amplify';
+import { Alert } from 'components/ui';
 import { Headline } from 'components/ui/typography';
 import NDataIcon from 'assets/img/ndata-icon.svg';
 import SignUpForm, { TFormValues } from './signup-form';
 import 'assets/css/auth.css';
-import './signup.css';
 
 interface SignUpProps {}
 
 export const SignUp: React.FC<SignUpProps> = props => {
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState();
+
   function handleSignUp(values: TFormValues) {
-    console.log({ values });
-    const username = 'quang@nclouds.com';
-    const password = 'p@ssw0rd!';
+    setError(null);
+    setLoading(true);
 
     Auth.signUp({
-      username,
-      password,
+      username: values.email,
+      password: values.password,
       attributes: {
-        // email, // optional
-        // phone_number, // optional - E.164 number convention
-        // other custom attributes
+        username: values.username,
+        firstName: values.firstName,
+        lastName: values.lastName,
+        companyName: values.companyName,
       },
       validationData: [], //optional
     })
-      .then(data => console.log(data))
-      .catch(err => console.log(err));
+      .then(data => {
+        console.log({ data });
+        setLoading(false);
+      })
+      .catch((error: Error) => {
+        setError(error);
+        setLoading(false);
+      });
   }
 
   return (
@@ -43,7 +52,14 @@ export const SignUp: React.FC<SignUpProps> = props => {
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                 diam nonumy eirmod tempor invidunt ut.
               </p>
-              <SignUpForm onSignUp={handleSignUp} />
+              {error && (
+                <Alert
+                  type="error"
+                  message="Error"
+                  description={error.message}
+                />
+              )}
+              <SignUpForm loading={loading} onSignUp={handleSignUp} />
               <div className="form-foot">
                 <p>
                   Already have an account? <Link to="/login">Log in</Link>
