@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
-import { Auth } from 'aws-amplify';
 import { Link, RouteComponentProps } from 'react-router-dom';
+import { useAuth } from 'hooks/auth';
 import { Alert } from 'components/ui';
 import { Headline } from 'components/ui/typography';
 import NDataIcon from 'assets/img/ndata-icon.svg';
 import LoginForm, { TFormValues } from './login-form';
 import 'assets/css/auth.css';
 import './login.css';
-import { CognitoUser } from '@aws-amplify/auth';
 
 type Error = {
   code: string;
@@ -20,35 +19,56 @@ interface LoginProps extends RouteComponentProps {}
 export const Login: React.FC<LoginProps> = props => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState();
-
-  const handleChange = () => {
-    setError(undefined);
-  };
+  const { login } = useAuth();
 
   const handleLogin = async (values: TFormValues) => {
-    const username = values.email || '';
+    const username = values.email;
     const password = values.password;
 
+    setError(null);
     setLoading(true);
-    Auth.signIn(username, password)
-      .then((user: CognitoUser) => {
-        props.history.replace('/');
-      })
-      .catch((error: Error) => {
-        if (error.code === 'UserNotConfirmedException') {
-          props.history.push('/verify-email?redirect=/', {
-            username,
-          });
-        } else {
-          setError(error);
-        }
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-  };
 
-  console.log({ error });
+    const user = await login(username, password).catch((error: Error) => {
+      if (error.code === 'UserNotConfirmedException') {
+        props.history.push('/verify-email?redirect=/', {
+          username,
+        });
+      } else {
+        setError(error);
+      }
+      setLoading(false);
+    });
+
+    // const user = await Auth.signIn(username, password).catch((error: Error) => {
+    //   if (error.code === 'UserNotConfirmedException') {
+    //     props.history.push('/verify-email?redirect=/', {
+    //       username,
+    //     });
+    //   } else {
+    //     setError(error);
+    //     setLoading(false);
+    //   }
+    // });
+
+    if (user) {
+      props.history.push('/');
+    }
+
+    // Auth.signIn(username, password)
+    //   .then((user: CognitoUser) => {
+    //     window.location.reload();
+    //   })
+    //   .catch((error: Error) => {
+    //     if (error.code === 'UserNotConfirmedException') {
+    //       props.history.push('/verify-email?redirect=/', {
+    //         username,
+    //       });
+    //     } else {
+    //       setError(error);
+    //     }
+    //     setLoading(false);
+    //   });
+  };
 
   return (
     <section className="auth-body">
@@ -67,11 +87,7 @@ export const Login: React.FC<LoginProps> = props => {
                   description={error.message}
                 />
               )}
-              <LoginForm
-                loading={loading}
-                onLogin={handleLogin}
-                onChange={handleChange}
-              />
+              <LoginForm loading={loading} onLogin={handleLogin} />
               <div className="form-foot">
                 <p>
                   Don't have an account?{' '}

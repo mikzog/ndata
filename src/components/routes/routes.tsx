@@ -14,7 +14,7 @@ export type TAppProps = {
 };
 
 interface AppRoutesProps {
-  appProps: TAppProps;
+  appProps?: TAppProps;
 }
 
 export const Routes: React.FC<AppRoutesProps> = ({ appProps }) => {
