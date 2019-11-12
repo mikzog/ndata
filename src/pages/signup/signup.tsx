@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, RouteComponentProps } from 'react-router-dom';
 import { Auth } from 'aws-amplify';
 import { Alert } from 'components/ui';
 import { Headline } from 'components/ui/typography';
@@ -7,7 +7,7 @@ import NDataIcon from 'assets/img/ndata-icon.svg';
 import SignUpForm, { TFormValues } from './signup-form';
 import 'assets/css/auth.css';
 
-interface SignUpProps {}
+interface SignUpProps extends RouteComponentProps {}
 
 export const SignUp: React.FC<SignUpProps> = props => {
   const [loading, setLoading] = useState(false);
@@ -21,15 +21,19 @@ export const SignUp: React.FC<SignUpProps> = props => {
       username: values.email,
       password: values.password,
       attributes: {
-        username: values.username,
-        firstName: values.firstName,
-        lastName: values.lastName,
-        companyName: values.companyName,
+        preferred_username: values.username,
+        given_name: values.firstName,
+        family_name: values.lastName,
+        'custom:company_name': values.companyName,
       },
       validationData: [], //optional
     })
       .then(data => {
-        console.log({ data });
+        if (data.userConfirmed) {
+          props.history.replace('/login');
+        } else {
+          props.history.replace('/verify-email');
+        }
         setLoading(false);
       })
       .catch((error: Error) => {

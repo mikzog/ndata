@@ -55,10 +55,10 @@ export const SignUpForm: React.FC<Props> = ({ loading, onSignUp }) => {
       initialValues={DEFAULT_VALUES}
       validationSchema={SignupSchema}
       onSubmit={(values, actions) => {
-        console.log({ actions });
         onSignUp(values);
       }}
-      render={(props: FormikProps<TFormValues>) => (
+    >
+      {(props: FormikProps<TFormValues>) => (
         <form className="auth-form" method="post" onSubmit={props.handleSubmit}>
           <Row>
             <Col sm={12} xs={12}>
@@ -149,7 +149,7 @@ export const SignUpForm: React.FC<Props> = ({ loading, onSignUp }) => {
           </InputGroup>
         </form>
       )}
-    ></Formik>
+    </Formik>
   );
 };
 

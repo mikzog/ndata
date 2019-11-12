@@ -1,10 +1,11 @@
 import React from 'react';
 import { Route, Redirect, RouteProps } from 'react-router-dom';
+import { useAuth } from 'hooks/auth';
 import { TAppProps } from './routes';
 
 interface ProtectedRouteProps extends RouteProps {
   component: React.ComponentType<any>;
-  appProps: TAppProps;
+  appProps?: TAppProps;
 }
 
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
@@ -12,13 +13,15 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   appProps,
   ...rest
 }) => {
+  const { user } = useAuth();
+
   return (
     <div>
       <header>HEADER GOES HERE!</header>
       <Route
         {...rest}
         render={props =>
-          appProps.authenticated ? (
+          user ? (
             <C {...props} {...appProps} />
           ) : (
             <Redirect

@@ -21,7 +21,7 @@ export const VerifyEmail: React.FC<Props> = props => {
     if (!username) {
       props.history.replace('/login');
     }
-  }, []);
+  });
 
   const handleSubmit = (otp: string) => {
     setError(undefined);
