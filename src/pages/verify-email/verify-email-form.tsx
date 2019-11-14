@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Button } from 'components/ui';
-import Input, { InputGroup } from 'components/ui/input';
+import { Button, Input, InputGroup } from 'components/ui';
 import { KeyIcon } from 'components/ui/icons';
 
 export type TFormField = {

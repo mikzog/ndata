@@ -1,10 +1,10 @@
 import * as Yup from 'yup';
 import React from 'react';
+
 import { Formik, FormikProps } from 'formik';
-import { Button, Checkbox, Col, Row } from 'components/ui';
-import { InputField } from 'components/form';
-import { InputGroup } from 'components/ui/input';
+import { Button, Checkbox, Col, Row, InputGroup } from 'components/ui';
 import { EmailIcon, LockIcon } from 'components/ui/icons';
+import { InputField } from 'components/form';
 
 export type TFormValues = {
   email: string;

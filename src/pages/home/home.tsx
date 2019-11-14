@@ -1,7 +1,6 @@
 import React from 'react';
 import { useAuth } from 'hooks/auth';
-import { Headline } from 'components/ui/typography';
-import { Button } from 'components/ui';
+import { Col, Row, Button, Headline, Container } from 'components/ui';
 
 interface HomeProps {}
 
@@ -9,12 +8,18 @@ export const Home: React.FC<HomeProps> = () => {
   const { logout } = useAuth();
 
   return (
-    <div>
-      <Headline>Login Page</Headline>
-      <main>
-        <Button onClick={() => logout()}>Logout</Button>
-      </main>
-    </div>
+    <Container fluid>
+      <Row>
+        <Col xs={12}>
+          <div className="nd-pageHead">
+            <Headline>Dashboard Page</Headline>
+          </div>
+        </Col>
+        <Col xs={12}>
+          <Button onClick={() => logout()}>Logout</Button>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 

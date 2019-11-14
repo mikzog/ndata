@@ -1,0 +1,1589 @@
+.nd-arp .nd-pageHead {
+    float: left;
+    width: auto;
+}
+
+.nd-arp .nd-pageTitle h1 {
+    margin-bottom: 15px;
+}
+
+.nd-card {
+    position: relative;
+}
+
+.nd-arp .nd-card{
+    padding: 22px 15px;
+}
+
+.nd-arp .nd-card .title{
+    font-weight: bold;
+    font-size: 17px;
+    left: 11px;
+    top: -13px;
+}
+
+.nd-card .descTitle {
+    text-transform: uppercase;
+    color: #95a0af;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.nd-card .nd-cardActions {
+    position: absolute;
+    right: 10px;
+    top: -21px;
+    padding: 0 5px;
+    background: #fff;
+}
+
+.nd-arp .nd-card .stat,
+.nd-arp .nd-card .desc{
+    padding-left: 0;
+}
+
+.nd-card .nd-cardActions .nd-button {
+    list-style: none;
+    font-size: 13px;
+    line-height: 30px;
+    height: 32px;
+    padding: 0 14px;
+    margin: 3px 0 3px 3px;
+    border-radius: 4px;
+    border-radius: 20px;
+}
+
+.nd-card .nd-cardInner .stat {
+    font-size: 30px;
+}
+
+.nd-cardInner{
+    border-right: 1px solid #e2e7eb;
+}
+
+.nd-cardInner.decrease .stat svg {
+    fill: #29BEB9;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+}
+
+.nd-cardInner.increase .desc span.green{
+    color: #f95b5b;
+}
+
+.nd-cardInner.increase .stat svg {
+    fill: #f95b5b;
+}
+
+.nd-arp .nd-card .nd-cardInner.last{
+    border-right: none;
+}
+
+.nd-card .graphActions a.active svg{
+    fill: #111;
+}
+
+.nd-card .graphActions a.active{
+    background: #e7ebef;
+    color: #111;
+}
+
+.nd-card .nd-cardGraph{
+    margin-top: 10px;
+}
+
+.nd-card .nd-cardGraph label{
+    text-align: center;
+    width: 100%;
+}
+
+.nd-arp .nd-rightContent{
+    padding-bottom: 35px;
+}
+
+.nd-arp .nd-card .desc{
+    font-size: 13px;
+}
+
+.nd-arp .nd-card .stat{
+    font-size: 28px;
+}
+
+/*cost comparisons*/
+.nd-arpCompare .nd-card .desc{
+    font-size: 14px;
+}
+
+.nd-arpCompare .nd-table2 .nd-cardGraph{
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.nd-arpCompare .nd-card .descTitle{
+    text-transform: none;
+    font-size: 14px;
+}
+
+.nd-arpCompare .nd-table2 table tr td svg {
+    position: relative;
+    top: 2px;
+}
+
+.nd-arpCompare .nd-table2 table tr td .increase svg {
+    fill: #f95b5b;
+}
+
+.nd-arpCompare .nd-table2 table tr td .decrease svg {
+    fill: #29BEB9;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+}
+
+.nd-arpCompare .nd-card .stat{
+    font-size: 32px;
+}
+
+.nd-arpCompare .nd-arpCompareForm p{
+    color: #727d8c;
+    display: block;
+}
+
+.nd-arpCompare .nd-arpCompareWrap{
+    border-top: 1px solid #e2e7eb;
+    padding-top: 15px;
+    width: 100%;
+    float: left;
+}
+
+.nd-arpCompare .nd-arpCompareForm h2{
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.nd-arpCompare .nd-arpCompareForm .nd-button{
+    height: 42px;
+    margin: 0;
+    line-height: 40px;
+}
+
+.nd-arpCompare .nd-arpCompareForm .nd-select-group .nd-input{
+    padding-right: 40px;
+}
+
+.nd-arpCompare .nd-arpCompareForm .nd-select-group .nd-caret{
+    right: 38px;
+    top: 5px;
+}
+
+.nd-arpCompare .nd-arpCompareForm .nd-input{
+    height: 42px;
+    line-height: 40px;
+    padding: 0px 10px 0px 40px;
+}
+
+.nd-arpCompare .nd-arpCompareForm{
+    width: 100%;
+    float: left;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.nd-tableIcons table tr td:first-child span,
+.nd-table3.arp-resources .name span,
+.nd-table3.arp-products .name span{
+    width: 18px;
+    height: 18px;
+    position: relative;
+    border-radius: 2px;
+    display: inline-block;
+    position: relative;
+    top: 3px;
+    margin-right: 3px;
+}
+
+.arp-products.nd-table3 table .accountRow .data .accName,
+.arp-resources.nd-table3 table .accountRow .data .accName{
+    max-width: 200px;
+}
+
+.nd-tableIcons table tr td:first-child span,
+.nd-table3.arp-resources .name a > span,
+.nd-table3.arp-resources .name > span,
+.nd-table3.arp-products .name a > span{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.nd-tableIcons table tr td:first-child a,
+.nd-table3.arp-resources .name,
+.nd-table3.arp-products .name a{
+    position: relative;
+    line-height: normal;
+    padding-left: 25px;
+    display: block;
+}
+
+.nd-table3.arp-resources .name a{
+    padding-left: 0;
+    line-height: normal;
+    display: block;
+}
+
+.nd-table3.arp-resources .name{
+    padding: 13px 15px 13px 40px;
+}
+
+.nd-table3.arp-resources .name a > span,
+.nd-table3.arp-resources .name > span{
+    left: 15px;
+    top: 13px;
+}
+
+.nd-tableIcons table tr td:first-child span:before,
+.nd-tableIcons table tr td:first-child span:before,
+.nd-table3.arp-resources .name span:before,
+.nd-table3.arp-products .name span:before{
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border-radius: 2px;
+    content: "";
+    left: 0;
+}
+
+.nd-tableIcons table tr td:first-child span.Amazon_EC2_Container_Service:before,
+.nd-table3.arp-resources .name span.Amazon_EC2_Container_Service:before,
+.nd-table3.arp-products .name span.Amazon_EC2_Container_Service:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/Amazon-Elastic-Container-Service_light-bg.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.Amazon_Elastic_Compute_Cloud:before,
+.nd-table3.arp-resources .name span.Amazon_Elastic_Compute_Cloud:before,
+.nd-table3.arp-products .name span.Amazon_Elastic_Compute_Cloud:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/Amazon-EC2.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.AWS_Systems_Manager:before,
+.nd-table3.arp-resources .name span.AWS_Systems_Manager:before,
+.nd-table3.arp-products .name span.AWS_Systems_Manager:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/AWS-Systems-Manager.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.Amazon_Cognito:before,
+.nd-table3.arp-resources .name span.Amazon_Cognito:before,
+.nd-table3.arp-products .name span.Amazon_Cognito:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/Amazon-Cognito.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.AWS_Amplify:before,
+.nd-table3.arp-resources .name span.AWS_Amplify:before,
+.nd-table3.arp-products .name span.AWS_Amplify:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/AWS-Amplify.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.AmazonCloudWatch:before,
+.nd-table3.arp-resources .name span.AmazonCloudWatch:before,
+.nd-table3.arp-products .name span.AmazonCloudWatch:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/Amazon-CloudWatch.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.Amazon_Simple_Storage_Service:before,
+.nd-table3.arp-resources .name span.Amazon_Simple_Storage_Service:before,
+.nd-table3.arp-products .name span.Amazon_Simple_Storage_Service:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/s3.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.AWS_Lambda:before,
+.nd-table3.arp-resources .name span.AWS_Lambda:before,
+.nd-table3.arp-products .name span.AWS_Lambda:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/AWS-Lambda.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.AWS_Key_Management_Service:before,
+.nd-table3.arp-resources .name span.AWS_Key_Management_Service:before,
+.nd-table3.arp-products .name span.AWS_Key_Management_Service:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/AWS-Key-Management-Service.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.Amazon_Relational_Database_Service:before,
+.nd-table3.arp-resources .name span.Amazon_Relational_Database_Service:before,
+.nd-table3.arp-products .name span.Amazon_Relational_Database_Service:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/Amazon-RDS.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.Amazon_Elastic_MapReduce:before,
+.nd-table3.arp-resources .name span.Amazon_Elastic_MapReduce:before,
+.nd-table3.arp-products .name span.Amazon_Elastic_MapReduce:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/Amazon-EMR.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.Amazon_SG:before,
+.nd-table3.arp-resources .name span.Amazon_SG:before,
+.nd-table3.arp-products .name span.Amazon_SG:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/AWS-Storage-Gateway.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.Amazon_Virtual_Private_Cloud:before,
+.nd-table3.arp-resources .name span.Amazon_Virtual_Private_Cloud:before,
+.nd-table3.arp-products .name span.Amazon_Virtual_Private_Cloud:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/Amazon-VPC.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.Amazon_DynamoDB:before,
+.nd-table3.arp-resources .name span.Amazon_DynamoDB:before,
+.nd-table3.arp-products .name span.Amazon_DynamoDB:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/Amazon-DynamoDB.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.Amazon_EC2_Container_Registry_ECR:before,
+.nd-table3.arp-resources .name span.Amazon_EC2_Container_Registry_ECR:before,
+.nd-table3.arp-products .name span.Amazon_EC2_Container_Registry_ECR:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/Amazon-EC2-Container-Registry.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.Amazon_Simple_Notification_Service:before,
+.nd-table3.arp-resources .name span.Amazon_Simple_Notification_Service:before,
+.nd-table3.arp-products .name span.Amazon_Simple_Notification_Service:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/Amazon-Simple-Notification-Service-SNS.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.Amazon_Elastic_File_System:before,
+.nd-table3.arp-resources .name span.Amazon_Elastic_File_System:before,
+.nd-table3.arp-products .name span.Amazon_Elastic_File_System:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/Amazon-Elastic-File-System_EFS.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.AWS_WAF:before,
+.nd-table3.arp-resources .name span.AWS_WAF:before,
+.nd-table3.arp-products .name span.AWS_WAF:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/AWS-WAF.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.Amazon_FSx:before,
+.nd-table3.arp-resources .name span.Amazon_FSx:before,
+.nd-table3.arp-products .name span.Amazon_FSx:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/Amazon-FSx.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.Amazon_Chime_Dialin:before,
+.nd-table3.arp-resources .name span.Amazon_Chime_Dialin:before,
+.nd-table3.arp-products .name span.Amazon_Chime_Dialin:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/Amazon-Chime.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.Amazon_Elastic_Container_Service_for_Kubernetes:before,
+.nd-table3.arp-resources .name span.Amazon_Elastic_Container_Service_for_Kubernetes:before,
+.nd-table3.arp-products .name span.Amazon_Elastic_Container_Service_for_Kubernetes:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/Amazon-Elastic-Container-Service-for-Kubernetes.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.Amazon_Route_53:before,
+.nd-table3.arp-resources .name span.Amazon_Route_53:before,
+.nd-table3.arp-products .name span.Amazon_Route_53:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/Amazon-Route-53.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.AWS_Directory_Service:before,
+.nd-table3.arp-resources .name span.AWS_Directory_Service:before,
+.nd-table3.arp-products .name span.AWS_Directory_Service:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/AWS-Directory-Service.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.Amazon_Simple_Queue_Service:before,
+.nd-table3.arp-resources .name span.Amazon_Simple_Queue_Service:before,
+.nd-table3.arp-products .name span.Amazon_Simple_Queue_Service:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/Amazon-Simple-Queue-Service-SQS.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.Amazon_API_Gateway:before,
+.nd-table3.arp-resources .name span.Amazon_API_Gateway:before,
+.nd-table3.arp-products .name span.Amazon_API_Gateway:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/Amazon-API-Gateway.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.Amazon_IAM:before,
+.nd-table3.arp-resources .name span.Amazon_IAM:before,
+.nd-table3.arp-products .name span.Amazon_IAM:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/AWS-Identity-and-Access-Management_IAM.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.Amazon_ElastiCache:before,
+.nd-table3.arp-resources .name span.Amazon_ElastiCache:before,
+.nd-table3.arp-products .name span.Amazon_ElastiCache:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/Amazon-ElastiCache.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.AWS_Transfer_for_SFTP:before,
+.nd-table3.arp-resources .name span.AWS_Transfer_for_SFTP:before,
+.nd-table3.arp-products .name span.AWS_Transfer_for_SFTP:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/AWS-Transfer-for-SFTP.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.AWS_CloudTrail:before,
+.nd-table3.arp-resources .name span.AWS_CloudTrail:before,
+.nd-table3.arp-products .name span.AWS_CloudTrail:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/AWS-CloudTrail.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.AWS_Glue:before,
+.nd-table3.arp-resources .name span.AWS_Glue:before,
+.nd-table3.arp-products .name span.AWS_Glue:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/AWS-Glue.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.Amazon_Elasticsearch_Service:before,
+.nd-table3.arp-resources .name span.Amazon_Elasticsearch_Service:before,
+.nd-table3.arp-products .name span.Amazon_Elasticsearch_Service:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/Amazon-Elasticsearch-Service.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.Amazon_CloudFront:before,
+.nd-table3.arp-resources .name span.Amazon_CloudFront:before,
+.nd-table3.arp-products .name span.Amazon_CloudFront:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/Amazon-CloudFront.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.Amazon_QuickSight:before,
+.nd-table3.arp-resources .name span.Amazon_QuickSight:before,
+.nd-table3.arp-products .name span.Amazon_QuickSight:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/Amazon-QuickSight.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.AWS_Data_Pipeline:before,
+.nd-table3.arp-resources .name span.AWS_Data_Pipeline:before,
+.nd-table3.arp-products .name span.AWS_Data_Pipeline:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/AWS-Data-Pipeline.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child .amazonIcon:before,
+.nd-tableIcons table tr td:first-child span.AWS_Support_Business:before,
+.nd-table3.arp-resources .name .amazonIcon:before,
+.nd-table3.arp-resources .name span.AWS_Support_Business:before,
+.nd-table3.arp-products .name span.AWS_Support_Business:before,
+.nd-tableIcons table tr td:first-child span.AWS_Premium_Business_Support:before,
+.nd-table3.arp-resources .name span.AWS_Premium_Business_Support:before,
+.nd-table3.arp-products .name span.AWS_Premium_Business_Support:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/AWS_default.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.Amazon_Kinesis:before,
+.nd-table3.arp-resources .name span.Amazon_Kinesis:before,
+.nd-table3.arp-products .name span.Amazon_Kinesis:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/Amazon-Kinesis.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.Tax_of_type_United_States:before,
+.nd-table3.arp-resources .name span.Tax_of_type_United_States:before,
+.nd-table3.arp-products .name span.Tax_of_type_United_States:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/AWS_default.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.AWS_Cost_Explorer:before,
+.nd-table3.arp-resources .name span.AWS_Cost_Explorer:before,
+.nd-table3.arp-products .name span.AWS_Cost_Explorer:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/AWS-Cost-Explorer.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.AWS_Service_Catalog:before,
+.nd-table3.arp-resources .name span.AWS_Service_Catalog:before,
+.nd-table3.arp-products .name span.AWS_Service_Catalog:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/AWS-Service-Catalog.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.Amazon_Redshift:before,
+.nd-table3.arp-resources .name span.Amazon_Redshift:before,
+.nd-table3.arp-products .name span.Amazon_Redshift:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/Amazon-Redshift.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.CodeBuild:before,
+.nd-table3.arp-resources .name span.CodeBuild:before,
+.nd-table3.arp-products .name span.CodeBuild:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/AWS-CodeBuild.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.AWS_Elemental_MediaStore:before,
+.nd-table3.arp-resources .name span.AWS_Elemental_MediaStore:before,
+.nd-table3.arp-products .name span.AWS_Elemental_MediaStore:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/AWS-Elemental-MediaStore.png);
+    background-size: 18px;
+}
+
+.nd-table3.arp-resources .name span.AWS_Global_Accelerator:before,
+.nd-table3.arp-products .name span.AWS_Global_Accelerator:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/AWS-Global-Accelerator.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.AWS_Secrets_Manager:before,
+.nd-table3.arp-resources .name span.AWS_Secrets_Manager:before,
+.nd-table3.arp-products .name span.AWS_Secrets_Manager:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/AWS-Secrets-Manager.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.AWS_X-Ray:before,
+.nd-table3.arp-resources .name span.AWS_X-Ray:before,
+.nd-table3.arp-products .name span.AWS_X-Ray:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/AWS-X-Ray.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.Amazon_Athena:before,
+.nd-table3.arp-resources .name span.Amazon_Athena:before,
+.nd-table3.arp-products .name span.Amazon_Athena:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/Amazon-Athena.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.Amazon_Machine_Learning:before,
+.nd-table3.arp-resources .name span.Amazon_Machine_Learning:before,
+.nd-table3.arp-products .name span.Amazon_Machine_Learning:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/Machine-Learning.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.AWS_Cloud_Map:before,
+.nd-table3.arp-resources .name span.AWS_Cloud_Map:before,
+.nd-table3.arp-products .name span.AWS_Cloud_Map:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/AWS-Cloud-Map.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.AWS_CodePipeline:before,
+.nd-table3.arp-resources .name span.AWS_CodePipeline:before,
+.nd-table3.arp-products .name span.AWS_CodePipeline:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/AWS-CodePipeline.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.AWS_Config:before,
+.nd-table3.arp-resources .name span.AWS_Config:before,
+.nd-table3.arp-products .name span.AWS_Config:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/AWS-Config.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.AWS_Data_Transfer:before,
+.nd-table3.arp-resources .name span.AWS_Data_Transfer:before,
+.nd-table3.arp-products .name span.AWS_Data_Transfer:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/AWS_default.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.Amazon_SageMaker:before,
+.nd-table3.arp-resources .name span.Amazon_SageMaker:before,
+.nd-table3.arp-products .name span.Amazon_SageMaker:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/Amazon-SageMaker_light-bg.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.AWS_Database_Migration_Service:before,
+.nd-table3.arp-resources .name span.AWS_Database_Migration_Service:before,
+.nd-table3.arp-products .name span.AWS_Database_Migration_Service:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/Amazon-SageMaker_light-bg.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.Amazon_SageMaker:before,
+.nd-table3.arp-resources .name span.Amazon_SageMaker:before,
+.nd-table3.arp-products .name span.Amazon_SageMaker:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/AWS-Database-Migration-Service.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.AWS_Step_Functions:before,
+.nd-table3.arp-resources .name span.AWS_Step_Functions:before,
+.nd-table3.arp-products .name span.AWS_Step_Functions:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/AWS-Step-Functions.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.AWS_IoT:before,
+.nd-table3.arp-resources .name span.AWS_IoT:before,
+.nd-table3.arp-products .name span.AWS_IoT:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/AWS-IoT-1-Click.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.Amazon_Comprehend:before,
+.nd-table3.arp-resources .name span.Amazon_Comprehend:before,
+.nd-table3.arp-products .name span.Amazon_Comprehend:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/Amazon-Comprehend.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.AWS_CodeCommit:before,
+.nd-table3.arp-resources .name span.AWS_CodeCommit:before,
+.nd-table3.arp-products .name span.AWS_CodeCommit:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/AWS-CodeCommit.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.AWS_Elemental_MediaLive:before,
+.nd-table3.arp-resources .name span.AWS_Elemental_MediaLive:before,
+.nd-table3.arp-products .name span.AWS_Elemental_MediaLive:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/AWS-Elemental-MediaLive.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.AWS_Elemental_MediaPackage:before,
+.nd-table3.arp-resources .name span.AWS_Elemental_MediaPackage:before,
+.nd-table3.arp-products .name span.AWS_Elemental_MediaPackage:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/AWS-Elemental-MediaPackage.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.Amazon_Polly:before,
+.nd-table3.arp-resources .name span.Amazon_Polly:before,
+.nd-table3.arp-products .name span.Amazon_Polly:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/Amazon-Polly.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.Amazon_Simple_Email_Service:before,
+.nd-table3.arp-resources .name span.Amazon_Simple_Email_Service:before,
+.nd-table3.arp-products .name span.Amazon_Simple_Email_Service:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/Amazon-Simple-Email-Service-SES.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.Amazon_Registrar:before,
+.nd-table3.arp-resources .name span.Amazon_Registrar:before,
+.nd-table3.arp-products .name span.Amazon_Registrar:before,
+.nd-tableIcons table tr td:first-child span.APN_Annual_Program_Fee:before,
+.nd-table3.arp-resources .name span.APN_Annual_Program_Fee:before,
+.nd-table3.arp-products .name span.APN_Annual_Program_Fee:before,
+.nd-tableIcons table tr td:first-child span.Tax:before,
+.nd-table3.arp-resources .name span.Tax:before,
+.nd-table3.arp-products .name span.Tax:before,
+.nd-tableIcons table tr td:first-child span.default:before,
+.nd-table3.arp-resources .name span.default:before,
+.nd-table3.arp-products .name span.default:before,
+.nd-tableIcons table tr td:first-child span.AWS_Support_Business:before,
+.nd-table3.arp-resources .name span.AWS_Support_Business:before,
+.nd-table3.arp-products .name span.AWS_Support_Business:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/AWS_default.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.Amazon_Chime:before,
+.nd-table3.arp-products .name span.Amazon_Chime:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/Amazon-Chime.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.Amazon_Glacier:before,
+.nd-table3.arp-products .name span.Amazon_Glacier:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/Amazon-S3-Glacier.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.Amazon_GuardDuty:before,
+.nd-table3.arp-products .name span.Amazon_GuardDuty:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/Amazon-GuardDuty.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.Amazon_Inspector:before,
+.nd-table3.arp-products .name span.Amazon_Inspector:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/Amazon-Inspector.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.Amazon_MQ:before,
+.nd-table3.arp-products .name span.Amazon_MQ:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/Amazon-MQ.png);
+    background-size: 18px;
+}
+
+.nd-tableIcons table tr td:first-child span.Amazon_SimpleDB:before,
+.nd-table3.arp-products .name span.Amazon_SimpleDB:before{
+    background-position: 18px 18px;
+    background: url(../assets/images/aws-icons/AWS_default.png);
+    background-size: 18px;
+}
+
+.nd-arp .nd-table3{
+    float: left;
+}
+
+.nd-arp .nd-paginationT .nd-button.active{
+    border-color: #0071EA;
+    color: #0071EA;
+    background: rgba(0, 113, 234, 0.1);
+    font-weight: bold;
+}
+
+.arg-tags table .totalRow > td:first-child,
+.arg-tags table tr td:nth-of-type(2),
+.arg-tags table tr th:nth-of-type(2){
+    min-width: auto;
+}
+
+.nd-arp .arg-tags table tr th.blueCol .data{
+    background: rgba(0, 113, 234, 0.07);
+    border-top: 2px solid #0071EA;
+}
+
+.nd-arp .arg-tags .freezeCol table tr th:first-child,
+.nd-arp .arg-tags .freezeCol table tr td:first-child{
+    position: initial;
+}
+
+.nd-arp .arg-tags table tr td.blueCol{
+    background: rgba(0, 113, 234, 0.07);
+}
+
+.nd-arp .nd-paginationT .nd-button{
+    margin-left: 1px;
+    line-height: 30px;
+}
+
+.arg-tags .arg-tags tr{
+    cursor: default;
+}
+
+.arg-tags tr .arp-tags-sub .nd-table2 .title a{
+    float: right;
+}
+
+.arg-tags tr .arp-tags-sub .nd-table2 .title a svg{
+    visibility: visible;
+}
+
+.arg-tags tr .arp-tags-sub .nd-table2 .title a:hover svg{
+    fill: #1C2B39;
+}
+
+.arg-tags tr .arp-tags-sub .nd-table2 .nd-paginationT.bottom{
+    background: transparent;
+    margin-bottom: 12px;
+}
+
+.arg-tags tr .arp-tags-sub .nd-table2 .title{
+    position: initial;
+    color: #1C2B39;
+    padding: 0;
+    background: transparent;
+}
+
+.arg-tags tr .arp-tags-sub .nd-table2{
+    padding: 20px;
+    border: none;
+    margin-top: 0;
+}
+
+.arg-tags tr .arp-tags-sub .data-tag-double{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.arg-tags tr .arp-tags-sub{
+    border-top: none;
+    padding: 13px 0 13px 0;
+}
+.arg-tags tr .arp-tags-sub .nd-paginationT .nd-caret{
+    z-index: 1;
+}
+
+.arg-tags tr .arp-tags-sub .nd-paginationT .nd-input{
+    background: #fff;
+}
+
+.arg-tags tr .arp-tags-sub tr td{
+    color: #1C2B39;
+}
+
+.arg-tags .clickableRows tr:hover .arp-tags-sub,
+.arg-tags tr:hover .arp-tags-sub td{
+    box-shadow: none;
+    background: transparent;
+}
+
+.nd-arp .arg-tags tr .arp-tags-sub{
+    padding: 0;
+}
+
+.nd-arp .arg-tags table tr .data svg{
+    fill: #95a0af;
+    position: relative;
+    top: 1px;
+    margin-left: 2px;
+    visibility: hidden;
+}
+
+.nd-arp .arg-tags table tr:hover .data svg {
+    visibility: visible;
+}
+
+.nd-arp .arg-tags table tr:hover .data .status svg{
+    fill: #1C2B39;
+}
+
+.nd-arp .arg-tags table tr td:first-child .data svg,
+.nd-arp .arg-tags table tr .data .status svg{
+    visibility: visible;
+}
+
+/*.nd-table3.arp-products .name span.ec2:before{*/
+/*background: url(../img/aws-icons/Amazon-EC2.png);*/
+/*background-size: cover;*/
+/*}*/
+
+/*.nd-table3.arp-products .name span.rds:before{*/
+/*background: url(../img/aws-icons/Amazon-RDS.png);*/
+/*background-size: cover;*/
+/*}*/
+
+/*.nd-table3.arp-products .name span.s3:before{*/
+/*background: url(../img/aws-icons/s3.png);*/
+/*background-size: cover;*/
+/*}*/
+
+.nd-arpCm .nd-table2 .nd-table2Actions .color-grey svg{
+    top: 1px;
+}
+
+.nd-tableTabs{
+    padding: 0;
+    margin-top: 10px;
+}
+
+.nd-arpCm .nd-table2 .trend{
+    width: 9px;
+    height: 9px;
+    border-radius: 10px;
+    display: inline-block;
+    background: #f95b5b;
+    margin-right: 10px;
+}
+
+.arpCM .nd-table2 .nd-table2-wrapper .nd-paginationT .pagination{
+    margin-right: 0;
+}
+
+.arpCM .nd-table2 .nd-table2-wrapper .nd-paginationT{
+    margin-bottom: 10px;
+    position: initial;
+    float: right;
+    margin-top: 5px;
+    padding-right: 0;
+}
+
+.arpCM .noData{
+    padding: 20px;
+    border: 1px solid rgba(213, 217, 223, 0.7);
+    border-radius: 4px;
+    margin: 5px 0;
+}
+
+.arpCM .noData img,
+.arpCM .noData svg{
+    width: 30px;
+    margin-right: 10px;
+}
+
+.arpCM .noData p,
+.arpCM .noData svg{
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+.arpCM .nd-table2 .nd-table2-wrapper .nd-paginationT.collapse{
+    display: none;
+}
+
+.nd-arpCm .nd-table2 tr td b{
+    font-weight: 500;
+}
+
+.nd-arpCm .nd-table2 .trend.increase{
+    background: #f95b5b;
+}
+
+.nd-arpCm .nd-table2 .trend.decrease{
+    background: #29BEB9;
+}
+
+.nd-arpCm .nd-rightContent{
+    padding-bottom: 15px;
+}
+
+.nd-tableTabs li a.active{
+    background: rgba(0, 113, 234, 0.12);
+    color: rgba(0, 113, 234, 1);
+    border-color: rgba(0, 113, 234, .3);
+    font-weight: bold;
+}
+
+.nd-tableTabs li a{
+    border-radius: 20px;
+    font-size: 13px;
+    line-height: 32px;
+    padding: 0 14px;
+    height: auto;
+}
+
+.nd-tableTabs li{
+    display: inline-block;
+    list-style: none;
+}
+
+.nd-filtersBlock .DateRangePicker{
+    width: 100%;
+}
+
+.nd-sorters.datepickers .DateInput_input,
+.nd-filtersBlock .DateInput_input,
+.nd-filtersBlock .DateInput{
+    background: transparent;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.nd-sorters.datepickers .DateRangePickerInput__withBorder,
+.nd-filtersBlock .DateRangePickerInput__withBorder{
+    font-size: 13px;
+    border: none;
+    background: #eff3f6;
+    height: 38px;
+    line-height: 36px;
+    width: 100%;
+    border-radius: 4px;
+    padding-left: 28px;
+}
+
+.nd-sorters.datepickers .DateInput_input__focused,
+.nd-filtersBlock .DateInput_input__focused{
+    border-bottom: 2px solid #0071EA;
+}
+
+.nd-sorters.datepickers .CalendarDay__selected,
+.nd-filtersBlock .CalendarDay__selected,
+.nd-sorters.datepickers .CalendarDay__selected:active,
+.nd-filtersBlock .CalendarDay__selected:active,
+.nd-sorters.datepickers .CalendarDay__selected:hover,
+.nd-filtersBlock .CalendarDay__selected:hover {
+    background: #0061CC;
+    border: 1px double #0061CC;
+    color: #fff;
+}
+
+.nd-sorters.datepickers .DayPickerKeyboardShortcuts_show__bottomRight:before ,
+.nd-filtersBlock .DayPickerKeyboardShortcuts_show__bottomRight:before {
+    border-right: 33px solid #0071EA;
+}
+
+.nd-sorters.datepickers .DayPickerNavigation_button__horizontalDefault svg{
+    left: 13px;
+    top: 10px;
+}
+
+.nd-sorters.datepickers .DayPickerNavigation_button__horizontalDefault,
+.nd-filtersBlock .DayPickerNavigation_button__horizontalDefault{
+    height: 40px;
+    width: 44px;
+}
+
+.nd-sorters.datepickers .CalendarDay__selected_span,
+.nd-filtersBlock .CalendarDay__selected_span {
+    background: rgba(0, 113, 234, 0.92);
+    border: 1px double #0071EA;
+    color: #fff;
+}
+
+.nd-sorters.datepickers .CalendarDay__selected_span:active,
+.nd-filtersBlock .CalendarDay__selected_span:active,
+.nd-sorters.datepickers .CalendarDay__selected_span:hover,
+.nd-filtersBlock .CalendarDay__selected_span:hover{
+    background: #0061CC;
+    border: 1px double #0061CC;
+}
+
+.nd-sorters.datepickers .DateRangePicker_picker button,
+.nd-filtersBlock .DateRangePicker_picker button{
+    font-size: 13px;
+    height: auto;
+    line-height: 18px;
+    border-radius: 3px;
+    padding: 5px 12px;
+    background: #f5f8fa;
+    transition: all .10s ease-in-out 0s;
+    -webkit-transition: all .10s ease-in-out 0s;
+    -moz-transition: all .10s ease-in-out 0s;
+    border: 1px solid rgb(204, 207, 210);
+    margin-bottom: 15px;
+    margin-left: 5px;
+}
+
+.nd-sorters.datepickers .DateRangePicker_picker button:hover,
+.nd-filtersBlock .DateRangePicker_picker button:hover,
+.nd-sorters.datepickers .DateRangePicker_picker button:active,
+.nd-filtersBlock .DateRangePicker_picker button:active {
+    border-color: #ccc;
+    background: #e7ebed;
+}
+
+.nd-sorters.datepickers .DateRangePicker_picker button.selected,
+.nd-filtersBlock .DateRangePicker_picker button.selected{
+    background: rgba(0, 113, 234, 0.92);
+    border: 1px double #0071EA;
+    color: #fff;
+}
+
+.nd-sorters.datepickers .DateRangePicker_picker button.selected:hover,
+.nd-filtersBlock .DateRangePicker_picker button.selected:hover{
+    background: #0061CC;
+    border: 1px double #0061CC;
+}
+
+.nd-sorters.datepickers .DateRangePicker_picker .DayPickerKeyboardShortcuts_buttonReset:hover,
+.nd-filtersBlock .DateRangePicker_picker .DayPickerKeyboardShortcuts_buttonReset:hover,
+.nd-sorters.datepickers .DateRangePicker_picker .DayPickerKeyboardShortcuts_buttonReset,
+.nd-filtersBlock .DateRangePicker_picker .DayPickerKeyboardShortcuts_buttonReset{
+    margin: 0 !important;
+    background: transparent;
+    border: none;
+}
+
+.nd-sorters.datepickers .DateRangePicker_picker div button:first-child,
+.nd-filtersBlock .DateRangePicker_picker div button:first-child{
+    margin-left: 23px;
+    margin-bottom: 20px;
+}
+
+.nd-arp .freezeCol table{
+    border-collapse: collapse;
+}
+
+.nd-arp .freezeCol table tr th:first-child,
+.nd-arp .freezeCol table tr td:first-child{
+    position: -webkit-sticky;
+    position: sticky;
+    left: 0;
+}
+
+/*.nd-arp .nd-table3 table tr td,
+.nd-arp .nd-table2 table tr td {
+    border-top: none;
+}*/
+
+.nd-arp .freezeCol table tr td:first-child{
+    border-top: none;
+}
+
+.nd-table4 .clickableRows table .subRow{
+    cursor: default;
+}
+
+.nd-table4 .clickableRows .subRow h3 a{
+    float: right;
+}
+
+.nd-table4 .clickableRows .subRow h3 a:hover svg{
+    fill: #1C2B39;
+}
+
+.nd-table4 .clickableRows .subRow h3 a svg{
+    width: 12px;
+    fill: #727d8c;
+}
+
+.nd-table4 .clickableRows .subRow h3{
+    padding: 0 25px;
+    font-weight: bold;
+    font-size: 17px;
+    width: 100%;
+    float: left;
+}
+
+.nd-table4 .subRow table tr th .data{
+    border-top: none;
+}
+
+.nd-table4 .clickableRows .subRow .nd-table2{
+    border: none;
+    margin-top: 0;
+    padding-top: 0px;
+    padding-bottom: 5px;
+    margin-bottom: 0;
+}
+
+.nd-table4 .clickableRows .subRow > td{
+    padding: 0 15px 15px;
+}
+
+.nd-table4 .clickableRows tr:hover .subRow tr td,
+.nd-table4 .clickableRows .subRow tr:hover td{
+    box-shadow: none;
+    background: transparent;
+}
+
+.nd-table4 .clickableRows .subRow > td .subRow-wrapper{
+    background: #f5f8fa;
+    width: 100%;
+    margin-top: 5px;
+    float: left;
+}
+
+.nd-table4 .clickableRows table .subRow:hover td{
+    box-shadow: none;
+}
+
+.nd-table4 table tr td .data,
+.nd-arp .freezeCol table tr td:first-child .data{
+    border-top: 1px solid rgba(213, 217, 223, 0.7);
+}
+
+.nd-table4 table tr td:first-child .data,
+.nd-table4 table tr th:first-child .data{
+    padding-left: 20px;
+}
+
+.nd-table4 table .subRow td:first-child .data,
+.nd-table4 table .subRow th:first-child .data{
+    padding-left: 10px;
+}
+
+.nd-arp .freezeCol table tr td{
+    border-top: 1px solid rgba(213, 217, 223, 0.7);
+}
+
+.nd-arp .arp-accounts table tr .name{
+    min-width: 200px;
+    max-width: 200px;
+}
+
+.nd-arp .arp-regions table tr .name{
+    min-width: 150px;
+    max-width: 150px;
+}
+
+.nd-arp .arg-tags table td .data{
+    min-width: initial;
+}
+
+.nd-arp .arg-tags table tr td:nth-of-type(2){
+    font-weight: normal;
+}
+
+.nd-arp .arg-tags table td{
+    vertical-align: top;
+}
+
+.nd-arp .arg-tags table tr .name{
+    min-width: 220px;
+    max-width: 220px;
+}
+
+.nd-arp .arp-resources table tr .name{
+    min-width: 230px;
+    max-width: 230px;
+}
+
+.nd-arp .arp-resources table tr .name a > svg{
+    visibility: visible;
+    width: 14px;
+    height: 14px;
+}
+
+.nd-arp .arp-operations table tr .name{
+    min-width: 210px;
+    max-width: 210px;
+}
+
+.nd-arp .arp-products table tr .name{
+    min-width: 220px;
+    max-width: 220px;
+}
+
+.nd-arp .arp-usagetypes table tr .name{
+    min-width: 220px;
+    max-width: 220px;
+}
+
+.nd-arp .nd-table4 table tr .data,
+.nd-arp .nd-table3 table tr .data{
+    word-break: break-word;
+}
+
+/*under unu*/
+.nd-uResources .nd-table2 table th .data,
+.nd-uResources .nd-table2 table tr .data{
+    padding: 8px 5px 8px 5px;
+}
+
+.nd-uResources .nd-wrapper .nd-sorters .nd-switch{
+    top: 17px;
+}
+
+.nd-uResources .nd-table2 .overriddenText {
+    display: block;
+    color: #faa934;
+}
+
+.nd-uResources .nd-table2 .overriddenText svg {
+    fill: #faa934;
+    position: relative;
+    top: 1px;
+    width: 11px;
+    height: 11px;
+}
+
+.nd-uResources .nd-table2 .nd-tableTabs{
+    margin-top: 0;
+}
+
+.nd-uResources .cost-unused .nd-table2-wrapper{
+    padding-bottom: 50px;
+}
+
+.nd-table4 table tr .data svg{
+    visibility: visible;
+}
+
+.nd-table4 table tr .data.green,
+.nd-table4 table tr .data.red{
+    font-weight: 500;
+}
+
+.nd-table4 table tr > th:first-child, .nd-table4 table tr > td:first-child{
+    width: auto;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.nd-table4 tr {
+    cursor: pointer;
+}
+ 
+.nd-table4 .subRow tr{
+    cursor: default;
+}
+
+.nd-table4 table tr td:nth-of-type(2),
+.nd-table4 table tr th:nth-of-type(2){
+    background: transparent;
+}
+
+.nd-table4 table tr td .action .active svg{
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+}
+
+.nd-table4 table tr > th:first-child,
+.nd-table4 table tr > td:first-child{  
+    background: transparent;
+}
+
+.nd-table4 table tr th,
+.nd-table4 table tr td{ 
+    border-right: none;
+}
+
+.nd-table4 .clickableRows tr:hover td {
+    box-shadow: 10px 0px 10px rgba(0, 0, 0, .12);
+    -webkit-box-shadow: 10px 0px 10px rgba(0, 0, 0, .12);
+    -ms-box-shadow: 10px 0px 10px rgba(0, 0, 0, .12);
+    background: #fff;
+}
+
+.nd-table4 .clickableRows .subRow:hover td{
+    background: transparent;
+}
+
+.arpCM .cmActions li{
+    list-style: none;
+    display: inline-block;
+}
+
+.arpCM .nd-table2 .nd-table2-wrapper .data.detection{
+    padding-right: 230px;
+    word-break: break-word;
+}
+
+.arpCM .nd-table2 .nd-table2-wrapper .data.detection:hover{
+    background: #f5f8fa;
+}
+
+.arpCM .cmActions{
+    position: absolute;
+    right: 15px;
+    top: 4px;
+    display: none;
+}
+
+.arpCM .nd-table2 .nd-table2-wrapper .data.detection:hover .cmActions{
+    display: block;
+}
+
+.arpCM .cmActions li a{
+    padding: 0 10px;
+    line-height: 26px;
+    height: 28px;
+    font-size: 13px;
+    color: #727d8c;
+}
+
+.arpCM .cmActions li a:hover{
+    color: inherit;
+}
+
+.joblist-modal .nd-slidePopWrap{
+    max-width: 1020px;
+    right: -1020px;
+}
+
+.joblist-modal .nd-slidePopWrap hr{
+    display: block;
+    float: left;
+    width: 100%;
+}
+
+.joblist-modal .nd-table2-wrapper tr td .data{
+    padding: 13px 7px 13px 7px;
+}
+
+.joblist-modal .nd-note{
+    padding-left: 42px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.joblist-modal .nd-note .tag{
+    background: rgba(253, 189, 97, 0.25);
+    padding: 1px 5px;
+    border-radius: 3px;
+    margin: 2px 0;
+    display: inline-block;
+}
+
+.joblist-modal .nd-note .note-icon{
+    top: 10px;
+}
+
+.joblist-modal .nd-note.yellow svg{
+    fill: #FDBD61;
+}
+
+.nd-table2 .nd-table2Actions .nd-input{
+    border-radius: 30px;
+}
+
+.joblist-modal .nd-table2-wrapper tr td{
+    vertical-align: top;
+}
+
+.joblist-modal .nd-table2-wrapper tr td:first-child{
+    width: 30%;
+}
+
+.joblist-modal .nd-table2-wrapper tr td:nth-of-type(2){
+    width: 25%;
+}
+
+.joblist-modal .nd-slidePopWrap .nd-tableIcon.red svg {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+}
+
+.nd-table2 .nd-tableFiltersHead .nd-tableTabs{
+    display: table;
+    float: left;
+}
+
+.nd-table2 .nd-tableFiltersHead {
+    width: 100%;
+    float: left;
+}
+
+.nd-table2 .filters {
+    padding: 0;
+    float: right;
+}
+
+.nd-table2 .filters li .nd-dropdownLink { 
+    color: #727d8b;
+}
+.nd-table2 .filters li .nd-dropdownLink {
+    font-size: 13px;
+}
+
+.nd-table2 .filters li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.nd-slidePopWrap .nd-table {
+	margin-top: 20px;
+}
+.nd-slidePopWrap .nd-button.light.close {
+    margin-top: 50px;
+}
+
+@media (max-width: 1199px) {
+    .nd-cardInner {
+        border-right: none;
+        border-bottom: 1px solid #e2e7eb;
+        padding-bottom: 20px;
+    }
+
+    .nd-arp .nd-card .stat {
+        font-size: 26px;
+    }
+
+    .nd-arp .nd-card .nd-cardInner.third,
+    .nd-arp .nd-card .nd-cardInner.last {
+        border-bottom: none;
+        padding-bottom: 0;
+        padding-top: 10px;
+    }
+
+    .nd-arp .nd-tabs > .tabs {
+        min-width: 850px;
+        padding-top: 3px; 
+    }
+
+    .nd-arp .nd-tabs {
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 1120px) {
+    .joblist-modal .nd-slidePopWrap {
+        max-width: 900px;
+        right: -900px;
+    }
+}
+
+
+@media (max-width: 991px) {
+    .joblist-modal .nd-slidePopWrap {
+        max-width: 800px;
+        right: -800px;
+    }
+}

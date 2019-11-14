@@ -1957,7 +1957,6 @@ input[type="submit"]{
 .nd-button:active {
     color: #111;
     text-decoration: none;
-    outline: none;
 }
 
 .nd-button:active {
@@ -2217,6 +2216,9 @@ textarea.resize-v{
     right: 15px;
     top: 8px;
     z-index: 1;
+}
+.nd-select-group .nd-caret svg{
+	fill: #000000;
 }
 
 select.nd-input{
