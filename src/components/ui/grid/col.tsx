@@ -7,6 +7,7 @@ interface ColProps {
   md?: number;
   sm?: number;
   xs?: number;
+  span?: number;
 }
 
 const Row: React.FC<ColProps> = ({ className, children, lg, md, sm, xs }) => {

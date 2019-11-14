@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { Link, RouteComponentProps } from 'react-router-dom';
 import { Auth } from 'aws-amplify';
-import { Alert } from 'components/ui';
-import { Headline } from 'components/ui/typography';
+import { Alert, Headline } from 'components/ui';
 import NDataIcon from 'assets/img/ndata-icon.svg';
 import SignUpForm, { TFormValues } from './signup-form';
 import 'assets/css/auth.css';

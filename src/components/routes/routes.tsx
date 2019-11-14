@@ -8,37 +8,26 @@ const LoginPage = lazy(() => import('pages/login'));
 const SignUpPage = lazy(() => import('pages/signup'));
 const VerifyEmailPage = lazy(() => import('pages/verify-email'));
 const NotFoundPage = lazy(() => import('pages/not-found'));
+const SourcePage = lazy(() => import('pages/source'));
+const JobListPage = lazy(() => import('pages/job-list'));
 
 export type TAppProps = {
-  authenticated: boolean;
+  [key: string]: any;
 };
 
 interface AppRoutesProps {
   appProps?: TAppProps;
 }
 
-export const Routes: React.FC<AppRoutesProps> = ({ appProps }) => {
+export const Routes: React.FC<AppRoutesProps> = () => {
   return (
     <Switch>
-      <ProtectedRoute exact path="/" component={HomePage} appProps={appProps} />
-      <PublicRoute
-        exact
-        path="/login"
-        component={LoginPage}
-        appProps={appProps}
-      />
-      <PublicRoute
-        exact
-        path="/signup"
-        component={SignUpPage}
-        appProps={appProps}
-      />
-      <PublicRoute
-        exact
-        path="/verify-email"
-        component={VerifyEmailPage}
-        appProps={appProps}
-      />
+      <ProtectedRoute exact path="/" component={HomePage} />
+      <ProtectedRoute exact path="/source" component={SourcePage} />
+      <ProtectedRoute exact path="/job-list" component={JobListPage} />
+      <PublicRoute exact path="/login" component={LoginPage} />
+      <PublicRoute exact path="/signup" component={SignUpPage} />
+      <PublicRoute exact path="/verify-email" component={VerifyEmailPage} />
       {/* Finally, catch all unmatched routes */}
       <Route component={NotFoundPage} />
     </Switch>

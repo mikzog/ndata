@@ -1,9 +1,8 @@
 import _get from 'lodash/get';
 import React, { useState, useEffect } from 'react';
-import { Auth } from 'aws-amplify';
 import { RouteComponentProps } from 'react-router-dom';
-import { Alert } from 'components/ui';
-import { Headline } from 'components/ui/typography';
+import { Auth } from 'aws-amplify';
+import { Alert, Headline } from 'components/ui';
 import NDataIcon from 'assets/img/ndata-icon.svg';
 import VerifyEmailForm from './verify-email-form';
 import 'assets/css/auth.css';

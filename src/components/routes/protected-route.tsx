@@ -1,36 +1,33 @@
 import React from 'react';
 import { Route, Redirect, RouteProps } from 'react-router-dom';
 import { useAuth } from 'hooks/auth';
-import { TAppProps } from './routes';
+import Layout from 'components/layout';
 
 interface ProtectedRouteProps extends RouteProps {
   component: React.ComponentType<any>;
-  appProps?: TAppProps;
 }
 
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
-  component: C,
-  appProps,
+  component: PageComponent,
+  location,
   ...rest
 }) => {
   const { user } = useAuth();
 
+  if (!user) {
+    const loginPath = '/login';
+    const redirectPath = location
+      ? `${loginPath}?redirect=${location.pathname}${location.search}`
+      : loginPath;
+    return <Redirect to={redirectPath} />;
+  }
+
   return (
-    <div>
-      <header>HEADER GOES HERE!</header>
-      <Route
-        {...rest}
-        render={props =>
-          user ? (
-            <C {...props} {...appProps} />
-          ) : (
-            <Redirect
-              to={`/login?redirect=${props.location.pathname}${props.location.search}`}
-            />
-          )
-        }
-      />
-    </div>
+    <Layout>
+      <Route {...rest}>
+        <PageComponent />
+      </Route>
+    </Layout>
   );
 };
 

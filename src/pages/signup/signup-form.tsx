@@ -1,9 +1,8 @@
 import * as Yup from 'yup';
 import React from 'react';
 import { Formik, FormikProps } from 'formik';
-import { Button, Col, Row } from 'components/ui';
+import { Button, Col, Row, InputGroup } from 'components/ui';
 import { InputField } from 'components/form';
-import { InputGroup } from 'components/ui/input';
 import {
   CompanyIcon,
   EmailIcon,

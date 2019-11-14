@@ -1,3 +1,4 @@
+import cx from 'classnames';
 import React from 'react';
 
 interface RowProps {
@@ -5,7 +6,7 @@ interface RowProps {
 }
 
 const Row: React.FC<RowProps> = ({ className, children }) => {
-  return <div className={`nd-row ${className}`}>{children}</div>;
+  return <div className={cx(className, 'nd-row')}>{children}</div>;
 };
 
 export default Row;

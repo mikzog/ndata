@@ -1,0 +1,10 @@
+.PageLogoLoader {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.PageLogoLoader > img {
+  width: 10vmin;
+}

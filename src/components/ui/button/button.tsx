@@ -13,6 +13,7 @@ export interface ButtonProps {
 
 export const Button: React.FC<ButtonProps &
   React.HTMLProps<HTMLButtonElement>> = ({
+  className,
   children,
   onClick,
   color,
@@ -21,7 +22,7 @@ export const Button: React.FC<ButtonProps &
   full,
   disabled,
 }) => {
-  const buttonClasses = cx('nd-button', {
+  const buttonClasses = cx(className, 'nd-button', {
     blue: color === 'blue',
     grey: color === 'grey',
     teal: color === 'teal',

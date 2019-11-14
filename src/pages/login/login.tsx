@@ -16,7 +16,7 @@ type Error = {
 
 interface LoginProps extends RouteComponentProps {}
 
-export const Login: React.FC<LoginProps> = props => {
+export const Login: React.FC<LoginProps> = ({ location, history }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState();
   const { login } = useAuth();
@@ -28,46 +28,20 @@ export const Login: React.FC<LoginProps> = props => {
     setError(null);
     setLoading(true);
 
-    const user = await login(username, password).catch((error: Error) => {
-      if (error.code === 'UserNotConfirmedException') {
-        props.history.push('/verify-email?redirect=/', {
-          username,
-        });
-      } else {
-        setError(error);
-      }
-      setLoading(false);
-    });
-
-    // const user = await Auth.signIn(username, password).catch((error: Error) => {
-    //   if (error.code === 'UserNotConfirmedException') {
-    //     props.history.push('/verify-email?redirect=/', {
-    //       username,
-    //     });
-    //   } else {
-    //     setError(error);
-    //     setLoading(false);
-    //   }
-    // });
-
-    if (user) {
-      props.history.push('/');
-    }
-
-    // Auth.signIn(username, password)
-    //   .then((user: CognitoUser) => {
-    //     window.location.reload();
-    //   })
-    //   .catch((error: Error) => {
-    //     if (error.code === 'UserNotConfirmedException') {
-    //       props.history.push('/verify-email?redirect=/', {
-    //         username,
-    //       });
-    //     } else {
-    //       setError(error);
-    //     }
-    //     setLoading(false);
-    //   });
+    login(username, password)
+      .then(() => {
+        history.push('/');
+      })
+      .catch((error: Error) => {
+        if (error.code === 'UserNotConfirmedException') {
+          history.push('/verify-email?redirect=/', {
+            username,
+          });
+        } else {
+          setError(error);
+        }
+        setLoading(false);
+      });
   };
 
   return (
