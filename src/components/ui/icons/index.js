@@ -7,3 +7,4 @@ export { ReactComponent as KeyIcon } from './key-icon.svg';
 export { ReactComponent as LayerIcon } from './layer-icon.svg';
 export { ReactComponent as LockIcon } from './lock-icon.svg';
 export { ReactComponent as UserIcon } from './user-icon.svg';
+export { ReactComponent as CloseIcon } from './close-icon.svg';
