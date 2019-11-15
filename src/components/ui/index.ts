@@ -10,4 +10,6 @@ export { default as Row } from './grid/row';
 export { default as Container } from './grid/container';
 // Typography
 export { default as Headline } from './typography/headline';
+// Drawer
+export { default as Drawer } from './drawer';
 export default {};

@@ -1,0 +1,12 @@
+.nd-slidePop {
+  visibility: visible !important;
+  left: inherit !important;
+}
+
+.nd-slidePopWrap {
+  min-width: 100%;
+}
+
+.nd-slidePopWrap .header {
+  min-height: 74px;
+}
