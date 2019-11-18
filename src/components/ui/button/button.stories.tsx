@@ -69,10 +69,10 @@ const ButtonWithFull = () => (
     <Button full outline color="blue">
       Button
     </Button>
-    <Button full type="red">
+    <Button full color="red">
       Button
     </Button>
-    <Button full outline type="red">
+    <Button full outline color="red">
       Button
     </Button>
   </Group>

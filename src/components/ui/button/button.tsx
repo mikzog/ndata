@@ -9,6 +9,7 @@ export interface ButtonProps {
   outline?: boolean;
   loading?: boolean;
   full?: boolean;
+  type?: 'button' | 'submit' | 'reset' | undefined;
 }
 
 export const Button: React.FC<ButtonProps &
@@ -17,10 +18,12 @@ export const Button: React.FC<ButtonProps &
   children,
   onClick,
   color,
+  style,
   outline,
   loading,
-  full,
   disabled,
+  full,
+  type,
 }) => {
   const buttonClasses = cx(className, 'nd-button', {
     blue: color === 'blue',
@@ -33,7 +36,13 @@ export const Button: React.FC<ButtonProps &
   });
 
   let component = (
-    <button className={buttonClasses} onClick={onClick} disabled={disabled}>
+    <button
+      className={buttonClasses}
+      onClick={onClick}
+      disabled={disabled}
+      style={style}
+      type={type}
+    >
       {children}
       {loading && <Spin small />}
     </button>

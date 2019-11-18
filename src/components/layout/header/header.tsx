@@ -7,7 +7,7 @@ import {
   withRouter,
   RouteComponentProps,
 } from 'react-router-dom';
-import { useAuth } from 'hooks/auth';
+import { useAuth } from 'hooks/use-auth';
 import {
   DashboardIcon,
   LayerIcon,
@@ -55,7 +55,7 @@ export const Header: React.FC<Props> = ({ location }) => {
 
               <li className={cx({ active: isMatch('/job-list') })}>
                 <JobIcon />
-                <Link to="/job-list">Job List</Link>
+                <Link to="/jobs">Job List</Link>
               </li>
             </ul>
           </div>

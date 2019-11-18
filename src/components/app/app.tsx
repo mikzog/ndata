@@ -1,4 +1,5 @@
 import React, { Suspense } from 'react';
+import { hot } from 'react-hot-loader';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { PageLogoLoader } from 'components/ui/placeholder';
 import Routes from '../routes';
@@ -16,4 +17,4 @@ const App: React.FC = () => {
   );
 };
 
-export default App;
+export default process.env.NODE_ENV === 'development' ? hot(module)(App) : App;
