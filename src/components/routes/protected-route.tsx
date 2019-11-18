@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Redirect, RouteProps } from 'react-router-dom';
-import { useAuth } from 'hooks/auth';
+import { useAuth } from 'hooks/use-auth';
 import Layout from 'components/layout';
 
 interface ProtectedRouteProps extends RouteProps {

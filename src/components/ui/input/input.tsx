@@ -8,7 +8,13 @@ export interface InputProps extends React.HTMLProps<HTMLInputElement> {
   error?: string;
 }
 
-const Input: React.FC<InputProps> = ({ error, prefix, ...props }) => {
+const Input: React.FC<InputProps> = ({
+  label,
+  error,
+  prefix,
+  required,
+  ...props
+}) => {
   let component = (
     <input
       className={cx('nd-input', {
@@ -27,12 +33,20 @@ const Input: React.FC<InputProps> = ({ error, prefix, ...props }) => {
     );
   }
 
-  if (prefix) {
+  if (prefix || label) {
     component = (
       <div className="nd-input-group">
-        <div className="input-icon">
-          <i className="nd-svg-icon">{prefix}</i>
-        </div>
+        {label && (
+          <label className="nd-label">
+            {label}
+            {required && <span style={{ color: 'red' }}>{` `}*</span>}
+          </label>
+        )}
+        {prefix && (
+          <div className="input-icon">
+            <i className="nd-svg-icon">{prefix}</i>
+          </div>
+        )}
         {component}
       </div>
     );

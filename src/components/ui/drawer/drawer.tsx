@@ -5,7 +5,7 @@ import React, { Suspense } from 'react';
 import RcDrawer from 'rc-drawer';
 import { IDrawerProps } from 'rc-drawer/lib/IDrawerPropTypes';
 import { CloseIcon } from 'components/ui/icons';
-// import { Code } from 'react-content-loader';
+import { Code } from 'react-content-loader';
 import 'rc-drawer/assets/index.css';
 import './drawer.css';
 
@@ -60,7 +60,7 @@ class Drawer extends React.Component<DrawerProps> {
       <div className="nd-slidePopWrap">
         {this.renderHeader()}
         <div className="body" style={this.props.bodyStyle}>
-          {this.props.children}
+          <Suspense fallback={<Code />}>{this.props.children}</Suspense>
         </div>
       </div>
     );

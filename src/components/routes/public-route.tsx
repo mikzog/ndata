@@ -1,5 +1,5 @@
 import React from 'react';
-import { useAuth } from 'hooks/auth';
+import { useAuth } from 'hooks/use-auth';
 import { Route, Redirect, RouteProps } from 'react-router-dom';
 import { getQueryParam } from 'utils/route';
 

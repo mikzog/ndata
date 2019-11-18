@@ -3,15 +3,12 @@ import { useToggle } from 'hooks';
 import { Col, Row, Container, Button, Drawer } from 'components/ui';
 import { Content, PageHead, PageContent } from 'components/layout';
 import { NoData } from 'components/common';
+import CreateJob from './create-job';
 
 interface Props {}
 
 export const JobList: React.FC<Props> = () => {
   const [openDrawer, toggleDrawer] = useToggle(true);
-
-  const handleCloseDrawer = (value: any) => {
-    console.log({ value });
-  };
 
   return (
     <Content>
@@ -37,17 +34,17 @@ export const JobList: React.FC<Props> = () => {
                 title="No Job!"
                 description="You haven’t created any job yet! Please click on the button below to start a new job"
               >
-                <Button color="blue" className="light">
+                <Button color="blue" className="light" onClick={toggleDrawer}>
                   + Create New Job
                 </Button>
               </NoData>
             </PageContent>
             <Drawer
               open={openDrawer}
-              title={`"flights_data" Job`}
-              onClose={() => toggleDrawer()}
+              title="Create New Job"
+              onClose={toggleDrawer}
             >
-              Hello World!
+              <CreateJob />
             </Drawer>
           </Col>
         </Row>
