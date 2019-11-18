@@ -1,5 +1,7 @@
-import React from 'react';
-import CreateJobForm, { TFormValues } from './create-job-form';
+import React, { lazy } from 'react';
+import { TFormValues } from './create-job-form';
+
+const CreateJobForm = lazy(() => import('./create-job-form'));
 
 interface Props {}
 
