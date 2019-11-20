@@ -12,4 +12,6 @@ export { default as Container } from './grid/container';
 export { default as Headline } from './typography/headline';
 // Drawer
 export { default as Drawer } from './drawer';
+// Table
+export { default as Table } from './table';
 export default {};
