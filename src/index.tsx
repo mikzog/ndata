@@ -7,6 +7,7 @@ import awsconfig from './aws-exports.js';
 import * as serviceWorker from './serviceWorker';
 import 'assets/css/common.css';
 import 'assets/css/theme.css';
+import 'assets/css/solutions-architects.css';
 
 // Init Amplify config
 Amplify.configure(awsconfig);
