@@ -1,3 +1,9 @@
 .nd-pageHead__extra {
   float: right;
 }
+
+.nd-pageHead__extra button {
+  float: right;
+  margin-top: 8px;
+  margin-left: 10px;
+}

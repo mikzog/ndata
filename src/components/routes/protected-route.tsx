@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Redirect, RouteProps } from 'react-router-dom';
+import { Route, Redirect, RouteProps, useLocation } from 'react-router-dom';
 import { useAuth } from 'hooks/use-auth';
 import Layout from 'components/layout';
 
@@ -9,10 +9,10 @@ interface ProtectedRouteProps extends RouteProps {
 
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   component: PageComponent,
-  location,
-  ...rest
+  ...props
 }) => {
   const { user } = useAuth();
+  const location = useLocation();
 
   if (!user) {
     const loginPath = '/login';
@@ -24,7 +24,7 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
 
   return (
     <Layout>
-      <Route {...rest}>
+      <Route {...props}>
         <PageComponent />
       </Route>
     </Layout>

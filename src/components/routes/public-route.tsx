@@ -9,19 +9,19 @@ export interface PublicRouteProps extends RouteProps {
 
 export const PublicRoute: React.FC<PublicRouteProps> = ({
   component: PageComponent,
-  ...rest
+  ...props
 }) => {
   const { user } = useAuth();
   let redirectPath = '/';
 
-  if (rest.location) {
-    redirectPath = getQueryParam(rest.location.search, 'redirect') as string;
+  if (props.location) {
+    redirectPath = getQueryParam(props.location.search, 'redirect') as string;
   }
 
   if (user) return <Redirect to={redirectPath} />;
 
   return (
-    <Route {...rest}>
+    <Route {...props}>
       <PageComponent />
     </Route>
   );

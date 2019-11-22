@@ -10,7 +10,7 @@ import {
 import { useAuth } from 'hooks/use-auth';
 import {
   DashboardIcon,
-  LayerIcon,
+  LayerOutlineIcon,
   JobIcon,
   HelpIcon,
 } from 'components/ui/icons';
@@ -49,7 +49,7 @@ export const Header: React.FC<Props> = ({ location }) => {
               </li>
 
               <li className={cx({ active: isMatch('/source') })}>
-                <LayerIcon />
+                <LayerOutlineIcon />
                 <Link to="/source">Source NavigatorNavLink</Link>
               </li>
 
@@ -79,7 +79,11 @@ export const Header: React.FC<Props> = ({ location }) => {
                     type="button"
                   >
                     <div className="user-icon-container">
-                      <img alt="user-avatar" src={UserAvatarPNG} />
+                      <img
+                        alt="user-avatar"
+                        src={UserAvatarPNG}
+                        style={{ width: 'inherit' }}
+                      />
                     </div>
                     <div className="user-name">
                       {_get(user, 'attributes.email')}

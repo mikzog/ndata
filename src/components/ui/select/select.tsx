@@ -16,7 +16,6 @@ const Select: React.FC<SelectProps> = ({
   children,
   ...props
 }) => {
-  console.log({ props });
   let component = (
     <>
       <select
