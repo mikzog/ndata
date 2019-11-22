@@ -4,7 +4,7 @@ import './page-head.css';
 
 interface Props {
   headline: string;
-  subHeadline?: string;
+  subHeadline?: string | React.ReactElement;
   extra?: React.ReactElement;
 }
 

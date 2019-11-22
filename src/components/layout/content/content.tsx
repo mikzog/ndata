@@ -1,9 +1,12 @@
+import cx from 'classnames';
 import React from 'react';
 
-interface Props {}
+interface Props {
+  className?: string;
+}
 
-export const Content: React.FC<Props> = ({ children }) => {
-  return <div className="nd-content nd-rules-detail">{children}</div>;
+export const Content: React.FC<Props> = ({ className, children }) => {
+  return <div className={cx('nd-content', className)}>{children}</div>;
 };
 
 export default Content;

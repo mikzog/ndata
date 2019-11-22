@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, RouteComponentProps } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { useAuth } from 'hooks/use-auth';
 import { Alert } from 'components/ui';
 import { Headline } from 'components/ui/typography';
@@ -14,9 +14,10 @@ type Error = {
   name?: string;
 };
 
-interface LoginProps extends RouteComponentProps {}
+interface LoginProps {}
 
-export const Login: React.FC<LoginProps> = ({ location, history }) => {
+export const Login: React.FC<LoginProps> = () => {
+  const history = useHistory();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState();
   const { login } = useAuth();

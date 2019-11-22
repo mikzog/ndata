@@ -1,24 +1,24 @@
 import _get from 'lodash/get';
 import React, { useState, useEffect } from 'react';
-import { RouteComponentProps } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { Auth } from 'aws-amplify';
 import { Alert, Headline } from 'components/ui';
 import NDataIcon from 'assets/img/ndata-icon.svg';
 import VerifyEmailForm from './verify-email-form';
 import 'assets/css/auth.css';
 
-interface Props extends RouteComponentProps {}
+interface Props {}
 
 export const VerifyEmail: React.FC<Props> = props => {
+  const history = useHistory();
   const [loading, setLoading] = useState(false);
   const [resendLoading, setResendLoading] = useState(false);
   const [error, setError] = useState();
-  // const [success, setSuccess] = useState();
   const username = _get(props, 'location.state.username');
 
   useEffect(() => {
     if (!username) {
-      props.history.replace('/login');
+      history.replace('/login');
     }
   });
 
@@ -31,7 +31,7 @@ export const VerifyEmail: React.FC<Props> = props => {
       forceAliasCreation: true,
     })
       .then(() => {
-        props.history.replace('/login');
+        history.replace('/login');
       })
       .catch((err: Error) => {
         setError(err);

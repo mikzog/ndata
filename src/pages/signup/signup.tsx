@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
-import { Link, RouteComponentProps } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { Auth } from 'aws-amplify';
 import { Alert, Headline } from 'components/ui';
 import NDataIcon from 'assets/img/ndata-icon.svg';
 import SignUpForm, { TFormValues } from './signup-form';
 import 'assets/css/auth.css';
 
-interface SignUpProps extends RouteComponentProps {}
+interface SignUpProps {}
 
 export const SignUp: React.FC<SignUpProps> = props => {
+  const history = useHistory();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState();
 
@@ -29,9 +30,9 @@ export const SignUp: React.FC<SignUpProps> = props => {
     })
       .then(data => {
         if (data.userConfirmed) {
-          props.history.replace('/login');
+          history.replace('/login');
         } else {
-          props.history.replace('/verify-email');
+          history.replace('/verify-email');
         }
         setLoading(false);
       })
