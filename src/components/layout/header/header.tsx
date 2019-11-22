@@ -1,12 +1,7 @@
 import _get from 'lodash/get';
 import cx from 'classnames';
 import React, { useCallback } from 'react';
-import {
-  Link,
-  matchPath,
-  withRouter,
-  RouteComponentProps,
-} from 'react-router-dom';
+import { Link, matchPath, withRouter, useLocation } from 'react-router-dom';
 import { useAuth } from 'hooks/use-auth';
 import {
   DashboardIcon,
@@ -19,10 +14,11 @@ import NDataLogoSVG from 'assets/img/ndata-logo-white.svg';
 import UserAvatarPNG from 'assets/img/user-avatar.png';
 import 'assets/css/header.css';
 
-interface Props extends RouteComponentProps {}
+interface Props {}
 
-export const Header: React.FC<Props> = ({ location }) => {
+export const Header: React.FC<Props> = () => {
   const { user } = useAuth();
+  const location = useLocation();
   const isMatch = useCallback(
     (path: string, isExact: boolean = false) => {
       const match = matchPath(location.pathname, path);
@@ -53,7 +49,7 @@ export const Header: React.FC<Props> = ({ location }) => {
                 <Link to="/source">Source NavigatorNavLink</Link>
               </li>
 
-              <li className={cx({ active: isMatch('/job-list') })}>
+              <li className={cx({ active: isMatch('/jobs') })}>
                 <JobIcon />
                 <Link to="/jobs">Job List</Link>
               </li>
