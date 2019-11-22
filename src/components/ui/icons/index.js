@@ -9,3 +9,8 @@ export { ReactComponent as LockIcon } from './lock-icon.svg';
 export { ReactComponent as UserIcon } from './user-icon.svg';
 export { ReactComponent as CloseIcon } from './close-icon.svg';
 export { ReactComponent as ArrowDownIcon } from './arrow-down-icon.svg';
+export { ReactComponent as ArrowRightIcon } from './arrow-right-icon.svg';
+export { ReactComponent as PauseIcon } from './pause-icon.svg';
+export { ReactComponent as TrashIcon } from './trash-icon.svg';
+export { ReactComponent as ClockIcon } from './clock-icon.svg';
+export { ReactComponent as CodeIcon } from './code-icon.svg';

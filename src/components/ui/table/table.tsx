@@ -1,4 +1,3 @@
-import cx from 'classnames';
 import React from 'react';
 import RCTable from 'rc-table';
 import { TableProps as RCTableProps } from 'rc-table/lib/Table';

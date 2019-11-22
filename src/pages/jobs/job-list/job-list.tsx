@@ -1,3 +1,4 @@
+import _uniqueId from 'lodash/uniqueId';
 import React from 'react';
 import { useToggle } from 'hooks';
 import { Col, Row, Container, Button, Drawer } from 'components/ui';
@@ -8,6 +9,7 @@ import CreateJob from '../create-job';
 
 const MOCK_JOBS: TJob[] = [
   {
+    id: _uniqueId(),
     name: 'nOps-UAT-695292474035',
     source: '	https://s3.amazonaws.com/ndata/asha',
     status: 'pending',
@@ -15,6 +17,7 @@ const MOCK_JOBS: TJob[] = [
     updated_at: '2019/11/20 22:00:00',
   },
   {
+    id: _uniqueId(),
     name: 'flights_data',
     source: '	https://s3.amazonaws.com/ndata/asha',
     status: 'pending',
@@ -22,6 +25,7 @@ const MOCK_JOBS: TJob[] = [
     updated_at: '2019/11/20 22:00:00',
   },
   {
+    id: _uniqueId(),
     name: 'nData-users',
     source: '	https://s3.amazonaws.com/ndata/asha',
     status: 'pending',
@@ -31,6 +35,7 @@ const MOCK_JOBS: TJob[] = [
 ];
 
 export type TJob = {
+  id: string;
   name: string;
   source: string;
   status: 'pending' | 'running' | 'completed';
