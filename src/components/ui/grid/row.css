@@ -1,0 +1,19 @@
+.nd-row {
+  position: relative;
+  height: auto;
+  margin-right: 0;
+  margin-left: 0;
+  zoom: 1;
+  display: block;
+  box-sizing: border-box;
+}
+
+.nd-row::before,
+.nd-row::after {
+  display: table;
+  content: '' !important;
+}
+
+.nd-row::after {
+  clear: both;
+}

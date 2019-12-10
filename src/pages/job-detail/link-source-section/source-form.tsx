@@ -41,7 +41,6 @@ export const SourceForm: React.FC<Props> = ({ onSubmit, onCancel }) => {
     >
       {(props: FormikProps<TFormValues>) => (
         <form onSubmit={props.handleSubmit}>
-          <InputGroup title="Source Details" />
           <InputField
             required
             type="text"
