@@ -2,3 +2,8 @@
   margin-left: 4px;
   top: 2px;
 }
+
+.regualar-tabs a:hover {
+  cursor: pointer;
+  color: #c6c6c6;
+}
