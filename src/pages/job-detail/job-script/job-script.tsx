@@ -1,12 +1,13 @@
-import 'assets/css/script-editor.css';
 import React from 'react';
 import { ScriptIcon } from 'components/ui/icons';
+import Editor from 'components/editor';
+import './job-script.css';
 
 interface Props {}
 
 const JobScript: React.FC<Props> = () => {
   return (
-    <div id="nd-wrapper">
+    <div className="nd-wrapper">
       <div className="script-section-tab">
         <div className="nd-tabs">
           <ul className="tabs">
@@ -15,22 +16,11 @@ const JobScript: React.FC<Props> = () => {
                 <ScriptIcon /> Job script
               </a>
             </li>
-            <li className="">
-              <a href="#">
-                <span className="status-color red"></span> 12 errors in the job
-              </a>
-            </li>
           </ul>
         </div>
       </div>
       <div className="script-section">
-        <ol className="console-box">
-          <li>
-            <span className="monokai-lightgrey">
-              &lt;!-- Script document --&gt;
-            </span>
-          </li>
-        </ol>
+        <Editor />
       </div>
     </div>
   );

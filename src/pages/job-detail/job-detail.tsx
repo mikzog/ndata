@@ -1,4 +1,3 @@
-import 'assets/css/job-page-start-node.css';
 import _find from 'lodash/find';
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
@@ -9,6 +8,9 @@ import { NoData } from 'components/common';
 import MOCK_JOBS from 'mocks/job-list.json';
 import JobControl from './job-control';
 import JobScript from './job-script';
+
+import 'assets/css/job-page-start-node.css';
+import './job-detail.css';
 
 interface Props {}
 
@@ -62,6 +64,8 @@ const JobDetail: React.FC<Props> = props => {
               }
             />
           </Col>
+        </Row>
+        <Row>
           <Col xs={8}>
             <JobControl />
           </Col>

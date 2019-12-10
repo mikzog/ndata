@@ -3,12 +3,7 @@ import cx from 'classnames';
 import React, { useCallback } from 'react';
 import { Link, matchPath, withRouter, useLocation } from 'react-router-dom';
 import { useAuth } from 'hooks/use-auth';
-import {
-  DashboardIcon,
-  LayerOutlineIcon,
-  JobIcon,
-  HelpIcon,
-} from 'components/ui/icons';
+import { DashboardIcon, JobIcon, HelpIcon } from 'components/ui/icons';
 
 import NDataLogoSVG from 'assets/img/ndata-logo-white.svg';
 import UserAvatarPNG from 'assets/img/user-avatar.png';
@@ -42,11 +37,6 @@ export const Header: React.FC<Props> = () => {
               <li className={cx({ active: isMatch('/', true) })}>
                 <DashboardIcon />
                 <Link to="/">Dashboard</Link>
-              </li>
-
-              <li className={cx({ active: isMatch('/source') })}>
-                <LayerOutlineIcon />
-                <Link to="/source">Source NavigatorNavLink</Link>
               </li>
 
               <li className={cx({ active: isMatch('/jobs') })}>

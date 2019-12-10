@@ -1,5 +1,6 @@
 import cx from 'classnames';
 import React from 'react';
+import './col.css';
 
 interface ColProps {
   className?: string;
@@ -11,7 +12,7 @@ interface ColProps {
 }
 
 const Row: React.FC<ColProps> = ({ className, children, lg, md, sm, xs }) => {
-  const colClasses = cx(className, {
+  const colClasses = cx('nd-col', className, {
     [`ndlg-${lg}`]: lg,
     [`ndmd-${md}`]: md,
     [`ndsm-${sm}`]: sm,
