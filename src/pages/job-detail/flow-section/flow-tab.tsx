@@ -1,17 +1,12 @@
 import React from 'react';
-import {
-  LayerIcon,
-  TargetGreyIcon,
-  PlayGreyIcon,
-  SortGreyIcon,
-  FilterGreyIcon,
-  MergedGreyIcon,
-} from 'components/ui/icons';
+import { LayerIcon, PlusIcon } from 'components/ui/icons';
 import './flow-tab.css';
 
-interface Props {}
+interface Props {
+  onAddServiceClick?: () => void;
+}
 
-const FlowTab: React.FC<Props> = () => {
+const FlowTab: React.FC<Props> = ({ onAddServiceClick }) => {
   return (
     <div className="nd-tabs">
       <ul className="tabs">
@@ -24,29 +19,8 @@ const FlowTab: React.FC<Props> = () => {
 
       <ul className="regualar-tabs">
         <li className="active">
-          <a href="#">
-            <PlayGreyIcon /> Source
-          </a>
-        </li>
-        <li className="">
-          <a href="#">
-            <TargetGreyIcon /> Target
-          </a>
-        </li>
-        <li className="">
-          <a href="#">
-            <FilterGreyIcon /> Filter
-          </a>
-        </li>
-        <li className="">
-          <a href="#">
-            <SortGreyIcon /> Sorten
-          </a>
-        </li>
-        <li className="">
-          <a href="#">
-            <MergedGreyIcon />
-            Join
+          <a type="button" onClick={onAddServiceClick}>
+            <PlusIcon width="14" height="14" /> Add services
           </a>
         </li>
       </ul>

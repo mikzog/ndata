@@ -27,3 +27,4 @@ export { ReactComponent as FilterGreyIcon } from './filter-grey-icon.svg';
 export { ReactComponent as SortGreyIcon } from './sort-grey-icon.svg';
 export { ReactComponent as TargetGreyIcon } from './target-grey-icon.svg';
 export { ReactComponent as MergedGreyIcon } from './merged-grey-icon.svg';
+export { ReactComponent as PlusIcon } from './plus-icon.svg';
