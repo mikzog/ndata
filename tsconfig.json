@@ -17,6 +17,6 @@
     "baseUrl": "src",
     "typeRoots": ["./typings", "./node_modules/@types"]
   },
-  "include": ["src"],
+  "include": ["src", "typings"],
   "exclude": ["typings"]
 }

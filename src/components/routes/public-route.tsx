@@ -1,7 +1,7 @@
 import React from 'react';
-import { useAuth } from 'hooks/use-auth';
+import { useAuth } from 'common/hooks/use-auth';
 import { Route, Redirect, RouteProps } from 'react-router-dom';
-import { getQueryParam } from 'utils/route';
+import { getQueryParam } from 'common/utils/route';
 
 export interface PublicRouteProps extends RouteProps {
   component: React.ComponentType<any>;

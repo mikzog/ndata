@@ -1,0 +1,11 @@
+.widget-draggable {
+  width: 80px;
+  height: 80px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+  cursor: move;
+  margin-bottom: 8px;
+}
+
+.widget-draggable.dragging {
+  opacity: 0.5;
+}

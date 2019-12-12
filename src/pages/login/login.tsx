@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import { useAuth } from 'hooks/use-auth';
+import { useAuth } from 'common/hooks/use-auth';
 import { Alert } from 'components/ui';
 import { Headline } from 'components/ui/typography';
 import NDataIcon from 'assets/img/ndata-icon.svg';

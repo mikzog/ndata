@@ -1,0 +1,10 @@
+.assembly-droppable {
+  height: 100%;
+  border: 2px dashed #ffffff;
+  padding: 20px;
+  min-height: 252px;
+}
+
+.assembly-droppable.dropping {
+  border-color: #d6d6d6;
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useAuth } from 'hooks/use-auth';
+import { useAuth } from 'common/hooks/use-auth';
 import { Col, Row, Button, Container } from 'components/ui';
 import { Content, PageHead } from 'components/layout';
 
