@@ -2,7 +2,7 @@ import _get from 'lodash/get';
 import cx from 'classnames';
 import React, { useCallback } from 'react';
 import { Link, matchPath, withRouter, useLocation } from 'react-router-dom';
-import { useAuth } from 'hooks/use-auth';
+import { useAuth } from 'common/hooks/use-auth';
 import { DashboardIcon, JobIcon, HelpIcon } from 'components/ui/icons';
 
 import NDataLogoSVG from 'assets/img/ndata-logo-white.svg';

@@ -1,0 +1,9 @@
+.widgets-section {
+  padding: 15px 0px;
+}
+
+.widgets-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

@@ -69,6 +69,7 @@
   min-height: 300px;
   background: #ffffff;
   overflow: scroll;
+  padding: 24px;
 }
 .nd-diagram-flow.max-three-nodes-cover {
   overflow: hidden;

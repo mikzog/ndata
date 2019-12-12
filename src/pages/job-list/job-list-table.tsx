@@ -1,11 +1,11 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { Table } from 'components/ui';
-import { TJob } from './job-list';
-import JobRowActions from './job-row-actions';
+import { Job } from './job-list-slice';
+import JobRowActions from './job-list-row-actions';
 
 interface Props {
-  jobs: TJob[];
+  jobs: Job[];
 }
 
 const JOB_COLUMNS = [
@@ -35,7 +35,7 @@ const JOB_COLUMNS = [
 
 export const JobTable: React.FC<Props> = ({ jobs }) => {
   const history = useHistory();
-  const handleRowClick = (job: TJob, index: number) => {
+  const handleRowClick = (job: Job, index: number) => {
     history.push(`/jobs/${job.id}`);
   };
 
@@ -45,7 +45,7 @@ export const JobTable: React.FC<Props> = ({ jobs }) => {
         rowKey="id"
         data={jobs}
         columns={JOB_COLUMNS}
-        onRow={(record: TJob, rowIndex: number) => ({
+        onRow={(record: Job, rowIndex: number) => ({
           onClick: () => handleRowClick(record, rowIndex),
         })}
       />
