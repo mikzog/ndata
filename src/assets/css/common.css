@@ -636,16 +636,6 @@
   }
 }
 
-svg {
-  fill: #fff;
-  position: relative;
-  top: 1px;
-}
-
-svg:not(:root) {
-  overflow: hidden;
-}
-
 /* pagination */
 
 .nd-table2 .nd-paginationT {
