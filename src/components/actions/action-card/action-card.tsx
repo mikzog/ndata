@@ -30,8 +30,12 @@ const ActionCard: React.FC<Props> = ({
         [styles.active]: active,
       })}
       actions={[
-        <Icon type="setting" key="Setting" />,
-        <Icon type="copy" key="Clone" />,
+        <span>
+          <Icon type="setting" key="Setting" /> Setting
+        </span>,
+        <span>
+          <Icon type="copy" key="Clone" /> Clone
+        </span>,
       ]}
     >
       <div className={styles.name}>{name}</div>
