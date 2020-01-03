@@ -1,0 +1,85 @@
+{
+  "schema": [
+    {
+      "name": "regionList",
+      "type": "string[]"
+    },
+    {
+      "name": "ownerOrganization",
+      "type": "string"
+    }
+  ],
+  "properties": [
+    {
+      "area": "General",
+      "attributes": [
+        {
+          "name": "name",
+          "value": ""
+        },
+        {
+          "name": "description",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "area": "Connection",
+      "attributes": [
+        {
+          "name": "connection",
+          "value": "http://"
+        },
+        {
+          "name": "httpMethod",
+          "value": "POST/PUT/..."
+        },
+        {
+          "name": "format",
+          "value": "Json/Xml/..."
+        }
+      ]
+    },
+    {
+      "area": "Connection-Parameters",
+      "attributes": [
+        {
+          "name": "key",
+          "value": "value"
+        }
+      ]
+    },
+    {
+      "area": "Connection-Authorization",
+      "attributes": [
+        {
+          "name": "userName",
+          "value": "value"
+        },
+        {
+          "name": "password",
+          "value": "value"
+        }
+      ]
+    },
+    {
+      "area": "Connection-Headers",
+      "attributes": [
+        {
+          "name": "key",
+          "value": "value"
+        }
+      ]
+    },
+    {
+      "area": "Connection-Body",
+      "attributes": [
+        {
+          "name": "body",
+          "value": ""
+        }
+      ]
+    }
+  ],
+  "script": "function systemMain(value) {\r\n    return main(value);\r\n}\r\nfunction main(value) {\r\n    return true;\r\n}\r\n"
+}

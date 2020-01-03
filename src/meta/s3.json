@@ -1,0 +1,25 @@
+{
+  "schema": [],
+  "properties": [
+    {
+      "area": "General",
+      "attributes": {
+        "name": "Hello",
+        "description": ""
+      }
+    },
+    {
+      "area": "Connection",
+      "attributes": {
+        "connection": "",
+        "bucketName": "",
+        "folderName": "",
+        "fileName": "",
+        "format": "",
+        "compressionType": "",
+        "encoding": ""
+      }
+    }
+  ],
+  "script": "function systemMain(value) {\r\n    return main(value);\r\n}\r\nfunction main(value) {\r\n    return true;\r\n}\r\n"
+}

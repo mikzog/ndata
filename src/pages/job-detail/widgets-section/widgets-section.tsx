@@ -14,7 +14,7 @@ export const WidgetsSection: React.FC<Props> = () => {
             key={index}
             type={widget.type}
             name={widget.name}
-            code={widget.code}
+            category={widget.category}
           />
         ))}
       </div>

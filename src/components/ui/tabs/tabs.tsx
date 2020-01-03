@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Tabs as ATabs } from 'antd';
+import { SectionLoader } from 'components/ui/placeholder';
 import styles from './tabs.module.less';
 
 const { TabPane } = ATabs;
@@ -28,7 +29,9 @@ const Tabs: React.FC<Props> = ({ data }) => {
             </span>
           }
         >
-          <div className="target-node-info">{tab.content}</div>
+          <div className="target-node-info">
+            <Suspense fallback={<SectionLoader />}>{tab.content}</Suspense>
+          </div>
         </TabPane>
       ))}
     </ATabs>

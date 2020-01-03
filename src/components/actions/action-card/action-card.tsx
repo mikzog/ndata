@@ -1,45 +1,53 @@
 import cx from 'classnames';
 import React, { useCallback } from 'react';
 import { Card, Icon } from 'antd';
-import { DesignAction } from 'pages/job-detail/job-detail-slice';
 import styles from './action-card.module.less';
 
 interface Props {
   active?: boolean;
-  data: DesignAction;
-  onSelect: (code: string) => void;
+  data: {
+    id: string;
+    name: string;
+    type: string;
+    category: string;
+  };
+  onSelect: (type: string) => void;
 }
 
 const ActionCard: React.FC<Props> = ({
   active,
-  data: { name, type, code },
+  data: { id, name, type, category },
   onSelect,
 }) => {
   const handleClick = useCallback(
     e => {
       e.preventDefault();
-      onSelect(code);
+      onSelect(id);
     },
-    [code]
+    [id]
   );
 
   return (
     <Card
       onClick={handleClick}
-      className={cx(styles.card, styles[code], {
+      className={cx(styles.card, styles[type], {
         [styles.active]: active,
       })}
-      actions={[
-        <span>
-          <Icon type="setting" key="Setting" /> Setting
-        </span>,
-        <span>
-          <Icon type="copy" key="Clone" /> Clone
-        </span>,
-      ]}
+      actions={
+        active
+          ? [
+              <span>
+                <Icon type="setting" key="Setting" /> Edit
+              </span>,
+              <span>
+                <Icon type="copy" key="Clone" /> Clone
+              </span>,
+            ]
+          : []
+      }
     >
       <div className={styles.name}>{name}</div>
-      <div className={styles.type}>{type}</div>
+      <div className={styles.type}>{category}</div>
     </Card>
   );
 };

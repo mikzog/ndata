@@ -1,5 +1,6 @@
 import React from 'react';
 import Tabs from 'components/ui/tabs';
+import RESTGeneralForm from './rest-general-form';
 
 interface Props {}
 
@@ -10,17 +11,17 @@ const RESTSection: React.FC<Props> = () => {
         {
           key: 'general',
           title: 'General',
-          content: 'Hello world!',
+          content: <RESTGeneralForm />,
         },
         {
           key: 'connection',
           title: 'Connection',
-          content: 'Hello Connection!',
+          content: 'REST Connection goes here!',
         },
         {
           key: 'schema',
           title: 'Schema',
-          content: 'Hello Schema!',
+          content: '',
         },
       ]}
     />
