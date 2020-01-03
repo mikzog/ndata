@@ -6,16 +6,19 @@ import './widget-draggable.css';
 
 interface Props {
   name: string;
-  code: string;
   type: string;
+  category: string;
 }
 
-export const WidgetDraggable: React.FC<Props> = ({ type, name, code }) => {
+export const WidgetDraggable: React.FC<Props> = ({ type, name, category }) => {
   const [{ isDragging }, drag] = useDrag({
     item: {
-      type,
-      name,
-      code,
+      type: category,
+      data: {
+        name,
+        type,
+        category,
+      },
     },
     collect: monitor => ({
       isDragging: !!monitor.isDragging(),
@@ -27,7 +30,7 @@ export const WidgetDraggable: React.FC<Props> = ({ type, name, code }) => {
       className={cx('widget-draggable', { dragging: isDragging })}
       ref={drag}
     >
-      <WidgetCard type={type} name={name} />
+      <WidgetCard type={category} name={name} />
     </div>
   );
 };

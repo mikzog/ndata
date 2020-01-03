@@ -1,21 +1,58 @@
-import React from 'react';
+import _get from 'lodash/get';
+import _find from 'lodash/find';
+import React, { lazy } from 'react';
 import Tabs from 'components/ui/tabs';
+import { IProperty } from 'pages/job-detail/job-detail-slice';
 
-interface Props {}
+const S3GeneralForm = lazy(() => import('./s3-general-form'));
+const S3ConnectionForm = lazy(() => import('./s3-connection-form'));
 
-const S3Section: React.FC<Props> = () => {
+interface Props {
+  data: any;
+  onChange?: (path: string, value: any) => void;
+}
+
+const S3Section: React.FC<Props> = ({ data, onChange }) => {
+  const getProperties = (area: string) => {
+    const propertiesData =
+      (_find(data.properties, { area }) as IProperty) || {};
+    return _get(propertiesData, 'attributes', {});
+  };
+
+  const handleGeneralChange = (values: any) => {
+    if (onChange) {
+      onChange('properties.0.attributes', values);
+    }
+  };
+
+  const handleConnectionChange = (values: any) => {
+    if (onChange) {
+      onChange('properties.1.attributes', values);
+    }
+  };
+
   return (
     <Tabs
       data={[
         {
           key: 'general',
           title: 'General',
-          content: 'Hello world!',
+          content: (
+            <S3GeneralForm
+              data={getProperties('General')}
+              onChange={handleGeneralChange}
+            />
+          ),
         },
         {
           key: 'connection',
           title: 'Connection',
-          content: 'Hello Connection!',
+          content: (
+            <S3ConnectionForm
+              data={getProperties('Connection')}
+              onChange={handleConnectionChange}
+            />
+          ),
         },
       ]}
     />
