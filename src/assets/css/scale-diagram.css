@@ -69,7 +69,8 @@
   position: relative;
   cursor: move;
 }
-.info-block:hover, .info-block:focus; {
+.info-block:hover,
+.info-block:focus {
   cursor: pointer
 }
 .icon-block {
