@@ -466,6 +466,9 @@ a.text-info:focus {
 .text-warning {
     color: #8a6d3b;
 }
+.text-warning.bold {
+    font-weight: bold;
+}
 a.text-warning:hover,
 a.text-warning:focus {
     color: #66512c;
@@ -663,6 +666,7 @@ address {
     padding-left: 10px;
     margin-right: auto;
     margin-left: auto;
+    background: #ffffff;
 }
 
 .nd-row {
@@ -1914,7 +1918,7 @@ input[type="submit"]{
 
 .nd-button{
     border-radius: 5px;
-    padding: 0 17px;
+    padding: 0 12px;
     line-height: 34px;
     height: 36px;
     font-weight: 600;
@@ -1923,7 +1927,7 @@ input[type="submit"]{
     font-size: 14px;
     text-decoration: none;
     margin: 2px;
-    background: #fff;
+    background: #f5f8fa;
     color: #1d2b38;
     border: 1px solid rgb(204, 207, 210);
     position: relative;
@@ -2109,6 +2113,37 @@ input[type="submit"]{
     color: #fff;
 }
 
+
+
+.button.red {
+    background-color: #f95b5b;
+    color: #fff;
+    border-color: #f95b5b;
+}
+
+.button.red:hover {
+    background-color: #fd575c;
+    border-color: #fd575c;
+    color: #fff;
+}
+
+.button.red:focus,
+.button.red:active {
+    color: #fff;
+}
+
+.button.red-outline {
+    background-color: #fff;
+    color: #f95b5b;
+    border-color: #f95b5b;
+}
+
+.button.red-outline:hover {
+    background-color: #fd575c;
+    border-color: #fd575c;
+    color: #fff;
+}
+
 .nd-input {
     display: block;
     width: 100%;
@@ -2218,7 +2253,7 @@ textarea.resize-v{
     z-index: 1;
 }
 .nd-select-group .nd-caret svg{
-	fill: #000000;
+    fill: #000000;
 }
 
 select.nd-input{
@@ -2901,6 +2936,79 @@ p.error{
     line-height: 31px;
 }
 
+.nd-popup.delete .popup-content{
+    border-radius: 3px 3px 0 0;
+    background: -webkit-linear-gradient(-45deg, #f95b5b 0%,#e14242 100%);
+    position: relative;
+}
+
+.nd-popup.delete .popup-content p,
+.nd-popup.delete .popup-content h3{
+    position: relative;
+    z-index: 1;
+}
+
+.nd-popup.delete .popup-content .close-modal {
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    right: 24px;
+    top: 21px;
+    transition: all .1s ease-in-out 0s;
+    -webkit-transition: all .1s ease-in-out 0s;
+    -moz-transition: all .1s ease-in-out 0s;
+}
+
+.nd-popup.delete .popup-content .close-modal svg {
+    fill: #fff;
+    margin-top: 7px;
+    width: 16px;
+    height: 16px;
+    z-index: 1;
+    opacity: 1;
+}
+
+.nd-popup.delete .popup-content svg{
+    width: 200px;
+    height: 120px;
+    position: absolute;
+    z-index: 0;
+    opacity: .15;
+    right: 0;
+}
+
+.nd-popup.delete .popup-content {
+    color:
+      #fff;
+}
+
+.nddialog.nddialog-theme-default {
+    padding-bottom: 160px;
+    padding-top: 160px;
+}
+
+.nddialog {
+    position: fixed;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    z-index: 10000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* fix for Scrollbars not clickable on overflow #552 */
+    background: rgba(0, 0, 0, 0.4);
+    animation: nddialog-fadein 0.5s;
+    /* end fix for Scrollbars not clickable on overflow #552 */
+}
+
+.nddialog.nddialog-disabled-animation,
+.nddialog.nddialog-disabled-animation .nddialog-overlay,
+.nddialog.nddialog-disabled-animation .nddialog-content {
+    -webkit-animation: none!important;
+    animation: none!important;
+}
+
 /*text editor*/
 .ta-toolbar {
     background-color: #F5F8FA;
@@ -3061,6 +3169,31 @@ ul.nd-nops-loader li {
     -ms-animation: nd-nops-loadbars 1.15s ease-in-out infinite -0.92s;
     -webkit-animation: nd-nops-loadbars 1.15s ease-in-out infinite -0.92s;
     -moz-animation: nd-nops-loadbars 1.15s ease-in-out infinite -0.92s;
+}
+
+
+#nddialog2.nddialog.nddialog-theme-default .nddialog-content {
+    padding: 0;
+    width: 600px;
+}
+#nddialog2.nddialog.nddialog-theme-default .nddialog-content .popup-content {
+    padding: 24px;
+}
+#nddialog2 .nd-popup.delete .popup-content svg {
+    top: 20px;
+}
+#nddialog2 .nd-popup.delete .popup-content .close-modal {
+    top: 1px;
+}
+
+.nd-wdiget-aside {
+    width: 16%;
+    float: left;
+}
+
+.nd-main-area {
+    width: 84%;
+    float: left;
 }
 
 @keyframes nd-nops-loadbars {

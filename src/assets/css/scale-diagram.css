@@ -16,49 +16,8 @@
   display: inline-block;
 }
 
-#scaleDiagram.nd-diagram-wrapper .info-block {
+#scaleDiagram.nd-diagram-wrapper .info-block{
   transform: scale(1.2);
-}
-
-.scale-button svg {
-  fill: #8d959c;
-}
-.scale-button {
-  position: absolute;
-  right: 30px;
-  top: 70px;
-  z-index: 1;
-  border: 1px solid rgb(204, 207, 210);
-  border-radius: 3px;
-  background-color: #ffffff;
-  padding: 0;
-}
-
-.scale-button:focus,
-.scale-button:hover {
-  box-shadow: 0px 4px 12.22px 0.78px rgba(45, 62, 80, 0.12);
-}
-
-.nd-diagram-container .scale-button .zoomin,
-.nd-diagram-container .scale-button .zoomout {
-  float: left;
-  height: 36px;
-  padding: 8px 12px;
-}
-
-.nd-diagram-container .scale-button .zoomout {
-  opacity: 0.5;
-  border-right: 1px solid rgb(204, 207, 210);
-}
-.nd-diagram-container .scale-button .zoomin {
-  opacity: 1;
-}
-
-.nd-diagram-container.nd-diagram-wrapper .scale-button .zoomin {
-  opacity: 0.5;
-}
-.nd-diagram-container.nd-diagram-wrapper .scale-button .zoomout {
-  opacity: 1;
 }
 
 /* *********** */
@@ -66,10 +25,9 @@
 .nd-diagram-flow {
   float: left;
   width: 100%;
-  min-height: 300px;
+  min-height: 355px;
   background: #ffffff;
   overflow: scroll;
-  padding: 24px;
 }
 .nd-diagram-flow.max-three-nodes-cover {
   overflow: hidden;
@@ -85,12 +43,12 @@
   width: 10px;
 }
 .nd-diagram-container::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
   border-radius: 0px;
 }
 .nd-diagram-container::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: inset 0 0 50px rgba(0,0,0,0.1);
 }
 
 .nd-diagram-container .info {
@@ -108,12 +66,11 @@
   vertical-align: top;
   padding: 20px 20px;
   margin-right: 80px;
-  cursor: pointer;
   position: relative;
+  cursor: move;
 }
-.info-block:hover,
-.info-block:focus {
-  cursor: pointer;
+.info-block:hover, .info-block:focus; {
+  cursor: pointer
 }
 .icon-block {
   width: 80px;
@@ -139,13 +96,13 @@
 }
 
 .info-block.block-blue .icon-block {
-  background-color: rgba(0, 113, 234, 0.1);
+  background-color: rgba(0, 113, 234, .1);
 }
 .info-block.block-yellow .icon-block {
-  background-color: rgba(253, 189, 97, 0.1);
+  background-color: rgba(253, 189, 97, .1);
 }
 .info-block.block-green .icon-block {
-  background-color: rgba(41, 190, 185, 0.1);
+  background-color: rgba(41, 190, 185, .1);
 }
 
 .info-block.block-blue .icon-block svg {
@@ -166,8 +123,9 @@
 }
 .info-block .header-block .secondary-title {
   display: block;
-  font-size: 80%;
-  color: #f95b5b;
+  font-size: 86%;
+  color: #a8aaab;
+  margin-top: 1px;
 }
 .info-block .header-block .secondary-title svg {
   fill: #f95b5b;
@@ -205,9 +163,14 @@
   width: 40px;
   left: -60px;
   top: 55px;
-  opacity: 0.2;
+  opacity: .2;
 }
 .nd-diagram-container.nd-diagram-wrapper .info-block:before {
   width: 30px;
   left: -35px;
+}
+
+.info-block .icon-block img {
+  border-radius: 50%;
+  overflow: hidden;
 }
