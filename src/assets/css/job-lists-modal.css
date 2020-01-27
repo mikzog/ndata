@@ -1,3 +1,5 @@
+/* ********* CSS - Job list modal ********* */
+
 .nd-arp .nd-pageHead {
     float: left;
     width: auto;
@@ -260,568 +262,6 @@
     left: 0;
 }
 
-.nd-tableIcons table tr td:first-child span.Amazon_EC2_Container_Service:before,
-.nd-table3.arp-resources .name span.Amazon_EC2_Container_Service:before,
-.nd-table3.arp-products .name span.Amazon_EC2_Container_Service:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/Amazon-Elastic-Container-Service_light-bg.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.Amazon_Elastic_Compute_Cloud:before,
-.nd-table3.arp-resources .name span.Amazon_Elastic_Compute_Cloud:before,
-.nd-table3.arp-products .name span.Amazon_Elastic_Compute_Cloud:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/Amazon-EC2.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.AWS_Systems_Manager:before,
-.nd-table3.arp-resources .name span.AWS_Systems_Manager:before,
-.nd-table3.arp-products .name span.AWS_Systems_Manager:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/AWS-Systems-Manager.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.Amazon_Cognito:before,
-.nd-table3.arp-resources .name span.Amazon_Cognito:before,
-.nd-table3.arp-products .name span.Amazon_Cognito:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/Amazon-Cognito.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.AWS_Amplify:before,
-.nd-table3.arp-resources .name span.AWS_Amplify:before,
-.nd-table3.arp-products .name span.AWS_Amplify:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/AWS-Amplify.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.AmazonCloudWatch:before,
-.nd-table3.arp-resources .name span.AmazonCloudWatch:before,
-.nd-table3.arp-products .name span.AmazonCloudWatch:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/Amazon-CloudWatch.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.Amazon_Simple_Storage_Service:before,
-.nd-table3.arp-resources .name span.Amazon_Simple_Storage_Service:before,
-.nd-table3.arp-products .name span.Amazon_Simple_Storage_Service:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/s3.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.AWS_Lambda:before,
-.nd-table3.arp-resources .name span.AWS_Lambda:before,
-.nd-table3.arp-products .name span.AWS_Lambda:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/AWS-Lambda.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.AWS_Key_Management_Service:before,
-.nd-table3.arp-resources .name span.AWS_Key_Management_Service:before,
-.nd-table3.arp-products .name span.AWS_Key_Management_Service:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/AWS-Key-Management-Service.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.Amazon_Relational_Database_Service:before,
-.nd-table3.arp-resources .name span.Amazon_Relational_Database_Service:before,
-.nd-table3.arp-products .name span.Amazon_Relational_Database_Service:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/Amazon-RDS.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.Amazon_Elastic_MapReduce:before,
-.nd-table3.arp-resources .name span.Amazon_Elastic_MapReduce:before,
-.nd-table3.arp-products .name span.Amazon_Elastic_MapReduce:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/Amazon-EMR.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.Amazon_SG:before,
-.nd-table3.arp-resources .name span.Amazon_SG:before,
-.nd-table3.arp-products .name span.Amazon_SG:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/AWS-Storage-Gateway.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.Amazon_Virtual_Private_Cloud:before,
-.nd-table3.arp-resources .name span.Amazon_Virtual_Private_Cloud:before,
-.nd-table3.arp-products .name span.Amazon_Virtual_Private_Cloud:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/Amazon-VPC.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.Amazon_DynamoDB:before,
-.nd-table3.arp-resources .name span.Amazon_DynamoDB:before,
-.nd-table3.arp-products .name span.Amazon_DynamoDB:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/Amazon-DynamoDB.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.Amazon_EC2_Container_Registry_ECR:before,
-.nd-table3.arp-resources .name span.Amazon_EC2_Container_Registry_ECR:before,
-.nd-table3.arp-products .name span.Amazon_EC2_Container_Registry_ECR:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/Amazon-EC2-Container-Registry.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.Amazon_Simple_Notification_Service:before,
-.nd-table3.arp-resources .name span.Amazon_Simple_Notification_Service:before,
-.nd-table3.arp-products .name span.Amazon_Simple_Notification_Service:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/Amazon-Simple-Notification-Service-SNS.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.Amazon_Elastic_File_System:before,
-.nd-table3.arp-resources .name span.Amazon_Elastic_File_System:before,
-.nd-table3.arp-products .name span.Amazon_Elastic_File_System:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/Amazon-Elastic-File-System_EFS.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.AWS_WAF:before,
-.nd-table3.arp-resources .name span.AWS_WAF:before,
-.nd-table3.arp-products .name span.AWS_WAF:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/AWS-WAF.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.Amazon_FSx:before,
-.nd-table3.arp-resources .name span.Amazon_FSx:before,
-.nd-table3.arp-products .name span.Amazon_FSx:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/Amazon-FSx.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.Amazon_Chime_Dialin:before,
-.nd-table3.arp-resources .name span.Amazon_Chime_Dialin:before,
-.nd-table3.arp-products .name span.Amazon_Chime_Dialin:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/Amazon-Chime.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.Amazon_Elastic_Container_Service_for_Kubernetes:before,
-.nd-table3.arp-resources .name span.Amazon_Elastic_Container_Service_for_Kubernetes:before,
-.nd-table3.arp-products .name span.Amazon_Elastic_Container_Service_for_Kubernetes:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/Amazon-Elastic-Container-Service-for-Kubernetes.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.Amazon_Route_53:before,
-.nd-table3.arp-resources .name span.Amazon_Route_53:before,
-.nd-table3.arp-products .name span.Amazon_Route_53:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/Amazon-Route-53.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.AWS_Directory_Service:before,
-.nd-table3.arp-resources .name span.AWS_Directory_Service:before,
-.nd-table3.arp-products .name span.AWS_Directory_Service:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/AWS-Directory-Service.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.Amazon_Simple_Queue_Service:before,
-.nd-table3.arp-resources .name span.Amazon_Simple_Queue_Service:before,
-.nd-table3.arp-products .name span.Amazon_Simple_Queue_Service:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/Amazon-Simple-Queue-Service-SQS.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.Amazon_API_Gateway:before,
-.nd-table3.arp-resources .name span.Amazon_API_Gateway:before,
-.nd-table3.arp-products .name span.Amazon_API_Gateway:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/Amazon-API-Gateway.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.Amazon_IAM:before,
-.nd-table3.arp-resources .name span.Amazon_IAM:before,
-.nd-table3.arp-products .name span.Amazon_IAM:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/AWS-Identity-and-Access-Management_IAM.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.Amazon_ElastiCache:before,
-.nd-table3.arp-resources .name span.Amazon_ElastiCache:before,
-.nd-table3.arp-products .name span.Amazon_ElastiCache:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/Amazon-ElastiCache.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.AWS_Transfer_for_SFTP:before,
-.nd-table3.arp-resources .name span.AWS_Transfer_for_SFTP:before,
-.nd-table3.arp-products .name span.AWS_Transfer_for_SFTP:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/AWS-Transfer-for-SFTP.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.AWS_CloudTrail:before,
-.nd-table3.arp-resources .name span.AWS_CloudTrail:before,
-.nd-table3.arp-products .name span.AWS_CloudTrail:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/AWS-CloudTrail.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.AWS_Glue:before,
-.nd-table3.arp-resources .name span.AWS_Glue:before,
-.nd-table3.arp-products .name span.AWS_Glue:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/AWS-Glue.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.Amazon_Elasticsearch_Service:before,
-.nd-table3.arp-resources .name span.Amazon_Elasticsearch_Service:before,
-.nd-table3.arp-products .name span.Amazon_Elasticsearch_Service:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/Amazon-Elasticsearch-Service.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.Amazon_CloudFront:before,
-.nd-table3.arp-resources .name span.Amazon_CloudFront:before,
-.nd-table3.arp-products .name span.Amazon_CloudFront:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/Amazon-CloudFront.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.Amazon_QuickSight:before,
-.nd-table3.arp-resources .name span.Amazon_QuickSight:before,
-.nd-table3.arp-products .name span.Amazon_QuickSight:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/Amazon-QuickSight.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.AWS_Data_Pipeline:before,
-.nd-table3.arp-resources .name span.AWS_Data_Pipeline:before,
-.nd-table3.arp-products .name span.AWS_Data_Pipeline:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/AWS-Data-Pipeline.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child .amazonIcon:before,
-.nd-tableIcons table tr td:first-child span.AWS_Support_Business:before,
-.nd-table3.arp-resources .name .amazonIcon:before,
-.nd-table3.arp-resources .name span.AWS_Support_Business:before,
-.nd-table3.arp-products .name span.AWS_Support_Business:before,
-.nd-tableIcons table tr td:first-child span.AWS_Premium_Business_Support:before,
-.nd-table3.arp-resources .name span.AWS_Premium_Business_Support:before,
-.nd-table3.arp-products .name span.AWS_Premium_Business_Support:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/AWS_default.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.Amazon_Kinesis:before,
-.nd-table3.arp-resources .name span.Amazon_Kinesis:before,
-.nd-table3.arp-products .name span.Amazon_Kinesis:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/Amazon-Kinesis.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.Tax_of_type_United_States:before,
-.nd-table3.arp-resources .name span.Tax_of_type_United_States:before,
-.nd-table3.arp-products .name span.Tax_of_type_United_States:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/AWS_default.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.AWS_Cost_Explorer:before,
-.nd-table3.arp-resources .name span.AWS_Cost_Explorer:before,
-.nd-table3.arp-products .name span.AWS_Cost_Explorer:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/AWS-Cost-Explorer.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.AWS_Service_Catalog:before,
-.nd-table3.arp-resources .name span.AWS_Service_Catalog:before,
-.nd-table3.arp-products .name span.AWS_Service_Catalog:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/AWS-Service-Catalog.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.Amazon_Redshift:before,
-.nd-table3.arp-resources .name span.Amazon_Redshift:before,
-.nd-table3.arp-products .name span.Amazon_Redshift:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/Amazon-Redshift.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.CodeBuild:before,
-.nd-table3.arp-resources .name span.CodeBuild:before,
-.nd-table3.arp-products .name span.CodeBuild:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/AWS-CodeBuild.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.AWS_Elemental_MediaStore:before,
-.nd-table3.arp-resources .name span.AWS_Elemental_MediaStore:before,
-.nd-table3.arp-products .name span.AWS_Elemental_MediaStore:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/AWS-Elemental-MediaStore.png);
-    background-size: 18px;
-}
-
-.nd-table3.arp-resources .name span.AWS_Global_Accelerator:before,
-.nd-table3.arp-products .name span.AWS_Global_Accelerator:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/AWS-Global-Accelerator.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.AWS_Secrets_Manager:before,
-.nd-table3.arp-resources .name span.AWS_Secrets_Manager:before,
-.nd-table3.arp-products .name span.AWS_Secrets_Manager:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/AWS-Secrets-Manager.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.AWS_X-Ray:before,
-.nd-table3.arp-resources .name span.AWS_X-Ray:before,
-.nd-table3.arp-products .name span.AWS_X-Ray:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/AWS-X-Ray.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.Amazon_Athena:before,
-.nd-table3.arp-resources .name span.Amazon_Athena:before,
-.nd-table3.arp-products .name span.Amazon_Athena:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/Amazon-Athena.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.Amazon_Machine_Learning:before,
-.nd-table3.arp-resources .name span.Amazon_Machine_Learning:before,
-.nd-table3.arp-products .name span.Amazon_Machine_Learning:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/Machine-Learning.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.AWS_Cloud_Map:before,
-.nd-table3.arp-resources .name span.AWS_Cloud_Map:before,
-.nd-table3.arp-products .name span.AWS_Cloud_Map:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/AWS-Cloud-Map.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.AWS_CodePipeline:before,
-.nd-table3.arp-resources .name span.AWS_CodePipeline:before,
-.nd-table3.arp-products .name span.AWS_CodePipeline:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/AWS-CodePipeline.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.AWS_Config:before,
-.nd-table3.arp-resources .name span.AWS_Config:before,
-.nd-table3.arp-products .name span.AWS_Config:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/AWS-Config.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.AWS_Data_Transfer:before,
-.nd-table3.arp-resources .name span.AWS_Data_Transfer:before,
-.nd-table3.arp-products .name span.AWS_Data_Transfer:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/AWS_default.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.Amazon_SageMaker:before,
-.nd-table3.arp-resources .name span.Amazon_SageMaker:before,
-.nd-table3.arp-products .name span.Amazon_SageMaker:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/Amazon-SageMaker_light-bg.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.AWS_Database_Migration_Service:before,
-.nd-table3.arp-resources .name span.AWS_Database_Migration_Service:before,
-.nd-table3.arp-products .name span.AWS_Database_Migration_Service:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/Amazon-SageMaker_light-bg.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.Amazon_SageMaker:before,
-.nd-table3.arp-resources .name span.Amazon_SageMaker:before,
-.nd-table3.arp-products .name span.Amazon_SageMaker:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/AWS-Database-Migration-Service.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.AWS_Step_Functions:before,
-.nd-table3.arp-resources .name span.AWS_Step_Functions:before,
-.nd-table3.arp-products .name span.AWS_Step_Functions:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/AWS-Step-Functions.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.AWS_IoT:before,
-.nd-table3.arp-resources .name span.AWS_IoT:before,
-.nd-table3.arp-products .name span.AWS_IoT:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/AWS-IoT-1-Click.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.Amazon_Comprehend:before,
-.nd-table3.arp-resources .name span.Amazon_Comprehend:before,
-.nd-table3.arp-products .name span.Amazon_Comprehend:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/Amazon-Comprehend.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.AWS_CodeCommit:before,
-.nd-table3.arp-resources .name span.AWS_CodeCommit:before,
-.nd-table3.arp-products .name span.AWS_CodeCommit:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/AWS-CodeCommit.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.AWS_Elemental_MediaLive:before,
-.nd-table3.arp-resources .name span.AWS_Elemental_MediaLive:before,
-.nd-table3.arp-products .name span.AWS_Elemental_MediaLive:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/AWS-Elemental-MediaLive.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.AWS_Elemental_MediaPackage:before,
-.nd-table3.arp-resources .name span.AWS_Elemental_MediaPackage:before,
-.nd-table3.arp-products .name span.AWS_Elemental_MediaPackage:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/AWS-Elemental-MediaPackage.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.Amazon_Polly:before,
-.nd-table3.arp-resources .name span.Amazon_Polly:before,
-.nd-table3.arp-products .name span.Amazon_Polly:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/Amazon-Polly.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.Amazon_Simple_Email_Service:before,
-.nd-table3.arp-resources .name span.Amazon_Simple_Email_Service:before,
-.nd-table3.arp-products .name span.Amazon_Simple_Email_Service:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/Amazon-Simple-Email-Service-SES.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.Amazon_Registrar:before,
-.nd-table3.arp-resources .name span.Amazon_Registrar:before,
-.nd-table3.arp-products .name span.Amazon_Registrar:before,
-.nd-tableIcons table tr td:first-child span.APN_Annual_Program_Fee:before,
-.nd-table3.arp-resources .name span.APN_Annual_Program_Fee:before,
-.nd-table3.arp-products .name span.APN_Annual_Program_Fee:before,
-.nd-tableIcons table tr td:first-child span.Tax:before,
-.nd-table3.arp-resources .name span.Tax:before,
-.nd-table3.arp-products .name span.Tax:before,
-.nd-tableIcons table tr td:first-child span.default:before,
-.nd-table3.arp-resources .name span.default:before,
-.nd-table3.arp-products .name span.default:before,
-.nd-tableIcons table tr td:first-child span.AWS_Support_Business:before,
-.nd-table3.arp-resources .name span.AWS_Support_Business:before,
-.nd-table3.arp-products .name span.AWS_Support_Business:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/AWS_default.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.Amazon_Chime:before,
-.nd-table3.arp-products .name span.Amazon_Chime:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/Amazon-Chime.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.Amazon_Glacier:before,
-.nd-table3.arp-products .name span.Amazon_Glacier:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/Amazon-S3-Glacier.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.Amazon_GuardDuty:before,
-.nd-table3.arp-products .name span.Amazon_GuardDuty:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/Amazon-GuardDuty.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.Amazon_Inspector:before,
-.nd-table3.arp-products .name span.Amazon_Inspector:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/Amazon-Inspector.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.Amazon_MQ:before,
-.nd-table3.arp-products .name span.Amazon_MQ:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/Amazon-MQ.png);
-    background-size: 18px;
-}
-
-.nd-tableIcons table tr td:first-child span.Amazon_SimpleDB:before,
-.nd-table3.arp-products .name span.Amazon_SimpleDB:before{
-    background-position: 18px 18px;
-    background: url(../assets/images/aws-icons/AWS_default.png);
-    background-size: 18px;
-}
-
 .nd-arp .nd-table3{
     float: left;
 }
@@ -944,22 +384,6 @@
 .nd-arp .arg-tags table tr .data .status svg{
     visibility: visible;
 }
-
-/*.nd-table3.arp-products .name span.ec2:before{*/
-/*background: url(../img/aws-icons/Amazon-EC2.png);*/
-/*background-size: cover;*/
-/*}*/
-
-/*.nd-table3.arp-products .name span.rds:before{*/
-/*background: url(../img/aws-icons/Amazon-RDS.png);*/
-/*background-size: cover;*/
-/*}*/
-
-/*.nd-table3.arp-products .name span.s3:before{*/
-/*background: url(../img/aws-icons/s3.png);*/
-/*background-size: cover;*/
-/*}*/
-
 .nd-arpCm .nd-table2 .nd-table2Actions .color-grey svg{
     top: 1px;
 }
@@ -1376,7 +800,7 @@
 .nd-table4 tr {
     cursor: pointer;
 }
- 
+
 .nd-table4 .subRow tr{
     cursor: default;
 }
@@ -1393,12 +817,12 @@
 }
 
 .nd-table4 table tr > th:first-child,
-.nd-table4 table tr > td:first-child{  
+.nd-table4 table tr > td:first-child{
     background: transparent;
 }
 
 .nd-table4 table tr th,
-.nd-table4 table tr td{ 
+.nd-table4 table tr td{
     border-right: none;
 }
 
@@ -1451,8 +875,7 @@
 }
 
 .joblist-modal .nd-slidePopWrap{
-    max-width: 1020px;
-    right: -1020px;
+    max-width: 640px;
 }
 
 .joblist-modal .nd-slidePopWrap hr{
@@ -1525,7 +948,7 @@
     float: right;
 }
 
-.nd-table2 .filters li .nd-dropdownLink { 
+.nd-table2 .filters li .nd-dropdownLink {
     color: #727d8b;
 }
 .nd-table2 .filters li .nd-dropdownLink {
@@ -1539,10 +962,14 @@
 }
 
 .nd-slidePopWrap .nd-table {
-	margin-top: 20px;
+    margin-top: 20px;
 }
 .nd-slidePopWrap .nd-button.light.close {
     margin-top: 50px;
+}
+
+.nd-slidePop.show .nd-slidePopWrap.resize-nd-slidePopWrap {
+    max-width: calc(100% - 300px);
 }
 
 @media (max-width: 1199px) {
@@ -1565,7 +992,7 @@
 
     .nd-arp .nd-tabs > .tabs {
         min-width: 850px;
-        padding-top: 3px; 
+        padding-top: 3px;
     }
 
     .nd-arp .nd-tabs {
@@ -1579,7 +1006,6 @@
         right: -900px;
     }
 }
-
 
 @media (max-width: 991px) {
     .joblist-modal .nd-slidePopWrap {

@@ -74,11 +74,15 @@
     text-align: left;
 }
 
-.ng-table th.sortable .sort-indicator{
+.nd-table th.sortable .sort-indicator{
     display: inline-block;
 }
 
-.ng-table th.sortable .sort-indicator:after, .ng-table th.sortable .sort-indicator:before{
+.nd-table th.sortable:hover {
+    background: #eaedef;
+}
+
+.nd-table th.sortable .sort-indicator:after, .ng-table th.sortable .sort-indicator:before{
     top: 8px;
 }
 
@@ -106,7 +110,7 @@ nd-table table tr td .data{
     height: 0;
     left: 0;
     position: absolute;
-	top: -2px;
+    top: -2px;
 }
 
 .nd-table-code .nd-table-head .sorting .up-down-icon:before,
@@ -169,7 +173,7 @@ nd-table table tr td .data{
 }
 
 .nd-table tr:hover{
-    background: #fff; 
+    background: #fff;
 }
 
 .ag-root-wrapper .actions a,
@@ -197,12 +201,12 @@ nd-table table tr td .data{
 .nd-table-code .nd-table-col .actions a:hover svg,
 .ag-root-wrapper .actions a:hover svg,
 .nd-table table .actions a:hover svg{
-    fill: #404a58; 
+    fill: #404a58;
 }
 
 .nd-content .nd-table-pagination .inactive{
     color: #CBD6E2;
-    cursor: not-allowed; 
+    cursor: not-allowed;
 }
 
 .nd-content .nd-table-pagination{
@@ -412,12 +416,12 @@ nd-table table tr td .data{
     border-color: #e2e7eb;
     font-size: 13px;
     float: left;
-	background-color: #f5f8fa;
-	-webkit-border-radius: 3px;
-	margin: 2px;
-	border: 1px solid rgb(204, 207, 210);
-	position: relative;
-	display: inline-block;
+    background-color: #f5f8fa;
+    -webkit-border-radius: 3px;
+    margin: 2px;
+    border: 1px solid rgb(204, 207, 210);
+    position: relative;
+    display: inline-block;
 }
 
 .nd-table-code .actions .nd-switchWrap .action-info{
@@ -510,7 +514,7 @@ nd-table table tr td .data{
 }
 
 .nd-table-col .goto-action svg{
-	fill: #000000;
+    fill: #000000;
 }
 
 @media (max-width: 767px) {

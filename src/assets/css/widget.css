@@ -1,0 +1,116 @@
+/*!
+ * widget CSS for nOps.io
+ * Copyright 2020 nOps.io
+ */
+
+.nd-wdiget-aside {
+  border-right: 1px solid #e1e4e6;
+  height: calc(100vh - 60px);
+}
+
+.widget {
+  background: #ffffff;
+}
+
+.widget.widget-icons {
+
+}
+
+.widget.widget-icons h4 {
+  padding-left: 24px;
+  font-size: 20px;
+  margin: 16px 0 0 0;
+}
+
+.widget.widget-icons ul {
+  padding: 10px;
+  margin: 0;
+  list-style: none;
+  display: inline-block;
+}
+
+.widget.widget-icons ul li {
+  display: inline;
+  float: left;
+  width: 32%;
+  text-align: center;
+  padding: 14px 20px;
+  cursor: move;
+  border: 1px solid rgba(217, 217, 217, 0);
+  /* box-shadow: 0px 7px 40.42px 2.58px rgba(139, 137, 143, 0.19); */
+}
+
+.widget.widget-icons ul li:hover {
+  border-color: 1px solid rgba(217, 217, 217, .5);
+  border-radius: 4px;
+  box-shadow: 0px 7px 40.42px 2.58px rgba(139, 137, 143, 0.19);
+}
+
+.widget.widget-icons ul li img {
+  max-width: 100%;
+  border-radius: 50%;
+  margin-bottom: 12px;
+}
+
+.nd-wdiget-aside .widget.widget-icons {
+  border-bottom: 8px solid #f5f8fa;
+}
+.nd-wdiget-aside .widget.widget-icons:last-child {
+  border-bottom: none;
+}
+
+.toggle-sidenav {
+  background: #ffffff;
+  padding: 4px 3px;
+  border-radius: 3px 0 0 3px;
+  border: 1px solid rgb(204, 207, 210);
+  border-right: none;
+  position: relative;
+  z-index: 1;
+  top: 16px;
+  left: 100%;
+  margin-left: -21px;
+  float: left;
+  cursor: pointer;
+}
+
+.toggle-sidenav svg {
+  fill: #000000;
+}
+
+.toggle-sidenav:hover {
+  background: #f3f3f3;
+}
+
+.nd-content.minimize-nd-wdiget-aside .nd-wdiget-aside {
+  width: 70px;
+}
+.nd-content.minimize-nd-wdiget-aside .nd-main-area {
+  width: calc(100% - 70px);
+}
+
+.nd-content.minimize-nd-wdiget-aside .widget.widget-icons h4 {
+  padding-left: 14px;
+  font-size: 16px;
+}
+.nd-content.minimize-nd-wdiget-aside .widget.widget-icons h4 {
+  display: none;
+}
+.nd-content.minimize-nd-wdiget-aside .widget.widget-icons ul {
+  padding: 8px;
+}
+.nd-content.minimize-nd-wdiget-aside .widget.widget-icons ul li {
+  width: 100%;
+  padding: 7px 5px;
+}
+.nd-content.minimize-nd-wdiget-aside .widget.widget-icons ul li span {
+  display: none;
+}
+.nd-content.minimize-nd-wdiget-aside .widget.widget-icons ul li img {
+  margin-bottom: 0;
+}
+
+.nd-content.minimize-nd-wdiget-aside .toggle-sidenav {
+  transform: rotate(180deg);
+  left: calc(100% + 22px);
+}

@@ -323,65 +323,67 @@
 }
 
 #header .header-left .g-icons-list {
-	margin-left: 20px;
+    margin-left: 20px;
 }
 #header .header-left ul.g-icons-list li {
-	margin-left: 0;
-	padding: 0px 20px 0px 14px;
+    margin-left: 0;
+    padding: 0px 20px 0px 14px;
+    opacity: .7;
 }
 #header .header-left ul.g-icons-list svg{
-	float: left;
-	margin: 17px 8px;
-	width: 15px;
+    float: left;
+    margin: 17px 8px;
+    width: 15px;
 }
 #header .header-left ul.g-icons-list li a{
-	float: left;
-	line-height: 58px;
-	opacity: .7;
+    float: left;
+    line-height: 58px;
 }
 #header .header-left ul.g-icons-list li.active {
-	background: #1f303f;
+    background: #1f303f;
 }
+#header .header-left ul.g-icons-list li:hover svg,
+#header .header-left ul.g-icons-list li:focus svg,
 #header .header-left ul.g-icons-list li.active svg{
-	fill: #0071ea;
+    fill: #0071ea;
 }
-#header .header-left ul.g-icons-list li.active a{
-	opacity: 1;
+#header .header-left ul.g-icons-list li.active{
+    opacity: 1;
 }
-#header .header-left ul.g-icons-list li:focus a,
-#header .header-left ul.g-icons-list li:hover a{
-	opacity: 1;
+#header .header-left ul.g-icons-list li:focus,
+#header .header-left ul.g-icons-list li:hover{
+    opacity: 1;
 }
 #header .header-right ul.g-icons-list li a{
-	color: #c2cedd;
+    color: #c2cedd;
 }
 #header .header-right ul.g-icons-list li svg{
-	fill: #c2cedd;
-	margin: 17px 8px;
-	width: 19px;
+    fill: #c2cedd;
+    margin: 20px 8px;
+    width: 19px;
 }
 
 #header .header-right ul.g-icons-list svg{
-	float: left;
-	margin: 18px 8px;
-	fill: #c2cedd;
-	opacity: .8;
+    float: left;
+    margin: 18px 8px;
+    fill: #c2cedd;
+    opacity: .8;
 }
 #header .header-right ul.g-icons-list li a{
-	float: left;
-	line-height: 58px;
-	opacity: .7;
+    float: left;
+    line-height: 58px;
+    opacity: .7;
 }
 #header .header-right .user-dropdown {
-	margin-left: 18px;
+    margin-left: 18px;
 }
 #header #profile-dropdown.account_dropdown .user-name {
-	margin: 0;
-	margin-left: 8px;
-	line-height: 28px;
+    margin: 0;
+    margin-left: 8px;
+    line-height: 28px;
 }
 #header #profile-dropdown.account_dropdown .user-name svg {
-	margin: 9px 0;
+    margin: 9px 0;
 }
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {

@@ -1,0 +1,321 @@
+/* ********* CSS - global modals ********* */
+
+.ReactModal__Body--open{
+  overflow: hidden;
+}
+
+.ReactModal__Overlay--after-open {
+  overflow: auto;
+  background: rgba(0,0,0,.4);
+  -webkit-backface-visibility: hidden;
+  -webkit-animation: nddialog-fadein .5s;
+  animation: nddialog-fadein .5s;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  padding-bottom: 120px;
+  padding-top: 120px;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+}
+
+.ReactModal__Content {
+  -webkit-animation: nd-modalSlide .5s;
+  animation: nd-modalSlide .5s;
+  background: #fff;
+  border-radius: 5px;
+  color: #444;
+  font-size: 1.1em;
+  line-height: 1.5em;
+  max-width: 100%;
+  padding: 0;
+  position: relative;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  width: 640px;
+  margin-left: -320px;
+  box-shadow: 0 0 25px rgba(0,0,0,.18);
+  -moz-box-shadow: 0 0 25px rgba(0,0,0,.18);
+  -webkit-box-shadow: 0 0 25px rgba(0,0,0,.18);
+}
+
+@keyframes nd-modalSlide{
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-40px);
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.ReactModal__Content .npModal-header {
+  border-bottom: none;
+  padding: 21px 60px 21px 24px;
+  color: #fff;
+  background: #0178f7;
+  background: -moz-linear-gradient(-45deg, #0178f7 0%, #0056b3 100%);
+  background: -webkit-linear-gradient(-45deg, #0178f7 0%,#0056b3 100%);
+  background: linear-gradient(135deg, #0178f7 0%,#0056b3 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0178f7', endColorstr='#0056b3',GradientType=1 );
+  border-radius: 3px 3px 0 0;
+}
+
+.ReactModal__Content .npModal-header h3 {
+  margin: 0;
+  font-size: 1.60em;
+  font-weight: 400;
+}
+
+.ReactModal__Content .npModal-header .close-modal svg{
+  fill: #fff;
+  width: 16px;
+  height: 16px;
+}
+
+.ReactModal__Content .npModal-header .close-modal {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 34px;
+  color: #fff;
+  position: absolute;
+  right: 24px;
+  top: 21px;
+  transition: all .1s ease-in-out 0s;
+  -webkit-transition: all .1s ease-in-out 0s;
+  -moz-transition: all .1s ease-in-out 0s;
+}
+
+.ReactModal__Content .npModal-header .close-modal:hover {
+  background: #0061CA;
+  outline: none;
+}
+
+.ReactModal__Content .npModal-body {
+  padding: 24px;
+}
+
+.ReactModal__Content .npModal-footer {
+  text-align: right;
+  padding: 15px 24px;
+  border-top: 1px solid #EAEAEC;
+}
+
+.ReactModal__Content .npModal-footer .nd-button {
+  display: inline-block;
+  margin-left: 8px;
+}
+
+.ReactModal__Content .addAccTitle {
+  color: #9aa1ac;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.ReactModal__Content .nd-button.blue.light {
+  margin-top: 0px;
+}
+
+.ReactModal__Content .npModal-footer.mT40 {
+  margin-top: 40px;
+}
+
+
+
+
+@-webkit-keyframes nddialog-flyin {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-40px);
+    transform: translateY(-40px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes nddialog-flyin {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-40px);
+    transform: translateY(-40px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes nddialog-flyout {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-40px);
+    transform: translateY(-40px);
+  }
+}
+
+@keyframes nddialog-flyout {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-40px);
+    transform: translateY(-40px);
+  }
+}
+
+.nddialog.nddialog-theme-default {
+  padding-bottom: 160px;
+  padding-top: 160px;
+}
+
+.nddialog.nddialog-theme-default.nddialog-closing .nddialog-content {
+  -webkit-animation: nddialog-flyout .5s;
+  animation: nddialog-flyout .5s;
+}
+
+.nddialog.nddialog-theme-default .nddialog-content {
+  -webkit-animation: nddialog-flyin .5s;
+  animation: nddialog-flyin .5s;
+  background: #f0f0f0;
+  border-radius: 5px;
+  color: #444;
+  font-family: 'Helvetica',sans-serif;
+  font-size: 1.1em;
+  line-height: 1.5em;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 1em;
+  position: relative;
+  width: 450px;
+}
+
+.nddialog.nddialog-theme-default .nddialog-close {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.nddialog.nddialog-theme-default .nddialog-close:before {
+  display: block;
+  padding: 3px;
+  background: transparent;
+  color: #bbb;
+  content: '\00D7';
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+}
+
+.nddialog.nddialog-theme-default .nddialog-close:hover:before,
+.nddialog.nddialog-theme-default .nddialog-close:active:before {
+  color: #777;
+}
+
+.nddialog.nddialog-theme-default .nddialog-message {
+  margin-bottom: .5em;
+}
+
+.nddialog.nddialog-theme-default .nddialog-input {
+  margin-bottom: 1em;
+}
+
+.nddialog.nddialog-theme-default .nddialog-input textarea,
+.nddialog.nddialog-theme-default .nddialog-input input[type="text"],
+.nddialog.nddialog-theme-default .nddialog-input input[type="password"],
+.nddialog.nddialog-theme-default .nddialog-input input[type="email"],
+.nddialog.nddialog-theme-default .nddialog-input input[type="url"] {
+  background: #fff;
+  border: 0;
+  border-radius: 3px;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0 0 .25em;
+  min-height: 2.5em;
+  padding: .25em .67em;
+  width: 100%;
+}
+
+.nddialog.nddialog-theme-default .nddialog-input textarea:focus,
+.nddialog.nddialog-theme-default .nddialog-input input[type="text"]:focus,
+.nddialog.nddialog-theme-default .nddialog-input input[type="password"]:focus,
+.nddialog.nddialog-theme-default .nddialog-input input[type="email"]:focus,
+.nddialog.nddialog-theme-default .nddialog-input input[type="url"]:focus {
+  box-shadow: inset 0 0 0 2px #8dbdf1;
+  outline: none;
+}
+
+.nddialog.nddialog-theme-default .nddialog-buttons {
+  *zoom: 1;
+}
+
+.nddialog.nddialog-theme-default .nddialog-buttons:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.nddialog.nddialog-theme-default .nddialog-button {
+  border: 0;
+  border-radius: 3px;
+  cursor: pointer;
+  float: right;
+  font-family: inherit;
+  font-size: .8em;
+  letter-spacing: .1em;
+  line-height: 1em;
+  margin: 0 0 0 .5em;
+  padding: .75em 2em;
+  text-transform: uppercase;
+}
+
+.nddialog.nddialog-theme-default .nddialog-button:focus {
+  -webkit-animation: nddialog-pulse 1.1s infinite;
+  animation: nddialog-pulse 1.1s infinite;
+  outline: none;
+}
+
+@media (max-width: 568px) {
+  .nddialog.nddialog-theme-default .nddialog-button:focus {
+    -webkit-animation: none;
+    animation: none;
+  }
+}
+
+.nddialog.nddialog-theme-default .nddialog-button.nddialog-button-primary {
+  background: #3288e6;
+  color: #fff;
+}
+
+.nddialog.nddialog-theme-default .nddialog-button.nddialog-button-secondary {
+  background: #e0e0e0;
+  color: #777;
+}
