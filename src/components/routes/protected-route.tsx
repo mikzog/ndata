@@ -11,7 +11,7 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   component: PageComponent,
   ...props
 }) => {
-  const { user = undefined } = useAuth();
+  const { user } = useAuth() || {};
   const location = useLocation();
 
   if (!user) {
