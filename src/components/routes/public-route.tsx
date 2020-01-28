@@ -11,7 +11,7 @@ export const PublicRoute: React.FC<PublicRouteProps> = ({
   component: PageComponent,
   ...props
 }) => {
-  const { user } = useAuth();
+  const { user } = useAuth() || {};
   let redirectPath = '/';
 
   if (props.location) {
