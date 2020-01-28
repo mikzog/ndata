@@ -12,7 +12,7 @@ import 'assets/css/header.css';
 interface Props {}
 
 export const Header: React.FC<Props> = () => {
-  const { user } = useAuth();
+  const { user } = useAuth() || {};
   const location = useLocation();
   const isMatch = useCallback(
     (path: string, isExact: boolean = false) => {
