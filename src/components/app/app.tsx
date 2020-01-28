@@ -3,7 +3,7 @@ import React, { Suspense } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { PageLogoLoader } from 'components/ui/placeholder';
 import Routes from '../routes';
-import './app.css';
+import 'assets/css/widget.css';
 
 const App: React.FC = () => {
   return (
