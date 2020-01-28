@@ -6,7 +6,7 @@ import { Content, PageHead } from 'components/layout';
 interface HomeProps {}
 
 export const Home: React.FC<HomeProps> = () => {
-  const { logout } = useAuth();
+  const { logout } = useAuth() || {};
 
   return (
     <Content>

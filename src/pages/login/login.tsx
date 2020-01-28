@@ -20,7 +20,7 @@ export const Login: React.FC<LoginProps> = () => {
   const history = useHistory();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState();
-  const { login } = useAuth();
+  const { login } = useAuth() || {};
 
   const handleLogin = async (values: TFormValues) => {
     const username = values.email;
