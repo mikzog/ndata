@@ -24,7 +24,6 @@ const JobDetail: React.FC<Props> = props => {
       <Content className="nd-content nd-job-page-start-node">
         <Container fluid>
           <div className="nd-row">
-            <JobDetailHeader name={name} status={state} />
             <div className="nd-wdiget-aside">
               <span className="toggle-sidenav">
                 <svg x="0px" y="0px" viewBox="0 0 240.823 240.823" width="14px"
@@ -38,8 +37,19 @@ const JobDetail: React.FC<Props> = props => {
               <WidgetsSection/>
             </div>
             <div className="nd-main-area">
-              <DesignSection/>
-              <PropertiesSection/>
+              <div className="nd-wrapper">
+                <div className="ndxs-12">
+                  <JobDetailHeader name={name} status={state} />
+                </div>
+                <div className="ndxs-12">
+                  <div className="nd-wrapper">
+                    <div className="nd-contentMain full">
+                      <DesignSection/>
+                      <PropertiesSection/>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </Container>

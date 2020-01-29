@@ -22,6 +22,12 @@ export const WidgetsSection: React.FC<Props> = () => {
           ))}
         </ul>
       </div>
+      <div className="widget widget-icons transform">
+        <h4>Transform</h4>
+      </div>
+      <div className="widget widget-icons mapping">
+        <h4>Mapping</h4>
+      </div>
     </div>
   );
 };
