@@ -22,7 +22,8 @@ const ActionList: React.FC<Props> = ({ selectedEntityId, data, onSelect }) => {
 
   return (
     <div>
-      <List
+      {/* TODO replace with normal horizontal list */}
+      {/*<List
         grid={{ gutter: 16, column: 4 }}
         dataSource={actionData}
         renderItem={item => (
@@ -34,7 +35,7 @@ const ActionList: React.FC<Props> = ({ selectedEntityId, data, onSelect }) => {
             />
           </List.Item>
         )}
-      />
+      />*/}
     </div>
   );
 };

@@ -23,12 +23,16 @@ export const DesignDroppable: React.FC<Props> = ({ onDropped, children }) => {
     ],
     drop: onDropped,
     collect: monitor => ({
-      isOver: !!monitor.isOver(),
+      isOver: monitor.isOver(),
     }),
   });
 
   return (
-    <div ref={drop} className={cx('design-droppable', { dropping: isOver })}>
+    <div
+      id="scaleDiagram"
+      ref={drop}
+      className={cx('nd-diagram-container max-three', { dropping: isOver })}
+    >
       {children}
     </div>
   );

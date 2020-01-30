@@ -14,7 +14,7 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   const { user } = useAuth() || {};
   const location = useLocation();
 
-  if (!user) {
+  if (false) {
     const loginPath = '/login';
     const redirectPath = location
       ? `${loginPath}?redirect=${location.pathname}${location.search}`
