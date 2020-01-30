@@ -3,7 +3,7 @@
  * Copyright 2020 nOps.io
  */
 
-.nd-wdiget-aside {
+.nd-widget-aside {
   border-right: 1px solid #e1e4e6;
   height: calc(100vh - 60px);
 }
@@ -34,14 +34,14 @@
   float: left;
   width: 32%;
   text-align: center;
-  /*padding: 14px 20px;*/
+  padding: 14px 20px;
   cursor: move;
   border: 1px solid rgba(217, 217, 217, 0);
   /* box-shadow: 0px 7px 40.42px 2.58px rgba(139, 137, 143, 0.19); */
 }
 
 .widget.widget-icons ul li:hover {
-  border-color: 1px solid rgba(217, 217, 217, .5);
+  border: 1px solid rgba(217, 217, 217, .5);
   border-radius: 4px;
   box-shadow: 0px 7px 40.42px 2.58px rgba(139, 137, 143, 0.19);
 }
@@ -52,10 +52,10 @@
   margin-bottom: 12px;
 }
 
-.nd-wdiget-aside .widget.widget-icons {
+.nd-widget-aside .widget.widget-icons {
   border-bottom: 8px solid #f5f8fa;
 }
-.nd-wdiget-aside .widget.widget-icons:last-child {
+.nd-widget-aside .widget.widget-icons:last-child {
   border-bottom: none;
 }
 
@@ -82,35 +82,35 @@
   background: #f3f3f3;
 }
 
-.nd-content.minimize-nd-wdiget-aside .nd-wdiget-aside {
+.nd-content.minimize-nd-widget-aside .nd-widget-aside {
   width: 70px;
 }
-.nd-content.minimize-nd-wdiget-aside .nd-main-area {
+.nd-content.minimize-nd-widget-aside .nd-main-area {
   width: calc(100% - 70px);
 }
 
-.nd-content.minimize-nd-wdiget-aside .widget.widget-icons h4 {
+.nd-content.minimize-nd-widget-aside .widget.widget-icons h4 {
   padding-left: 14px;
   font-size: 16px;
 }
-.nd-content.minimize-nd-wdiget-aside .widget.widget-icons h4 {
+.nd-content.minimize-nd-widget-aside .widget.widget-icons h4 {
   display: none;
 }
-.nd-content.minimize-nd-wdiget-aside .widget.widget-icons ul {
+.nd-content.minimize-nd-widget-aside .widget.widget-icons ul {
   padding: 8px;
 }
-.nd-content.minimize-nd-wdiget-aside .widget.widget-icons ul li {
+.nd-content.minimize-nd-widget-aside .widget.widget-icons ul li {
   width: 100%;
   padding: 7px 5px;
 }
-.nd-content.minimize-nd-wdiget-aside .widget.widget-icons ul li span {
+.nd-content.minimize-nd-widget-aside .widget.widget-icons ul li span {
   display: none;
 }
-.nd-content.minimize-nd-wdiget-aside .widget.widget-icons ul li img {
+.nd-content.minimize-nd-widget-aside .widget.widget-icons ul li img {
   margin-bottom: 0;
 }
 
-.nd-content.minimize-nd-wdiget-aside .toggle-sidenav {
+.nd-content.minimize-nd-widget-aside .toggle-sidenav {
   transform: rotate(180deg);
   left: calc(100% + 22px);
 }

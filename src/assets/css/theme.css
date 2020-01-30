@@ -2150,7 +2150,7 @@ input[type="submit"]{
     height: 36px;
     line-height: 34px;
     padding: 6px 15px;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 400;
     color: #404a58;
     background-color: #fff;
@@ -3186,7 +3186,7 @@ ul.nd-nops-loader li {
     top: 1px;
 }
 
-.nd-wdiget-aside {
+.nd-widget-aside {
     width: 16%;
     float: left;
 }
@@ -3195,6 +3195,96 @@ ul.nd-nops-loader li {
     width: 84%;
     float: left;
 }
+
+.combo-field .nd-input-group {
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+}
+
+.combo-field .nd-select-group{
+    width: 20%;
+    float: left;
+}
+.combo-field .nd-input {
+    width: 80%;
+    float: left;
+    border-radius: 0 3px 3px 0;
+    height: 48px;
+}
+.combo-field .nd-select-group .nd-input {
+    width: 100%;
+    border-radius: 3px 0 0 3px;
+    border-right: none;
+    background: #f6f6f6;
+}
+.combo-field .nd-button {
+    margin: 0;
+    margin-left: 10px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 15px;
+}
+.nd-job-page-start-node .combo-field .nd-button svg {
+    top: 4px;
+    fill: #0071EA;
+}
+
+.button-blue-line {
+    border-color: #0071EA;
+    color: #0071EA;
+    font-weight: 400;
+}
+
+.button-blue-line:hover,
+.button-blue-line:focus {
+    background: #0071EA;
+    color: #ffffff;
+}
+
+.button-blue-line:hover svg,
+.button-blue-line:focus svg{
+    fill: #ffffff !important;
+}
+.combo-field .nd-select-group .nd-caret{
+    top: 16px;
+}
+
+
+.sub-tabs.connection {
+    float: left;
+    width: 100%;
+    background: #eaf3fc;
+    margin-top: 10px;
+}
+.sub-tabs.connection ul li.disabled {
+    opacity: .5;
+}
+.sub-tabs.connection ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+.sub-tabs.connection ul li a {
+    color: #1d2a3a;
+}
+.sub-tabs.connection ul li a.active {
+    color: #016cec;
+    font-weight: 600;
+}
+.sub-tabs.connection ul {
+    margin: 0;
+    padding: 12px 20px;
+}
+
+.sub-tabs-content.connection {
+    border-radius: 3px;
+}
+.sub-tabs-content.connection {
+    border-radius: 3px;
+}
+
 
 @keyframes nd-nops-loadbars {
     0%{
