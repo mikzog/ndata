@@ -12,7 +12,6 @@ import DesignSection from './design-section';
 import WidgetsSection from './widgets-section';
 import PropertiesSection from './properties-section';
 import 'assets/css/job-page-start-node.css';
-import './job-detail.css';
 
 interface Props {}
 
