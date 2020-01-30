@@ -1,4 +1,4 @@
-/* ********* CSS - job daigram flow ********* */
+/* ********* CSS - job diagram flow ********* */
 
 .nd-diagram-flow {
   display: block;
@@ -64,7 +64,6 @@
   min-width: 160px;
   display: inline-block;
   vertical-align: top;
-  padding: 20px 20px;
   margin-right: 80px;
   position: relative;
   cursor: move;
@@ -81,19 +80,16 @@
   text-align: center;
   line-height: 80px;
   margin: auto;
+  margin-top: 20px;
 }
 .icon-block svg {
   vertical-align: middle;
 }
 
-.info-block.block-blue {
-  border-top: 5px solid rgb(0, 113, 234);
-}
-.info-block.block-yellow {
-  border-top: 5px solid rgb(253, 189, 97);
-}
+.info-block.block-blue,
+.info-block.block-yellow,
 .info-block.block-green {
-  border-top: 5px solid rgb(41, 190, 185);
+  border-top: 5px solid rgb(228, 228, 228);
 }
 
 .info-block.block-blue .icon-block {
@@ -117,7 +113,9 @@
 }
 
 .info-block .header-block {
-  margin-top: 10px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  padding: 0 15px;
 }
 .info-block .header-block .title {
   font-weight: 600;
@@ -126,7 +124,7 @@
   display: block;
   font-size: 86%;
   color: #a8aaab;
-  margin-top: 1px;
+  margin-top: -1px;
 }
 .info-block .header-block .secondary-title svg {
   fill: #f95b5b;
@@ -136,6 +134,7 @@
 .info-block.block-blue:hover,
 .info-block.block-blue.active {
   box-shadow: 0px 5px 26.32px 1.68px rgba(0, 113, 234, 0.2);
+  border-top: 5px solid rgb(0, 113, 234);
   border-left: 1px solid rgb(0, 113, 234);
   border-right: 1px solid rgb(0, 113, 234);
   border-bottom: 1px solid rgb(0, 113, 234);
@@ -143,6 +142,7 @@
 .info-block.block-yellow:hover,
 .info-block.block-yellow.active {
   box-shadow: 0px 5px 26.32px 1.68px rgba(253, 189, 97, 0.2);
+  border-top: 5px solid rgb(253, 189, 97);
   border-left: 1px solid rgb(253, 189, 97);
   border-right: 1px solid rgb(253, 189, 97);
   border-bottom: 1px solid rgb(253, 189, 97);
@@ -150,6 +150,7 @@
 .info-block.block-green:hover,
 .info-block.block-green.active {
   box-shadow: 0px 5px 26.32px 1.68px rgba(41, 190, 185, 0.2);
+  border-top: 5px solid rgb(41, 190, 185);
   border-left: 1px solid rgb(41, 190, 185);
   border-right: 1px solid rgb(41, 190, 185);
   border-bottom: 1px solid rgb(41, 190, 185);
@@ -174,4 +175,22 @@
 .info-block .icon-block img {
   border-radius: 50%;
   overflow: hidden;
+}
+
+.info-block .footer-block {
+  padding: 7px 0 5px;
+  background-color: #f0f0f2;
+  width: 100%;
+  float: left;
+}
+
+.info-block .footer-block .action-btn {
+  width: 50%;
+  float: left;
+  cursor: pointer;
+  opacity: .6;
+}
+
+.info-block .footer-block .action-btn:hover {
+  opacity: 1;
 }

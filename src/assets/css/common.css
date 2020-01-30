@@ -432,7 +432,7 @@
 .nd-tabs > .tabs > li.active a:after {
   background: #0071EA;
   height: 4px;
-  top: 0px;
+  top: -1px;
   position: absolute;
   left: 0;
   right: 0;
@@ -446,7 +446,7 @@
 .nd-tabs > .tabs > li a:after {
   background: #e4e4e4;
   height: 4px;
-  top: 0px;
+  top: -1px;
   position: absolute;
   left: 0;
   right: 0;
