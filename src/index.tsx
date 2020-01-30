@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import Amplify from 'aws-amplify';
 import { AuthProvider } from 'common/contexts/auth';
-import awsconfig from './aws-exports.js';
+// import awsconfig from './aws-exports.js';
 import store from './rootStore';
 import * as serviceWorker from './serviceWorker';
 import 'assets/css/common.css';
@@ -11,7 +11,7 @@ import 'assets/css/theme.css';
 import 'assets/css/solutions-architects.css';
 
 // Init Amplify config
-Amplify.configure(awsconfig);
+Amplify.configure({});
 
 const renderApp = () => {
   const App = require('components/app').default;

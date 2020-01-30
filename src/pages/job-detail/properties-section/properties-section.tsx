@@ -2,8 +2,10 @@ import _get from 'lodash/get';
 import _debounce from 'lodash/debounce';
 import React, { Suspense, lazy, useCallback } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+
 import { setEntityData } from 'pages/job-detail/job-detail-slice';
 import { SectionLoader } from 'components/ui/placeholder';
+import { ConfigurationIcon, DownIcon, UpIcon } from 'components/ui/icons'
 import DefaultSection from 'components/properties/default-section';
 import { RootState } from '../../../rootReducer';
 
@@ -54,9 +56,32 @@ export const PropertiesSection: React.FC<Props> = () => {
 
   return (
     <div className="nodes-detail-section">
-      <Suspense fallback={<SectionLoader />}>
+      <div className="nd-tabs">
+        <ul className="tabs">
+          <li className="active">
+            <a href="#">
+              <ConfigurationIcon/> General
+            </a>
+          </li>
+        </ul>
+
+        <span className="toggle-area-setting">
+          <span className="up">
+            <UpIcon/>
+          </span>
+
+          <span className="down" style={{display: 'none'}}>
+            <DownIcon/>
+          </span>
+        </span>
+      </div>
+
+      <div className="target-node-info">
+
+      </div>
+      {/*<Suspense fallback={<SectionLoader />}>
         {renderProperties(selectedEntityType)}
-      </Suspense>
+      </Suspense>*/}
     </div>
   );
 };
