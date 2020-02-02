@@ -1,6 +1,7 @@
 import cx from 'classnames';
 import React, { useCallback } from 'react';
 import { S3Icon } from 'assets/img/widget';
+import { WIDGET_CATEGORY } from 'common/constants';
 import { ScriptIcon, CloneIcon } from 'components/ui/icons';
 
 interface Props {
@@ -33,7 +34,11 @@ const ActionCard: React.FC<Props> = ({
   };
 
   return (
-    <div className="info-block block-yellow active first-child"
+    <div className={
+      cx('info-block block-yellow', {
+        active: active,
+        'first-child': category === WIDGET_CATEGORY.SOURCE
+      })}
       onClick={handleClick}
       // className={cx(styles.card, styles[type], {
       //   [styles.active]: active,
