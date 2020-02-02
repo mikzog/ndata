@@ -1,4 +1,4 @@
-/* ********* CSS - Job page start node  ********* */
+/* ********* CSS - Job page srtart node  ********* */
 /* ********* CSS - Job page target node ********* */
 
 .nd-job-page-start-node .ndxs-12,
@@ -15,23 +15,25 @@
 
 .nd-job-page-start-node {
   padding: 0;
-  box-shadow: 0 1px 2px rgba(0,0,0,.09);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .09);
 }
 
-.nd-job-page-start-node .nd-container-fluid{
+.nd-job-page-start-node .nd-container-fluid {
   padding-right: 0px;
   padding-left: 0px;
 }
-.nd-job-page-start-node .nd-pageHead{
+
+.nd-job-page-start-node .nd-pageHead {
   /* padding: 15px 20px; */
   padding: 15px 20px 15px 30px;
   margin-bottom: 0;
 }
 
-.nd-job-page-start-node .nd-pageHead{
+.nd-job-page-start-node .nd-pageHead {
   background-color: #ffffff;
-  box-shadow: 0 1px 2px rgba(0,0,0,.09);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .09);
 }
+
 .head-step-back {
   float: left;
   width: auto;
@@ -64,6 +66,7 @@
 .nd-job-page-start-node .nd-tabs {
   background-color: #f5f8fa;
 }
+
 .regualar-tabs {
   padding: 0;
   list-style: none;
@@ -72,32 +75,37 @@
   margin-bottom: 0;
   margin-right: 15px;
 }
+
 .regualar-tabs li {
   display: inline-block;
 }
-.regualar-tabs li a{
+
+.regualar-tabs li a {
   color: #899199;
   padding: 16px;
 }
+
 .regualar-tabs li.active a,
 .regualar-tabs li a:hover,
-.regualar-tabs li a:focus{
+.regualar-tabs li a:focus {
   color: #1d2b38;
   text-decoration: none;
 }
+
 .regualar-tabs li.active svg,
 .regualar-tabs li a:hover svg,
 .regualar-tabs li a:focus svg {
   fill: #1d2b38;
 }
 
-.regualar-tabs svg{
+.regualar-tabs svg {
   fill: #899199;
 }
 
 .nd-job-page-start-node .nd-tabs > .tabs {
   width: auto;
 }
+
 .nd-job-page-start-node .nd-tabs > .tabs > li.active a svg {
   margin-right: 6px;
   top: 2px;
@@ -125,13 +133,15 @@
 .nd-job-page-start-node .target-node-info::-webkit-scrollbar {
   width: 10px;
 }
+
 .nd-job-page-start-node .target-node-info::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 0px;
 }
+
 .nd-job-page-start-node .target-node-info::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 20px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .nd-job-page-start-node .action-block {
@@ -139,7 +149,7 @@
   clear: left;
 }
 
-.nd-job-page-start-node .script-section-tab .nd-tabs > .tabs > li a{
+.nd-job-page-start-node .script-section-tab .nd-tabs > .tabs > li a {
   font-weight: bold;
 }
 
@@ -150,6 +160,7 @@
   border-bottom: 1px solid #e1e4e6;
   background-color: #ffffff;
 }
+
 .nodes-detail-section {
   margin-top: -5px;
   border-bottom: 0;
@@ -165,10 +176,12 @@
   margin-top: 26px;
   margin-left: 20px;
 }
+
 .target-node-info .nd-row {
   display: inline-block;
   width: 100%;
 }
+
 .addAccTitle {
   text-transform: uppercase;
   color: #9aa1ac;
@@ -193,10 +206,12 @@
 .nd-job-page-start-node.nd-start-job .nd-diagram-flow {
   min-height: 355px;
 }
+
 .nd-job-page-start-node.nd-start-job .target-node-info {
   min-height: 355px;
   max-height: 355px;
 }
+
 .nd-job-page-start-node.nd-start-job .nd-diagram-flow .nd-diagram-container {
   margin-top: 30px;
 }

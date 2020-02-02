@@ -1,12 +1,12 @@
 /* ********* CSS - global modals ********* */
 
-.ReactModal__Body--open{
+.ReactModal__Body--open {
   overflow: hidden;
 }
 
 .ReactModal__Overlay--after-open {
   overflow: auto;
-  background: rgba(0,0,0,.4);
+  background: rgba(0, 0, 0, .4);
   -webkit-backface-visibility: hidden;
   -webkit-animation: nddialog-fadein .5s;
   animation: nddialog-fadein .5s;
@@ -33,15 +33,15 @@
   max-width: 100%;
   padding: 0;
   position: relative;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   width: 640px;
   margin-left: -320px;
-  box-shadow: 0 0 25px rgba(0,0,0,.18);
-  -moz-box-shadow: 0 0 25px rgba(0,0,0,.18);
-  -webkit-box-shadow: 0 0 25px rgba(0,0,0,.18);
+  box-shadow: 0 0 25px rgba(0, 0, 0, .18);
+  -moz-box-shadow: 0 0 25px rgba(0, 0, 0, .18);
+  -webkit-box-shadow: 0 0 25px rgba(0, 0, 0, .18);
 }
 
-@keyframes nd-modalSlide{
+@keyframes nd-modalSlide {
   0% {
     opacity: 0;
     -webkit-transform: translateY(-40px);
@@ -60,9 +60,9 @@
   color: #fff;
   background: #0178f7;
   background: -moz-linear-gradient(-45deg, #0178f7 0%, #0056b3 100%);
-  background: -webkit-linear-gradient(-45deg, #0178f7 0%,#0056b3 100%);
-  background: linear-gradient(135deg, #0178f7 0%,#0056b3 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0178f7', endColorstr='#0056b3',GradientType=1 );
+  background: -webkit-linear-gradient(-45deg, #0178f7 0%, #0056b3 100%);
+  background: linear-gradient(135deg, #0178f7 0%, #0056b3 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0178f7', endColorstr='#0056b3', GradientType=1);
   border-radius: 3px 3px 0 0;
 }
 
@@ -72,7 +72,7 @@
   font-weight: 400;
 }
 
-.ReactModal__Content .npModal-header .close-modal svg{
+.ReactModal__Content .npModal-header .close-modal svg {
   fill: #fff;
   width: 16px;
   height: 16px;
@@ -127,8 +127,6 @@
 .ReactModal__Content .npModal-footer.mT40 {
   margin-top: 40px;
 }
-
-
 
 
 @-webkit-keyframes nddialog-flyin {
@@ -203,7 +201,7 @@
   background: #f0f0f0;
   border-radius: 5px;
   color: #444;
-  font-family: 'Helvetica',sans-serif;
+  font-family: 'Helvetica', sans-serif;
   font-size: 1.1em;
   line-height: 1.5em;
   margin: 0 auto;

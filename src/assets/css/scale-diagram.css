@@ -1,4 +1,4 @@
-/* ********* CSS - job diagram flow ********* */
+/* ********* CSS - job daigram flow ********* */
 
 .nd-diagram-flow {
   display: block;
@@ -12,11 +12,12 @@
 .nd-diagram-container.more-than-three {
   display: flex;
 }
+
 .nd-diagram-container.max-three {
   display: inline-block;
 }
 
-#scaleDiagram.nd-diagram-wrapper .info-block{
+#scaleDiagram.nd-diagram-wrapper .info-block {
   transform: scale(1.2);
 }
 
@@ -29,6 +30,7 @@
   background: #ffffff;
   overflow: scroll;
 }
+
 .nd-diagram-flow.max-three-nodes-cover {
   overflow: hidden;
 }
@@ -39,22 +41,26 @@
   width: 100%;
   text-align: center;
 }
+
 .nd-diagram-container::-webkit-scrollbar {
   width: 10px;
 }
+
 .nd-diagram-container::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 0px;
 }
+
 .nd-diagram-container::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 50px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.1);
 }
 
 .nd-diagram-container .info {
   color: #727d8c;
   margin-top: 50px;
 }
+
 .info-block {
   border-style: solid;
   border-width: 1px;
@@ -68,10 +74,12 @@
   position: relative;
   cursor: move;
 }
+
 .info-block:hover,
 .info-block:focus {
   cursor: pointer
 }
+
 .icon-block {
   width: 80px;
   height: 80px;
@@ -82,6 +90,7 @@
   margin: auto;
   margin-top: 20px;
 }
+
 .icon-block svg {
   vertical-align: middle;
 }
@@ -95,9 +104,11 @@
 .info-block.block-blue .icon-block {
   background-color: rgba(0, 113, 234, .1);
 }
+
 .info-block.block-yellow .icon-block {
   background-color: rgba(253, 189, 97, .1);
 }
+
 .info-block.block-green .icon-block {
   background-color: rgba(41, 190, 185, .1);
 }
@@ -105,9 +116,11 @@
 .info-block.block-blue .icon-block svg {
   fill: rgb(0, 113, 234);
 }
+
 .info-block.block-yellow .icon-block svg {
   fill: rgb(253, 189, 97);
 }
+
 .info-block.block-green .icon-block svg {
   fill: rgb(41, 190, 185);
 }
@@ -117,15 +130,18 @@
   margin-bottom: 20px;
   padding: 0 15px;
 }
+
 .info-block .header-block .title {
   font-weight: 600;
 }
+
 .info-block .header-block .secondary-title {
   display: block;
   font-size: 86%;
   color: #a8aaab;
   margin-top: -1px;
 }
+
 .info-block .header-block .secondary-title svg {
   fill: #f95b5b;
   top: 3px;
@@ -139,6 +155,7 @@
   border-right: 1px solid rgb(0, 113, 234);
   border-bottom: 1px solid rgb(0, 113, 234);
 }
+
 .info-block.block-yellow:hover,
 .info-block.block-yellow.active {
   box-shadow: 0px 5px 26.32px 1.68px rgba(253, 189, 97, 0.2);
@@ -147,6 +164,7 @@
   border-right: 1px solid rgb(253, 189, 97);
   border-bottom: 1px solid rgb(253, 189, 97);
 }
+
 .info-block.block-green:hover,
 .info-block.block-green.active {
   box-shadow: 0px 5px 26.32px 1.68px rgba(41, 190, 185, 0.2);
@@ -159,6 +177,7 @@
 .info-block.first-child:before {
   content: '';
 }
+
 .info-block:before {
   position: absolute;
   content: url(../img/arrow.svg);
@@ -167,6 +186,7 @@
   top: 55px;
   opacity: .2;
 }
+
 .nd-diagram-container.nd-diagram-wrapper .info-block:before {
   width: 30px;
   left: -35px;

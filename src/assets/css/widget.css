@@ -55,6 +55,7 @@
 .nd-widget-aside .widget.widget-icons {
   border-bottom: 8px solid #f5f8fa;
 }
+
 .nd-widget-aside .widget.widget-icons:last-child {
   border-bottom: none;
 }
@@ -85,6 +86,7 @@
 .nd-content.minimize-nd-widget-aside .nd-widget-aside {
   width: 70px;
 }
+
 .nd-content.minimize-nd-widget-aside .nd-main-area {
   width: calc(100% - 70px);
 }
@@ -93,19 +95,24 @@
   padding-left: 14px;
   font-size: 16px;
 }
+
 .nd-content.minimize-nd-widget-aside .widget.widget-icons h4 {
   display: none;
 }
+
 .nd-content.minimize-nd-widget-aside .widget.widget-icons ul {
   padding: 8px;
 }
+
 .nd-content.minimize-nd-widget-aside .widget.widget-icons ul li {
   width: 100%;
   padding: 7px 5px;
 }
+
 .nd-content.minimize-nd-widget-aside .widget.widget-icons ul li span {
   display: none;
 }
+
 .nd-content.minimize-nd-widget-aside .widget.widget-icons ul li img {
   margin-bottom: 0;
 }

@@ -23,7 +23,7 @@ const JobDetail: React.FC<Props> = props => {
       <Content className="nd-content nd-job-page-start-node">
         <Container fluid>
           <div className="nd-row">
-            <div className="nd-wdiget-aside">
+            <div className="nd-widget-aside">
               <span className="toggle-sidenav">
                 <svg x="0px" y="0px" viewBox="0 0 240.823 240.823" width="14px"
                      height="14px">
