@@ -12,12 +12,14 @@ interface Props {
     category: string;
   };
   onSelect: (type: string) => void;
+  onRemove: (type: string) => void;
 }
 
 const ActionCard: React.FC<Props> = ({
   active,
   data: { id, name, type, category },
   onSelect,
+  onRemove,
 }) => {
   const handleClick = useCallback(
     e => {
@@ -26,6 +28,9 @@ const ActionCard: React.FC<Props> = ({
     },
     [id]
   );
+  const handleRemove = () => {
+    onRemove(id);
+  };
 
   return (
     <div className="info-block block-yellow active first-child"
@@ -48,9 +53,12 @@ const ActionCard: React.FC<Props> = ({
               <ScriptIcon/>
               Edit
             </span>
-            <span className="action-btn">
-              <CloneIcon/>
-              Clone
+            <span
+              className="action-btn"
+              onClick={handleRemove}
+            >
+              {/*<CloneIcon/>*/}
+              Delete
             </span>
           </div>
           : null

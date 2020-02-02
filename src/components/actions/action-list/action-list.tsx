@@ -10,9 +10,12 @@ interface Props {
   data: {};
   selectedEntityId?: string;
   onSelect: (id: string) => void;
+  onRemove: (id: string) => void;
 }
 
-const ActionList: React.FC<Props> = ({ selectedEntityId, data, onSelect }) => {
+const ActionList: React.FC<Props> = (
+  { selectedEntityId, data, onSelect, onRemove },
+) => {
   const actionData = _map(data, (type, id) => {
     const action = WIDGETS.find(widgetItem => widgetItem.type === type);
     return {
@@ -30,6 +33,7 @@ const ActionList: React.FC<Props> = ({ selectedEntityId, data, onSelect }) => {
               active={selectedEntityId === row.id}
               data={row as any}
               onSelect={onSelect}
+              onRemove={onRemove}
             />))}
           </div>
           : <div className="info-block block-blue active first-child">
