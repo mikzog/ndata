@@ -1,7 +1,7 @@
 import cx from 'classnames';
 import React, { useCallback } from 'react';
-import { Card, Icon } from 'antd';
-import styles from './action-card.module.less';
+import { S3Icon } from 'assets/img/widget';
+import { ScriptIcon, CloneIcon } from 'components/ui/icons';
 
 interface Props {
   active?: boolean;
@@ -28,27 +28,34 @@ const ActionCard: React.FC<Props> = ({
   );
 
   return (
-    <Card
+    <div className="info-block block-yellow active first-child"
       onClick={handleClick}
-      className={cx(styles.card, styles[type], {
-        [styles.active]: active,
-      })}
-      actions={
-        active
-          ? [
-              <span>
-                <Icon type="setting" key="Setting" /> Edit
-              </span>,
-              <span>
-                <Icon type="copy" key="Clone" /> Clone
-              </span>,
-            ]
-          : []
-      }
+      // className={cx(styles.card, styles[type], {
+      //   [styles.active]: active,
+      // })}
     >
-      <div className={styles.name}>{name}</div>
-      <div className={styles.type}>{category}</div>
-    </Card>
+      <div className="icon-block">
+        <img src={S3Icon} alt={name}/>
+      </div>
+      <div className="header-block">
+        <span className="title">{name}</span>
+        <span className="secondary-title">{category}</span>
+      </div>
+      {
+        active
+          ? <div className="footer-block">
+            <span className="action-btn">
+              <ScriptIcon/>
+              Edit
+            </span>
+            <span className="action-btn">
+              <CloneIcon/>
+              Clone
+            </span>
+          </div>
+          : null
+      }
+    </div>
   );
 };
 

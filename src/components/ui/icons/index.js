@@ -1,6 +1,9 @@
 export { ReactComponent as ArrowDownIcon } from './arrow-down-icon.svg';
+export { ReactComponent as ArrowLeftIcon } from './arrow-left-icon.svg';
+export { ReactComponent as ArrowMoveIcon } from './arrow-move-icon.svg';
 export { ReactComponent as ArrowRightIcon } from './arrow-right-icon.svg';
 export { ReactComponent as ClockIcon } from './clock-icon.svg';
+export { ReactComponent as CloneIcon } from './clone-icon.svg';
 export { ReactComponent as CloseIcon } from './close-icon.svg';
 export { ReactComponent as CodeIcon } from './code-icon.svg';
 export { ReactComponent as CompanyIcon } from './company-icon.svg';

@@ -1,7 +1,8 @@
 import _map from 'lodash/map';
 import React from 'react';
-import { List } from 'antd';
+
 import { WIDGETS } from 'common/constants';
+import { ArrowMoveIcon } from 'components/ui/icons';
 import { IEntity, IAction } from 'pages/job-detail/job-detail-slice';
 import ActionCard from '../action-card';
 
@@ -21,22 +22,29 @@ const ActionList: React.FC<Props> = ({ selectedEntityId, data, onSelect }) => {
   });
 
   return (
-    <div>
-      {/* TODO replace with normal horizontal list */}
-      {/*<List
-        grid={{ gutter: 16, column: 4 }}
-        dataSource={actionData}
-        renderItem={item => (
-          <List.Item>
-            <ActionCard
-              active={selectedEntityId === item.id}
-              data={item as any}
+    <>
+      {
+        actionData.length
+          ? <div className="nd-diagram-container max-three" id="scaleDiagram">
+            {actionData.map(row => (<ActionCard
+              active={selectedEntityId === row.id}
+              data={row as any}
               onSelect={onSelect}
-            />
-          </List.Item>
-        )}
-      />*/}
-    </div>
+            />))}
+          </div>
+          : <div className="info-block block-blue active first-child">
+            <div className="icon-block">
+              <ArrowMoveIcon/>
+            </div>
+            <div className="header-block">
+              <span className="title">
+                Drag the Source from<br/> widget tray to start the process
+              </span>
+              <span className="secondary-title"/>
+            </div>
+          </div>
+      }
+    </>
   );
 };
 
