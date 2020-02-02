@@ -86,6 +86,10 @@ const jobDetailSlice = createSlice({
     setSelectedEntityId(state, action: PayloadAction<undefined | string>) {
       state.selectedEntityId = action.payload;
     },
+    removeSelectedEntity(state, action: PayloadAction<string>) {
+      delete state.entities[action.payload];
+      delete state.data[action.payload];
+    },
   },
 });
 
@@ -93,6 +97,7 @@ export const {
   setEntity,
   setEntityData,
   setSelectedEntityId,
+  removeSelectedEntity,
 } = jobDetailSlice.actions;
 
 export default jobDetailSlice.reducer;

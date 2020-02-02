@@ -7,6 +7,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import {
   setEntity,
   setSelectedEntityId,
+  removeSelectedEntity,
 } from 'pages/job-detail/job-detail-slice';
 import ActionList from 'components/actions/action-list';
 import DesignDroppable, { ITarget } from './design-droppable';
@@ -31,6 +32,7 @@ const DesignSection: React.FC<Props> = () => {
   };
 
   const handleCardSelect = (id: string) => dispatch(setSelectedEntityId(id));
+  const handleCardDelete = (id: string) => dispatch(removeSelectedEntity(id));
 
   return (
     <div className="flow-section">
@@ -41,6 +43,7 @@ const DesignSection: React.FC<Props> = () => {
             data={entities}
             selectedEntityId={selectedEntityId}
             onSelect={handleCardSelect}
+            onRemove={handleCardDelete}
           />
         </DesignDroppable>
       </div>
