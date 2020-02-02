@@ -64,20 +64,20 @@ workflows:
       # - build:
       #     requires:
       #       - test
-    build-deploy-uat:
-      jobs:
-        - test
-        - build:
+  build-deploy-uat:
+    jobs:
+      - test
+      - build:
 #            requires:
 #              - test
-            filters:
-              branches:
-                only: develop
-            context: uat
-        - deploy-uat:
-            requires:
-              - build
-            filters:
-              branches:
-                only: develop
-            context: uat
+          filters:
+            branches:
+              only: develop
+          context: uat
+      - deploy-uat:
+          requires:
+            - build
+          filters:
+            branches:
+              only: develop
+          context: uat
