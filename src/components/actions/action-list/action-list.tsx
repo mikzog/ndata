@@ -29,9 +29,9 @@ const ActionList: React.FC<Props> = (
       {
         actionData.length
           ? <div className="nd-diagram-container max-three" id="scaleDiagram">
-            {actionData.map(row => (<ActionCard
-              active={selectedEntityId === row.id}
-              data={row as any}
+            {actionData.map(card => (<ActionCard
+              active={selectedEntityId === card.id}
+              data={card as any}
               onSelect={onSelect}
               onRemove={onRemove}
             />))}
