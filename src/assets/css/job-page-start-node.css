@@ -215,3 +215,8 @@
 .nd-job-page-start-node.nd-start-job .nd-diagram-flow .nd-diagram-container {
   margin-top: 30px;
 }
+
+.nd-job-page-start-node.nd-start-job .nd-diagram-flow .nd-diagram-container.more-than-three {
+  overflow: hidden;
+  overflow-x: scroll;
+}

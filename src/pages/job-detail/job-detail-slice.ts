@@ -25,6 +25,8 @@ export interface ISchema {
 export interface IAttribute {
   name: string;
   value: string;
+  type?: string;
+  options?: any[];
 }
 
 export interface IProperty {
