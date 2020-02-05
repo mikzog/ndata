@@ -6,6 +6,7 @@ import { ScriptIcon, CloneIcon } from 'components/ui/icons';
 
 interface Props {
   active?: boolean;
+  isFirst?: boolean;
   data: {
     id: string;
     name: string;
@@ -18,6 +19,7 @@ interface Props {
 
 const ActionCard: React.FC<Props> = ({
   active,
+  isFirst,
   data: { id, name, type, category },
   onSelect,
   onRemove,
@@ -37,7 +39,7 @@ const ActionCard: React.FC<Props> = ({
     <div className={
       cx('info-block block-yellow', {
         active: active,
-        'first-child': category === WIDGET_CATEGORY.SOURCE
+        'first-child': isFirst
       })}
       onClick={handleClick}
       // className={cx(styles.card, styles[type], {
