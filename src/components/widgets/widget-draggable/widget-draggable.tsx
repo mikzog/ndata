@@ -1,8 +1,6 @@
 import cx from 'classnames';
 import React from 'react';
 import { useDrag } from 'react-dnd';
-// import WidgetCard from 'components/widgets/widget-card';
-// import './widget-draggable.css';
 
 interface Props {
   name: string;
@@ -30,12 +28,11 @@ export const WidgetDraggable: React.FC<Props> =
 
     return (
       <li
-        className={cx('widget-draggable', { dragging: isDragging })}
+        className={cx('', { dragging: isDragging })}
         ref={drag}
       >
-        <img src={icon} alt={name} width={50} height={50}/>
+        <img src={icon} alt={name}/>
         <span title={title}>{name}</span>
-        {/*<WidgetCard type={category} name={name} />*/}
       </li>
     );
   };
