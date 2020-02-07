@@ -26,6 +26,7 @@ export interface IAttribute {
   name: string;
   value: string;
   type?: string;
+  required?: boolean;
   options?: any[];
 }
 
@@ -37,6 +38,7 @@ export interface IProperty {
 export interface IEntity {
   id: string;
   type: string;
+  category: string;
 }
 
 interface JobDetailState {

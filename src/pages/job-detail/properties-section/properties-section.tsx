@@ -4,10 +4,19 @@ import React, { Suspense, lazy, useCallback } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { setEntityData } from 'pages/job-detail/job-detail-slice';
+import { RootState } from '../../../rootReducer';
 import { SectionLoader } from 'components/ui/placeholder';
 import { ConfigurationIcon, DownIcon, UpIcon } from 'components/ui/icons'
 import DefaultSection from 'components/properties/default-section';
-import { RootState } from '../../../rootReducer';
+import S3_META from 'meta/s3.json';
+import REST_META from 'meta/s3.json';
+import TRANSFORM_META from 'meta/s3.json';
+
+const DEFAULT_ENTITY_DATA: any = {
+  s3: S3_META,
+  rest: REST_META,
+  transform: TRANSFORM_META,
+};
 
 const RESTSection = lazy(() => import('components/properties/rest-section'));
 const S3Section = lazy(() => import('components/properties/s3-section'));
@@ -56,7 +65,10 @@ export const PropertiesSection: React.FC<Props> = () => {
 
   return (
     <div className="nodes-detail-section">
-      <div className="nd-tabs">
+      <Suspense fallback={<SectionLoader/>}>
+        {renderProperties(selectedEntityType)}
+      </Suspense>
+      {/*<div className="nd-tabs">
         <ul className="tabs">
           <li className="active">
             <a href="#">
@@ -78,10 +90,7 @@ export const PropertiesSection: React.FC<Props> = () => {
 
       <div className="target-node-info">
 
-      </div>
-      {/*<Suspense fallback={<SectionLoader />}>
-        {renderProperties(selectedEntityType)}
-      </Suspense>*/}
+      </div>*/}
     </div>
   );
 };
