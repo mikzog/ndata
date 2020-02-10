@@ -2,7 +2,6 @@
   "name": "ndata_frontend",
   "version": "0.0.1",
   "private": true,
-  "homepage": "https://d2a77dtyg2mkss.cloudfront.net/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.1.0",
     "@types/classnames": "^2.2.9",

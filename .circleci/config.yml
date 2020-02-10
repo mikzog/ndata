@@ -1,10 +1,10 @@
 version: 2.1
 
 orbs:
-  aws-s3: circleci/aws-s3@1.0.11
+  aws-cli: circleci/aws-cli@0.1.20
 
 default: &default
-  working_directory: ~/ndata-frontend
+  working_directory: /home/circleci/ndata-frontend
   docker:
     - image: circleci/node:8
 
@@ -38,46 +38,46 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "yarn.lock" }}
       - persist_to_workspace:
-          root: .
-          paths:
-            - build
+          root: /home/circleci/ndata-frontend
+          paths: build/
 
-  deploy-uat:
-    docker:
-      - image: 'circleci/python:2.7'
+  deploy:
+    <<: *default
     steps:
       - checkout
-      - aws-s3/sync:
-          from: build
-          to: '$UAT_BUCKET'
-          arguments: |
-            --acl public-read \
-            --cache-control "max-age=86400"
-          overwrite: true
+      - attach_workspace:
+          at: /home/circleci/ndata-frontend
+      - aws-cli/install
+      - aws-cli/setup
+      - run:
+          name: Sync assets 
+          command: aws s3 sync build s3://$S3StaticBucket/ --delete
+      - run:
+          name: CDN invalidations 
+          command: aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths "/*"
 
 workflows:
   version: 2
-
-  build_and_test:
-    jobs:
-      - test
-      # - build:
-      #     requires:
-      #       - test
+  # build_and_test:
+  #   jobs:
+  #     - test
+  #     - build:
+  #         requires:
+  #           - test
   build-deploy-uat:
     jobs:
       - test
       - build:
-#            requires:
-#              - test
+          requires:
+            - test
           filters:
             branches:
-              only: develop
-          context: uat
-      - deploy-uat:
+              only: fer/develop
+          context: ndata_dev
+      - deploy:
           requires:
             - build
           filters:
             branches:
-              only: develop
-          context: uat
+              only: fer/develop
+          context: ndata_dev
