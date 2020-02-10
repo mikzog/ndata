@@ -33,6 +33,7 @@ const S3Section: React.FC<Props> = ({ data, onChange }) => {
 
   return (
     <Tabs
+      active='general'
       data={[
         {
           key: 'general',
