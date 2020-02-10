@@ -9,8 +9,9 @@ import {
 } from 'components/ui/icons';
 import { IProperty } from 'pages/job-detail/job-detail-slice';
 
-const S3GeneralForm = lazy(() => import('./s3-general-form'));
-const S3ConnectionForm = lazy(() => import('./s3-connection-form'));
+import S3GeneralForm from './s3-general-form';
+import S3ConnectionForm from './s3-connection-form';
+import S3Schema from './s3-schema';
 
 interface Props {
   data: any;
@@ -32,7 +33,7 @@ const S3Section: React.FC<Props> = ({ data, onChange }) => {
           onChange={handleConnectionChange}
         />;
       case 'schema':
-        return 'Schema';
+        return <S3Schema/>;
     }
   };
 
@@ -69,6 +70,11 @@ const S3Section: React.FC<Props> = ({ data, onChange }) => {
             key: 'connection',
             title: 'Connection',
             icon: <TabConnectionIcon/>,
+          },
+          {
+            key: 'schema',
+            title: 'Schema',
+            icon: <TabSchemaIcon/>,
           },
         ]}
       />
