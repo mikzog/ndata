@@ -6,6 +6,7 @@ import {
   TabSchemaIcon,
 } from 'components/ui/icons';
 import RESTGeneralForm from './rest-general-form';
+import RESTConnectionForm from './rest-connection-form';
 
 interface Props {}
 
@@ -16,7 +17,7 @@ const RESTSection: React.FC<Props> = () => {
       case 'general':
         return <RESTGeneralForm/>;
       case 'connection':
-        return 'Connection';
+        return <RESTConnectionForm/>;
       case 'schema':
         return 'Schema';
     }
