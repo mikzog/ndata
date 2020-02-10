@@ -57,41 +57,20 @@ export const PropertiesSection: React.FC<Props> = () => {
         case 'rest':
           return <RESTSection />;
         default:
-          return <DefaultSection />;
+          return null;
       }
     },
     [selectedEntityType]
   );
 
   return (
-    <div className="nodes-detail-section">
-      <Suspense fallback={<SectionLoader/>}>
-        {renderProperties(selectedEntityType)}
-      </Suspense>
-      {/*<div className="nd-tabs">
-        <ul className="tabs">
-          <li className="active">
-            <a href="#">
-              <ConfigurationIcon/> General
-            </a>
-          </li>
-        </ul>
-
-        <span className="toggle-area-setting">
-          <span className="up">
-            <UpIcon/>
-          </span>
-
-          <span className="down" style={{display: 'none'}}>
-            <DownIcon/>
-          </span>
-        </span>
+    selectedEntityType
+      ? <div className="nodes-detail-section">
+        <Suspense fallback={<SectionLoader/>}>
+          {renderProperties(selectedEntityType)}
+        </Suspense>
       </div>
-
-      <div className="target-node-info">
-
-      </div>*/}
-    </div>
+      : null
   );
 };
 
