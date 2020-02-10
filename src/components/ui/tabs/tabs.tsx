@@ -1,9 +1,4 @@
-import React, { Suspense } from 'react';
-import { Tabs as ATabs } from 'antd';
-import { SectionLoader } from 'components/ui/placeholder';
-import styles from './tabs.module.less';
-
-const { TabPane } = ATabs;
+import React from 'react';
 
 interface TabData {
   key: string;
@@ -14,27 +9,28 @@ interface TabData {
 
 interface Props {
   data: TabData[];
+  active: string;
+  onClick?: any;
 }
 
-const Tabs: React.FC<Props> = ({ data }) => {
+const Tabs: React.FC<Props> = ({ data, active, onClick }) => {
   return (
-    <ATabs type="card" className={styles.tabs}>
-      {data.map(tab => (
-        <TabPane
-          key={tab.key}
-          tab={
-            <span>
+    <div className="nd-tabs">
+      <ul className="tabs">
+        {data.map(tab => (
+          <li
+            className={active === tab.key ? 'active': ''}
+            key={tab.key}
+          >
+            <a onClick={() => onClick(tab.key)}>
               {tab.icon}
-              {tab.title}
-            </span>
-          }
-        >
-          <div className="target-node-info">
-            <Suspense fallback={<SectionLoader />}>{tab.content}</Suspense>
-          </div>
-        </TabPane>
-      ))}
-    </ATabs>
+              &nbsp;{tab.title}
+            </a>
+          </li>
+        ))
+        }
+      </ul>
+    </div>
   );
 };
 

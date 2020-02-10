@@ -6,6 +6,7 @@ interface Props {}
 const DefaultSection: React.FC<Props> = () => {
   return (
     <Tabs
+      active='general'
       data={[
         {
           key: 'general',
