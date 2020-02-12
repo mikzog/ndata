@@ -72,12 +72,12 @@ workflows:
             - test
           filters:
             branches:
-              only: fer/develop
+              only: develop
           context: ndata_dev
       - deploy:
           requires:
             - build
           filters:
             branches:
-              only: fer/develop
+              only: develop
           context: ndata_dev
