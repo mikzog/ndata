@@ -40,6 +40,7 @@ const ActionList: React.FC<Props> = (
           >
             {actionData.map(card => (
               <ActionCard
+                key={card.id}
                 isFirst={card === actionData[0]}
                 active={selectedEntityId === card.id}
                 data={card as any}

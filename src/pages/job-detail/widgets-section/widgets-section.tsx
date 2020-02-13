@@ -42,7 +42,7 @@ export const WidgetsSection: React.FC<Props> = () => {
       <div className="widget widget-icons mapping">
         <h4>Mapping</h4>
         <ul>
-          {WIDGETS.filter(widget => widget.category === WIDGET_CATEGORY.TARGET)
+          {WIDGETS.filter(widget => widget.category === WIDGET_CATEGORY.MAPPING)
             .map((widget, index) => (
               <WidgetDraggable
                 key={index}
