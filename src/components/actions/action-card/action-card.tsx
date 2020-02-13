@@ -1,8 +1,18 @@
 import cx from 'classnames';
 import React, { useCallback } from 'react';
-import { S3Icon } from 'assets/img/widget';
+import {
+  AggregateIcon,
+  RDSIcon,
+  S3Icon,
+  RESTIcon,
+  ScriptIcon,
+  SAPIcon,
+  IfThenIcon,
+  RedShiftIcon,
+  SplitIcon,
+} from 'assets/img/widget';
 import { WIDGET_CATEGORY } from 'common/constants';
-import { ScriptIcon, CloneIcon } from 'components/ui/icons';
+import { ScriptIcon as ScriptSVG, CloneIcon } from 'components/ui/icons';
 
 interface Props {
   active?: boolean;
@@ -16,7 +26,29 @@ interface Props {
   onSelect: (type: string) => void;
   onRemove: (type: string) => void;
 }
-
+const iconMapping: any = (type: string) => {
+  switch (type) {
+    case 's3':
+      return S3Icon;
+    case 'rest':
+      return RESTIcon;
+    case 'sap':
+      return SAPIcon;
+    case 'redshift':
+      return RedShiftIcon;
+    case 'rds':
+      return RDSIcon;
+    case 'script':
+      return ScriptIcon;
+    case 'split':
+      return SplitIcon;
+    case 'if':
+      return IfThenIcon;
+    case 'aggregate':
+      return AggregateIcon;
+  }
+  return S3Icon
+};
 const ActionCard: React.FC<Props> = ({
   active,
   isFirst,
@@ -47,29 +79,25 @@ const ActionCard: React.FC<Props> = ({
       // })}
     >
       <div className="icon-block">
-        <img src={S3Icon} alt={name}/>
+        <img src={iconMapping(type)} alt={name}/>
       </div>
       <div className="header-block">
         <span className="title">{name}</span>
         <span className="secondary-title">{category}</span>
       </div>
-      {
-        active
-          ? <div className="footer-block">
-            <span className="action-btn">
-              <ScriptIcon/>
-              Edit
-            </span>
-            <span
-              className="action-btn"
-              onClick={handleRemove}
-            >
-              {/*<CloneIcon/>*/}
-              Delete
-            </span>
-          </div>
-          : null
-      }
+      <div className="footer-block">
+        <span className="action-btn">
+          <ScriptSVG/>
+          Edit
+        </span>
+        <span
+          className="action-btn"
+          onClick={handleRemove}
+        >
+          {/*<CloneIcon/>*/}
+          Delete
+        </span>
+      </div>
     </div>
   );
 };

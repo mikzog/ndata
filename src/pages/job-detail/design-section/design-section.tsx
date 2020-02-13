@@ -27,6 +27,7 @@ const DesignSection: React.FC<Props> = () => {
       setEntity({
         id: uuid(),
         type: target.data.type,
+        category: target.data.category
       })
     );
   };

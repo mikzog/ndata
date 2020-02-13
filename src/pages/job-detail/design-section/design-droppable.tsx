@@ -19,7 +19,7 @@ export const DesignDroppable: React.FC<Props> = ({ onDropped, children }) => {
     accept: [
       WIDGET_CATEGORY.SOURCE,
       WIDGET_CATEGORY.TRANSFORM,
-      WIDGET_CATEGORY.TARGET,
+      WIDGET_CATEGORY.MAPPING,
     ],
     drop: onDropped,
     collect: monitor => ({
