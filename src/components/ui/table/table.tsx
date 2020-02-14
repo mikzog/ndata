@@ -8,6 +8,7 @@ import './table.css';
 interface TableProps extends RCTableProps {}
 
 export const Table: React.FC<TableProps & any> = props => {
+  // TODO (Maxim) replace rc-table with react-table
   return (
     <div className="clickableRows">
       <RCTable
